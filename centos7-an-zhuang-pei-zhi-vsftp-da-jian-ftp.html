@@ -1,0 +1,1325 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="CentOS7安装配置vsftp搭建FTP, 网络,树莓派,编程,Java">
+    <meta name="description" content="我折腾 我快乐">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>CentOS7安装配置vsftp搭建FTP | ghf</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="ghf" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ghf</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://iamghf.top/wiki" class="waves-effect waves-light">
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Wiki</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ghf</div>
+        <div class="logo-desc">
+            
+            我折腾 我快乐
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://iamghf.top/wiki" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-list"></i>
+			
+			Wiki
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">CentOS7安装配置vsftp搭建FTP</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+        
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ftp/">
+                                <span class="chip bg-color">ftp</span>
+                            </a>
+                        
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                软件系统
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-12-26
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="CentOS7安装配置vsftp搭建FTP"><a href="#CentOS7安装配置vsftp搭建FTP" class="headerlink" title="CentOS7安装配置vsftp搭建FTP"></a>CentOS7安装配置vsftp搭建FTP</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在安装前查看是否已安装vsftpd</p>
+<pre><code># 查看是否已安装 方法一
+[root@localhost ~]# rpm -q vsftpd
+vsftpd-3.0.2-21.el7.x86_64
+
+# 查看是否已安装 方法二
+[root@localhost ~]# vsftpd -v
+vsftpd: version 3.0.2
+
+# 安装 vsftpd
+[root@localhost ~]# yum -y install vsftpd</code></pre><h2 id="查看位置"><a href="#查看位置" class="headerlink" title="查看位置"></a>查看位置</h2><pre><code>[root@localhost ~]# whereis vsftpd
+vsftpd: /usr/sbin/vsftpd /etc/vsftpd /usr/share/man/man8/vsftpd.8.gz</code></pre><h2 id="启动vsftpd服务"><a href="#启动vsftpd服务" class="headerlink" title="启动vsftpd服务"></a>启动vsftpd服务</h2><pre><code>systemctl start vsftpd.service</code></pre><h2 id="关闭firewall和SELinux"><a href="#关闭firewall和SELinux" class="headerlink" title="关闭firewall和SELinux"></a>关闭firewall和SELinux</h2><pre><code>setenforce 0   # 设置SELinux 成为permissive模式  （关闭SELinux）
+setenforce 1   # 设置SELinux 成为enforcing模式   （开启SELinux）
+
+# 或者修改配置
+vi /etc/selinux/config
+# SELINUX=enforcing
+# 注释掉
+# SELINUXTYPE=targeted
+# 注释掉
+SELINUX=disabled
+# 增加
+:wq! #保存退出
+setenforce 0</code></pre><p>或者设置SELinux</p>
+<pre><code>getsebool -a | grep ftp
+setsebool -P ftpd_full_access on
+systemctl stop firewalld.service
+#停止firewall
+systemctl disable firewalld.service
+#禁止firewall开机启动</code></pre><p>如果你不愿意关闭防火墙，需要防火墙添加FTP服务。</p>
+<pre><code>firewall-cmd --permanent --zone=public --add-service=ftp
+firewall-cmd --reload</code></pre><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p>配置文件<code>/etc/vsftpd/vsftpd.conf</code></p>
+<pre><code>anonymous_enable=NO        # 不允许匿名访问，禁用匿名登录
+chroot_local_user=YES      # 启用限定用户在其主目录下
+use_localtime=YES          # 使用本地时(自行添加)
+chroot_list_enable=YES
+local_enable=YES           # 允许使用本地帐户进行FTP用户登录验证
+allow_writeable_chroot=YES # 如果启用了限定用户在其主目录下需要添加这个配置，解决报错 500 OOPS: vsftpd: refusing to run with writable root inside chroot()
+xferlog_enable=YES         # 启用上传和下载的日志功能，默认开启。
+local_umask=022            # 设置本地用户默认文件掩码022
+# FTP上本地的文件权限，默认是077，不过vsftpd安装后的配置文件里默认是022</code></pre><p>虚拟用户高级参数</p>
+<pre><code>当virtual_use_local_privs=YES 时，虚拟用户和本地用户有相同的权限；
+当virtual_use_local_privs=NO  时，虚拟用户和匿名用户有相同的权限，默认是NO。
+当virtual_use_local_privs=YES，write_enable=YES时，虚拟用户具有写权限（上传、下载、删除、重命名）。
+当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=YES，
+anon_upload_enable=YES时，虚拟用户不能浏览目录，只能上传文件，无其他权限。
+当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，
+anon_upload_enable=NO时，虚拟用户只能下载文件，无其他权限。
+当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，
+anon_upload_enable=YES时，虚拟用户只能上传和下载文件，无其他权限。
+当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，
+anon_mkdir_write_enable=YES时，虚拟用户只能下载文件和创建文件夹，无其他权限。
+当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，
+anon_other_write_enable=YES时，虚拟用户只能下载、删除和重命名文件，无其他权限。</code></pre><h2 id="匿名登录"><a href="#匿名登录" class="headerlink" title="匿名登录"></a>匿名登录</h2><p>安装完默认情况下是开启匿名登录的，对应的是 <code>/var/ftp</code> 目录，这时只要服务启动了，就可以直接连上FTP了。默认用户名是<code>ftp</code>，密码是空的。如果你在配置里面配置了<code>anonymous_enable=NO</code>，匿名就无法登录。</p>
+<pre><code>$ ftp 192.168.188.114
+
+Connected to 192.168.188.114.
+220 (vsFTPd 3.0.2)
+Name (192.168.188.114:kennywang): ftp
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp&gt; ls
+229 Entering Extended Passive Mode (|||47867|).
+150 Here comes the directory listing.
+-rw-r--r--    1 0        0              12 Jan 18 06:31 README.md
+drwxr-xr-x    2 0        0               6 Nov 05 19:43 pub
+226 Directory send OK.</code></pre><h2 id="多用户配置"><a href="#多用户配置" class="headerlink" title="多用户配置"></a>多用户配置</h2><p>多用户配置需要自己手工添加配置，下面内容到vsftpd.conf末尾</p>
+<pre><code># 
+# 
+
+use_localtime=YES          # 使用本地时(自行添加)
+listen_port=21
+chroot_local_user=YES      # 启用限定用户在其主目录下
+idle_session_timeout=300
+
+data_connection_timeout=120  # 数据连接超时时间
+guest_enable=YES             # 设定启用虚拟用户功能
+guest_username=ftpuser       # 指定虚拟用户的宿主用户 ftpuser（就是我们后面会新建这个用户）
+# guest_username=www
+# 如果ftp目录是指向网站根目录，用来上传网站程序，
+# 可以指定虚拟用户的宿主用户为nginx运行账户www，可以避免很多权限设置问题 
+
+
+user_config_dir=/etc/vsftpd/vuser_conf   # 虚拟用户配置文件目录
+virtual_use_local_privs=YES # NO时，虚拟用户和匿名用户有相同的权限，默认是NO
+
+pasv_min_port=10060         # 被动模式最小端口号10060
+pasv_max_port=10090         # 被动模式最大端口号10090
+
+accept_timeout=5
+connect_timeout=1</code></pre><h3 id="创建宿主用户"><a href="#创建宿主用户" class="headerlink" title="创建宿主用户"></a>创建宿主用户</h3><p>新建系统用户ftpuser，用户目录为<code>/home/vsftpd</code>, 用户登录终端设为/bin/false(即使之不能登录系统)</p>
+<pre><code># 方法一
+# 创建用户 ftpuser 指定 `/home/vsftpd` 目录
+useradd -g root -M -d /home/vsftpd -s /sbin/nologin ftpuser
+
+# 设置用户 ftpuser 的密码
+passwd ftpuser
+# 把 /home/vsftpd 的所有权给ftpuser.root
+chown -R ftpuser.root /home/vsftpd
+
+# 方法二
+useradd ftpuser -d /home/vsftpd -s /bin/false
+chown ftpuser:ftpuser /home/vsftpd -R 
+
+# 如果虚拟用户的宿主用户为www，需要这样设置
+# www目录是你应用的目录
+chown www:www /home/www -R</code></pre><p>删除用户 <code>userdel ftpuser</code></p>
+<h3 id="建立虚拟用户文件"><a href="#建立虚拟用户文件" class="headerlink" title="建立虚拟用户文件"></a>建立虚拟用户文件</h3><pre><code>touch /etc/vsftpd/vuser_passwd
+# 编辑虚拟用户名单文件：（
+# 第一行账号，第二行密码，注意：不能使用root做用户名，系统保留）
+vi /etc/vsftpd/vuser_passwd 
+# 编辑内容，下面是 vuser_passwd 内容
+wcj
+123456
+hss
+123456
+#保存退出</code></pre><h3 id="生成虚拟用户数据文件"><a href="#生成虚拟用户数据文件" class="headerlink" title="生成虚拟用户数据文件"></a>生成虚拟用户数据文件</h3><pre><code>db_load -T -t hash -f /etc/vsftpd/vuser_passwd /etc/vsftpd/vuser_passwd.db
+chmod 600 /etc/vsftpd/vuser_passwd.db</code></pre><h3 id="创建用户配置"><a href="#创建用户配置" class="headerlink" title="创建用户配置"></a>创建用户配置</h3><pre><code>mkdir /etc/vsftpd/vuser_conf  # 建立虚拟用户个人vsftp的配置文件
+cd /etc/vsftpd/vuser_conf     # 进入目录
+touch hss wcj                 # 这里创建两个虚拟用户配置文件</code></pre><p>每一个文件配置文件都差不多，只是参数<code>local_root</code>不一样。</p>
+<pre><code>local_root=/home/vsftpd/hss   # 用户 hss 配置目录，这个地方不一样
+write_enable=YES              # 允许本地用户对FTP服务器文件具有写权限
+anon_world_readable_only=NO
+anon_upload_enable=YES        # 允许匿名用户上传文件(须将全局的write_enable=YES,默认YES)
+anon_mkdir_write_enable=YES   # 允许匿名用户创建目录
+anon_other_write_enable=YES   # 允许匿名用户删除和重命名权限(自行添加)</code></pre><h3 id="创建用户目录"><a href="#创建用户目录" class="headerlink" title="创建用户目录"></a>创建用户目录</h3><p>每个用户目录文件夹是有root用户创建的，也就是上面<code>local_root</code>配置目录，其权限应设置为755。因为权限的问题在该文件夹内无法直接上传文件。而如果设置为777则无法访问，这是由于vsftpd的安全性设置。解决上传问题的方法是在local_root文件夹内新建一个upload的文件夹，权限设置为777，可将文件上传到该文件夹。</p>
+<pre><code>mkdir -p /home/vsftpd/hss     # 每个用户对于一个目录，创建两个目录“hss”、“wcj”
+
+# 下面是目录结构
+/home/vsftpd
+      ├── hss
+      │   ├── filename.md
+      │   └── upload
+      └── wcj
+          └── filename.md
+
+
+# 赋予其权限
+chmod -R 777 /var/vsftpd/hss/upload/
+
+# 在/var/ftp下新建一个目录来实现匿名用户上传
+mkdir /var/ftp/upload</code></pre><p>vsftpd中几种用户的区分：</p>
+<p><strong>本地用户</strong>：用户在FTP服务器拥有账号，且该账号为本地用户的账号，可以通过自己的账号和口令进行授权登录，登录目录为自己的home目录<code>$HOME</code><br><strong>虚拟用户</strong>：用户在FTP服务器上拥有账号，但该账号只能用于文件传输服务。登录目录为某一特定的目录，通常可以上传和下载<br><strong>匿名用户</strong>：用户在FTP服务器上没有账号，登录目录为/var/ftp</p>
+<h3 id="最后重启vsftpd服务器"><a href="#最后重启vsftpd服务器" class="headerlink" title="最后重启vsftpd服务器"></a>最后重启vsftpd服务器</h3><pre><code>systemctl restart vsftpd.service</code></pre><h2 id="服务运维"><a href="#服务运维" class="headerlink" title="服务运维"></a>服务运维</h2><pre><code>systemctl restart vsftpd.service  # 重启服务
+systemctl start vsftpd.service    # 启动服务
+systemctl status vsftpd.service   # 服务状态查看</code></pre><h2 id="FTP命令"><a href="#FTP命令" class="headerlink" title="FTP命令"></a>FTP命令</h2><pre><code>ftp&gt; ascii  # 设定以ASCII方式传送文件(缺省值) 
+ftp&gt; bell   # 每完成一次文件传送,报警提示. 
+ftp&gt; binary # 设定以二进制方式传送文件. 
+ftp&gt; bye    # 终止主机FTP进程,并退出FTP管理方式. 
+ftp&gt; case # 当为ON时,用MGET命令拷贝的文件名到本地机器中,全部转换为小写字母. 
+ftp&gt; cd     # 同UNIX的CD命令. 
+ftp&gt; cdup   # 返回上一级目录. 
+ftp&gt; chmod  # 改变远端主机的文件权限. 
+ftp&gt; close  # 终止远端的FTP进程,返回到FTP命令状态, 所有的宏定义都被删除. 
+ftp&gt; delete # 删除远端主机中的文件. 
+ftp&gt; dir [remote-directory] [local-file] # 列出当前远端主机目录中的文件.如果有本地文件,就将结果写至本地文件. 
+ftp&gt; get [remote-file] [local-file] # 从远端主机中传送至本地主机中. 
+ftp&gt; help [command] # 输出命令的解释. 
+ftp&gt; lcd # 改变当前本地主机的工作目录,如果缺省,就转到当前用户的HOME目录. 
+ftp&gt; ls [remote-directory] [local-file] # 同DIR. 
+ftp&gt; macdef                 # 定义宏命令. 
+ftp&gt; mdelete [remote-files] # 删除一批文件. 
+ftp&gt; mget [remote-files]    # 从远端主机接收一批文件至本地主机. 
+ftp&gt; mkdir directory-name   # 在远端主机中建立目录. 
+ftp&gt; mput local-files # 将本地主机中一批文件传送至远端主机. 
+ftp&gt; open host [port] # 重新建立一个新的连接. 
+ftp&gt; prompt           # 交互提示模式. 
+ftp&gt; put local-file [remote-file] # 将本地一个文件传送至远端主机中. 
+ftp&gt; pwd  # 列出当前远端主机目录. 
+ftp&gt; quit # 同BYE. 
+ftp&gt; recv remote-file [local-file] # 同GET. 
+ftp&gt; rename [from] [to]     # 改变远端主机中的文件名. 
+ftp&gt; rmdir directory-name   # 删除远端主机中的目录. 
+ftp&gt; send local-file [remote-file] # 同PUT. 
+ftp&gt; status   # 显示当前FTP的状态. 
+ftp&gt; system   # 显示远端主机系统类型. 
+ftp&gt; user user-name [password] [account] # 重新以别的用户名登录远端主机. 
+ftp&gt; ? [command] # 同HELP. [command]指定需要帮助的命令名称。如果没有指定 command，ftp 将显示全部命令的列表。
+ftp&gt; ! # 从 ftp 子系统退出到外壳。 </code></pre><h3 id="关闭FTP连接"><a href="#关闭FTP连接" class="headerlink" title="关闭FTP连接"></a>关闭FTP连接</h3><pre><code>bye
+exit
+quit</code></pre><h3 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h3><pre><code>ftp&gt; get readme.txt # 下载 readme.txt 文件
+ftp&gt; mget *.txt     # 下载 </code></pre><h3 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h3><pre><code>ftp&gt; put /path/readme.txt # 上传 readme.txt 文件
+ftp&gt; mput *.txt           # 可以上传多个文件</code></pre><h2 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h2><ul>
+<li>230 - 登录成功</li>
+<li>200 - 命令执行成功</li>
+<li>150 - 文件状态正常，开启数据连接端口</li>
+<li>250 - 目录切换操作完成</li>
+<li>226 - 关闭数据连接端口，请求的文件操作成功</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="http://hx100.blog.51cto.com/44326/383143/" target="_blank" rel="noopener">Vsftpd虚拟用户的配置</a></li>
+<li><a href="http://www.cnblogs.com/flandre/p/6051532.html" target="_blank" rel="noopener">CentOS7安装和配置FTP</a></li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top" rel="external nofollow noreferrer">ghf</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top/centos7-an-zhuang-pei-zhi-vsftp-da-jian-ftp.html">https://iamghf.top/centos7-an-zhuang-pei-zhi-vsftp-da-jian-ftp.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://iamghf.top" target="_blank">ghf</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/ftp/">
+                                    <span class="chip bg-color">ftp</span>
+                                </a>
+                            
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">one for all, all for one</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '7140a41ed2ddd46c10c7',
+        clientSecret: '9f81b92236315959b71eb3c245a4f02f922a7651',
+        repo: 'xjbsay',
+        owner: 'iamghf',
+        admin: "iamghf",
+        id: '2019-12-26T19-27-04',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/vsftpd-gao-ji-yong-fa-zhi-xu-ni-yong-hu-pei-zhi.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="vsftpd高级用法之虚拟用户配置">
+                        
+                        <span class="card-title">vsftpd高级用法之虚拟用户配置</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            vsftpd高级用法之虚拟用户配置需求：需要2个ftp用户访问不同的根目录，其他的访问ftp默认目录。
+2个用户为：test1、test2
+首先安装vsftpd，然后配置文件如下：
+vsftpd.conf：
+anonymous_enable
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ftp/">
+                        <span class="chip bg-color">ftp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/san-shi-er-li.html">
+                    <div class="card-image">
+                        
+                        <img src="https://img.iamghf.top/91ef76c6a7efce1b6e9970cda251f3deb48f6503.jpg" class="responsive-img" alt="三十而立">
+                        
+                        <span class="card-title">三十而立</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            三十而立
+《论语·为政》中说：“三十而立。”指年至三十，学有成就。我从小读了很多书，但都是一些乱七八糟的书。后来上错了大学，耽误了学业，学术上没什么成绩，大部时间都用来思考宇宙和人生了。三十岁对于一个男人来说是一个矛盾的年龄。三十岁的男人，
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%B6%A3%E9%97%BB/" class="post-category">
+                                    趣闻
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%88%90%E9%95%BF/">
+                        <span class="chip bg-color">成长</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://iamghf.top" target="_blank">ghf</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">湘ICP备18008192号-1</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/iamghf" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:841567545@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=841567545" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 841567545" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

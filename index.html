@@ -1,0 +1,1428 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="网络,树莓派,编程,Java">
+    <meta name="description" content="我折腾 我快乐">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>ghf</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="ghf" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ghf</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://iamghf.top/wiki" class="waves-effect waves-light">
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Wiki</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ghf</div>
+        <div class="logo-desc">
+            
+            我折腾 我快乐
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://iamghf.top/wiki" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-list"></i>
+			
+			Wiki
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+</style>
+
+
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+    
+
+    <div class="carousel-item red white-text bg-cover about-cover">
+        <div class="container">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                健康快乐每一天
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+</script>
+
+
+
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i>开始阅读
+                </a>
+
+                
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/iamghf" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:841567545@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=841567545" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 841567545" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script>
+    // TODO 此处的轮播尚需优化，PC/Mobile 在触摸切换时都感觉相当不灵活
+    $(function () {
+        let coverSlider = $('.carousel');
+
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
+        
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
+
+        function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
+
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
+    });
+</script>
+
+
+
+<main class="content">
+
+    
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+        </div>
+    </div>
+</div>
+                    
+
+                    
+
+                    
+
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
+
+
+
+
+
+<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
+
+<div class="row">
+
+    
+    
+    <div class="col s12" >
+        <div class="post-card" style="background-image: url('https://img.iamghf.top/blog/20200325144858.png')">
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" class="category">网络技术</a>
+                        
+                    
+                </div>
+                <a href="/wang-xian-dan-xian-fu-yong.html">
+                    <h3 class="post-title">网线单线复用</h3>
+                </a>
+                <p class="post-description">网线单线复用家里装修时从弱电箱到客厅只埋了一根网线，家里宽带只有100M的带宽，采取的是将网线一分为二的廉价方式来满足同时使用宽带和IPTV服务。最近电信推出了宽带免费提</p>
+                <a href="/wang-xian-dan-xian-fu-yong.html" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/pg-zhu-cong.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="postgersql主从配置">
+                            
+                            <span class="card-title">postgersql主从配置</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                环境信息pg版本：10.12.1
+主：172.20.0.231
+备：172.20.0.152
+安装目录：PGHOME = /home/nh/pg/pgsql/
+data目录：PGDATA =  /nhdata/busi_db/
+主数据库修改
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-20
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
+                                    大数据
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                            <span class="chip bg-color">数据库</span>
+                        </a>
+                        
+                        <a href="/tags/postgresql/">
+                            <span class="chip bg-color">postgresql</span>
+                        </a>
+                        
+                        <a href="/tags/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
+                            <span class="chip bg-color">主从复制</span>
+                        </a>
+                        
+                        <a href="/tags/%E4%B8%BB%E4%BB%8E%E5%88%87%E6%8D%A2/">
+                            <span class="chip bg-color">主从切换</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/wang-luo-io-mo-xing.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="网络IO模型">
+                            
+                            <span class="card-title">网络IO模型</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                同步（synchronous） IO和异步（asynchronous） IO，阻塞（blocking） IO和非阻塞（non-blocking）IO分别是什么，到底有什么区别？这个问题其实不同的人给出的答案都可能不同，比如wiki，就认为a
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    编程语言
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/linux/">
+                            <span class="chip bg-color">linux</span>
+                        </a>
+                        
+                        <a href="/tags/IO/">
+                            <span class="chip bg-color">IO</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/reactor-mo-shi.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Reactor模式">
+                            
+                            <span class="card-title">Reactor模式</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Reactor什么是 Reactor 模式wiki：
+
+“The reactor design pattern is an event handling pattern for handling service requests deliv
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    编程语言
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
+                        </a>
+                        
+                        <a href="/tags/reactor/">
+                            <span class="chip bg-color">reactor</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/svn-chang-yong-ming-ling.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="svn常用命令">
+                            
+                            <span class="card-title">svn常用命令</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                svn常用命令checkout代码svn co svn://svnbucket.com/xxx/xxx
+更新代码svn up
+添加新文件到版本库svn add filename
+
+#添加当前目录下所有java文件
+svn add *.jav
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/svn/">
+                            <span class="chip bg-color">svn</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/mac-cha-kan-jdk.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="mac查看jdk实际位置">
+                            
+                            <span class="card-title">mac查看jdk实际位置</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                mac查看jdk位置1、打开终端，输入：/usr/libexec/java_home -V
+   注意：输入命令参数区分大小写(-v是不对的，必须是-V)
+如图：3个红框内依次为：输入命令； 当前Mac已安装jdk目录； Mac默认使用的j
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/mac/">
+                            <span class="chip bg-color">mac</span>
+                        </a>
+                        
+                        <a href="/tags/jdk/">
+                            <span class="chip bg-color">jdk</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/jia-gou-yan-jin-zhi-lu.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="高并发分布式架构演进之路">
+                            
+                            <span class="card-title">高并发分布式架构演进之路</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                1. 概述本文以淘宝作为例子，介绍从一百个并发到千万级并发情况下服务端的架构的演进过程，同时列举出每个演进阶段会遇到的相关技术，让大家对架构的演进有一个整体的认知，文章最后汇总了一些架构设计的原则。
+2. 基本概念在介绍架构之前，为了避免部
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                            <span class="chip bg-color">分布式</span>
+                        </a>
+                        
+                        <a href="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/">
+                            <span class="chip bg-color">高并发</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%9E%B6%E6%9E%84/">
+                            <span class="chip bg-color">架构</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/linux-fang-huo-qiang.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="linux防火墙">
+                            
+                            <span class="card-title">linux防火墙</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Linux中有两种防火墙软件，CentOS7.0以上使用的是firewall，CentOS7.0以下使用的是iptables
+firewall
+开启防火墙：
+
+systemctl start firewalld
+
+关闭防火墙：
+
+syste
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/linux/">
+                            <span class="chip bg-color">linux</span>
+                        </a>
+                        
+                        <a href="/tags/firewall/">
+                            <span class="chip bg-color">firewall</span>
+                        </a>
+                        
+                        <a href="/tags/iptables/">
+                            <span class="chip bg-color">iptables</span>
+                        </a>
+                        
+                        <a href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/">
+                            <span class="chip bg-color">防火墙</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/docker-an-zhuang-oracle.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="docker安装oracle">
+                            
+                            <span class="card-title">docker安装oracle</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                docker安装oracle获取镜像docker pull registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g
+创建容器docker run -d -p 1521:1521 --name
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/linux/">
+                            <span class="chip bg-color">linux</span>
+                        </a>
+                        
+                        <a href="/tags/docker/">
+                            <span class="chip bg-color">docker</span>
+                        </a>
+                        
+                        <a href="/tags/oracle/">
+                            <span class="chip bg-color">oracle</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/fei-root-an-zhuang-docker.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="非root安装docker">
+                            
+                            <span class="card-title">非root安装docker</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                非root安装docker添加docker组cat /etc/group |grep docker
+sudo groupadd docker
+sudo gpasswd -a 用户名 docker
+下载docker源码https://mirr
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/linux/">
+                            <span class="chip bg-color">linux</span>
+                        </a>
+                        
+                        <a href="/tags/docker/">
+                            <span class="chip bg-color">docker</span>
+                        </a>
+                        
+                        <a href="/tags/root/">
+                            <span class="chip bg-color">root</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/centos-an-zhuang-postgresql.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="centos安装Postgresql">
+                            
+                            <span class="card-title">centos安装Postgresql</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                centos 离线安装Postgresql本机上传压缩包scp ./postgresql-10.12-1-linux-x64-binaries.tar.gz 用户名@远程主机:/home/dbdev/postgreSql
+解压缩tar -z
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/linux/">
+                            <span class="chip bg-color">linux</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                            <span class="chip bg-color">数据库</span>
+                        </a>
+                        
+                        <a href="/tags/postgresql/">
+                            <span class="chip bg-color">postgresql</span>
+                        </a>
+                        
+                        <a href="/tags/centos/">
+                            <span class="chip bg-color">centos</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/centos-an-zhuang-mysql.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="非root安装mysql">
+                            
+                            <span class="card-title">非root安装mysql</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                非root安装mysql本机上传压缩包scp mysql-5.7.29-linux-glibc2.12-x86_64.tar.gz 用户名@远程主机:/home/dbdev/mysql
+解压缩tar -zxvf mysql-5.7.29-l
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/linux/">
+                            <span class="chip bg-color">linux</span>
+                        </a>
+                        
+                        <a href="/tags/centos/">
+                            <span class="chip bg-color">centos</span>
+                        </a>
+                        
+                        <a href="/tags/mysql/">
+                            <span class="chip bg-color">mysql</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/cornerstone.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Mac下Cornerstone添加外部对比工具Beyond Compare">
+                            
+                            <span class="card-title">Mac下Cornerstone添加外部对比工具Beyond Compare</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Mac下Cornerstone添加外部对比工具Beyond CompareBeyond Compare 安装命令行工具点击 Beyond Compare-》安装命令行工具
+
+创建shell脚本vim bc.sh
+内容如下：
+#!/bin/b
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-06
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/mac/">
+                            <span class="chip bg-color">mac</span>
+                        </a>
+                        
+                        <a href="/tags/svn/">
+                            <span class="chip bg-color">svn</span>
+                        </a>
+                        
+                        <a href="/tags/Cornerstone/">
+                            <span class="chip bg-color">Cornerstone</span>
+                        </a>
+                        
+                        <a href="/tags/byond-compare/">
+                            <span class="chip bg-color">byond compare</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
+
+</main>
+
+
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a class="left btn-floating btn-large disabled">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">1 / 5</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+            <a href="/page/2/"
+               class="right btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://iamghf.top" target="_blank">ghf</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">湘ICP备18008192号-1</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/iamghf" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:841567545@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=841567545" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 841567545" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

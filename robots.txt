@@ -1,0 +1,17 @@
+# welcome to : https://iamghf.top
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /tags/
+Allow: /categories/
+Allow: /about/
+Allow: /contact/
+Allow: /friends/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /lib/
+Sitemap: https://iamghf.top/sitemap.xml
+Sitemap: https://iamghf.top/baidusitemap.xml
