@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> 数据库 </tag>
-            
             <tag> postgresql </tag>
+            
+            <tag> 数据库 </tag>
             
             <tag> 主从复制 </tag>
             
@@ -275,13 +275,13 @@
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> centos </tag>
             
-            <tag> 数据库 </tag>
+            <tag> linux </tag>
             
             <tag> postgresql </tag>
             
-            <tag> centos </tag>
+            <tag> 数据库 </tag>
             
         </tags>
       
@@ -306,11 +306,11 @@
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> mysql </tag>
             
             <tag> centos </tag>
             
-            <tag> mysql </tag>
+            <tag> linux </tag>
             
         </tags>
       
@@ -335,13 +335,13 @@
       
         <tags>
             
-            <tag> mac </tag>
-            
             <tag> svn </tag>
             
             <tag> Cornerstone </tag>
             
             <tag> byond compare </tag>
+            
+            <tag> mac </tag>
             
         </tags>
       
@@ -509,11 +509,11 @@
       
         <tags>
             
+            <tag> docker </tag>
+            
             <tag> frp </tag>
             
             <tag> 树莓派 </tag>
-            
-            <tag> docker </tag>
             
             <tag> portainer </tag>
             
@@ -1340,9 +1340,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> mac </tag>
+            
+            <tag> linux </tag>
             
             <tag> find </tag>
             
