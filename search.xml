@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>通用Java部署运行脚本</title>
+      <link href="/tong-yong-java-yun-xing-jiao-ben.html"/>
+      <url>/tong-yong-java-yun-xing-jiao-ben.html</url>
+      
+        <content type="html"><![CDATA[<p>记录下jar 部署发布脚本。</p><pre class=" language-shell"><code class="language-shell">#!/bin/bash# 主类APP_NAME="$1"APP_MAINCLASS="jxict-digitalvillage-modules-$APP_NAME"# 服务jar包位置和日志位置APP_FILE_PATH="/data/app/$APP_NAME/$APP_MAINCLASS.jar"# 进程ID文件PID_FILE="/data/app/$APP_NAME/$APP_NAME.pid"# 获取进程ID，如果进程不存在则返回0getpid() {   if [ -f "$PID_FILE" ]; then       psid=$(cat "$PID_FILE")   else       psid=0   fi}# 函数：检查进程是否存在# 参数 $1：要检查的进程号# 返回值：如果进程存在，返回 0，否则返回 1checkPid(){    local pid_to_check="$1"    if ps -p "$pid_to_check" > /dev/null; then        return 0  # 进程存在    else        return 1  # 进程不存在    fi}start() {   echo "Starting $APP_MAINCLASS..."   if [ -f "$PID_FILE" ]; then       echo "$APP_NAME is already running."   else       nohup java -jar "$APP_FILE_PATH" --spring.profiles.active=mobile >> "/data/app/$APP_NAME/nohup.log" 2>&1 &       echo "$!" > "$PID_FILE"       echo "Started $APP_NAME. PID: $!"   fi}stop() {   getpid   if [ $psid -ne 0 ]; then       echo "Stopping $APP_MAINCLASS..."       kill "$psid"       rm "$PID_FILE"   else       echo "$APP_NAME is not running."   fi}restart() {     getpid   local jpid=$psid   checkPid $jpid   local flag=$?   stop   while [ $flag -ne 0 ]; do       sleep 1       checkPid $jpid       flag=$?   done   sleep 2   start}method="$2"case "$method" in    "start")        start        ;;    "stop")        stop        ;;    "restart")        restart        ;;    *)        echo "Usage: $0 <app_name> <start|stop|restart>"        exit 1        ;;esac</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> shell </tag>
+            
+            <tag> springboot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>安装MinIO</title>
       <link href="/an-zhuang-minio.html"/>
       <url>/an-zhuang-minio.html</url>

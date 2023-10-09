@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="安装MinIO, 网络,树莓派,编程,Java,大数据,Flink,ChatGPT">
+    <meta name="keywords" content="通用Java部署运行脚本, 网络,树莓派,编程,Java,大数据,Flink,ChatGPT">
     <meta name="description" content="我折腾 我快乐">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>安装MinIO | ghf</title>
+    <title>通用Java部署运行脚本 | ghf</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">安装MinIO</h1>
+                    <h1 class="description center-align post-title">通用Java部署运行脚本</h1>
                 </div>
             </div>
         </div>
@@ -315,12 +315,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/minio/">
-                                <span class="chip bg-color">minio</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6/">
-                                <span class="chip bg-color">分布式文件</span>
+                            <a href="/tags/shell/">
+                                <span class="chip bg-color">shell</span>
+                            </a>
+                        
+                            <a href="/tags/springboot/">
+                                <span class="chip bg-color">springboot</span>
                             </a>
                         
                     </div>
@@ -331,8 +335,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
-                                软件系统
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="post-category">
+                                编程语言
                             </a>
                         
                     </div>
@@ -353,7 +357,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    94
+                    238
                 </div>
                 
 
@@ -376,17 +380,92 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="安装Minio"><a href="#安装Minio" class="headerlink" title="安装Minio"></a>安装Minio</h1><p><strong>下载地址</strong>：<a href="https://minio.org.cn/download.shtml#/linux" target="_blank" rel="noopener">https://minio.org.cn/download.shtml#/linux</a></p>
-<p><strong>编辑启动脚本</strong></p>
-<pre class=" language-shell"><code class="language-shell">#!/bin/sh
-export MINIO_ROOT_USER=admin
-export MINIO_ROOT_PASSWORD=admin123
-nohup /hldata/soft/minio/bin/minio server --address=0.0.0.0:32000 --console-address 0.0.0.0:32001 --config-dir /data/soft/minio /data/soft/minio/data >/data/soft/minio/logs/minio.log 2>&1&</code></pre>
-<pre class=" language-shell"><code class="language-shell">## 添加服务
-./bin/mc config host add minio http://127.0.0.1:32000 admin admin123
+                <p>记录下jar 部署发布脚本。</p>
+<pre class=" language-shell"><code class="language-shell">#!/bin/bash
+# 主类
+APP_NAME="$1"
+APP_MAINCLASS="jxict-digitalvillage-modules-$APP_NAME"
+# 服务jar包位置和日志位置
+APP_FILE_PATH="/data/app/$APP_NAME/$APP_MAINCLASS.jar"
+# 进程ID文件
+PID_FILE="/data/app/$APP_NAME/$APP_NAME.pid"
 
-## 查看服务列表
-./bin/mc config host list</code></pre>
+# 获取进程ID，如果进程不存在则返回0
+getpid() {
+   if [ -f "$PID_FILE" ]; then
+       psid=$(cat "$PID_FILE")
+   else
+       psid=0
+   fi
+}
+
+# 函数：检查进程是否存在
+# 参数 $1：要检查的进程号
+# 返回值：如果进程存在，返回 0，否则返回 1
+checkPid(){
+    local pid_to_check="$1"
+    if ps -p "$pid_to_check" > /dev/null; then
+        return 0  # 进程存在
+    else
+        return 1  # 进程不存在
+    fi
+}
+
+start() {
+   echo "Starting $APP_MAINCLASS..."
+   if [ -f "$PID_FILE" ]; then
+       echo "$APP_NAME is already running."
+   else
+       nohup java -jar "$APP_FILE_PATH" --spring.profiles.active=mobile >> "/data/app/$APP_NAME/nohup.log" 2>&1 &
+       echo "$!" > "$PID_FILE"
+       echo "Started $APP_NAME. PID: $!"
+   fi
+}
+
+stop() {
+   getpid
+   if [ $psid -ne 0 ]; then
+       echo "Stopping $APP_MAINCLASS..."
+       kill "$psid"
+       rm "$PID_FILE"
+   else
+       echo "$APP_NAME is not running."
+   fi
+}
+
+restart() {
+     getpid
+   local jpid=$psid
+   checkPid $jpid
+   local flag=$?
+   stop
+   while [ $flag -ne 0 ]; do
+       sleep 1
+       checkPid $jpid
+       flag=$?
+   done
+   sleep 2
+   start
+}
+
+method="$2"
+
+case "$method" in
+    "start")
+        start
+        ;;
+    "stop")
+        stop
+        ;;
+    "restart")
+        restart
+        ;;
+    *)
+        echo "Usage: $0 <app_name> <start|stop|restart>"
+        exit 1
+        ;;
+esac
+</code></pre>
 
             </div>
             <hr/>
@@ -412,7 +491,7 @@ nohup /hldata/soft/minio/bin/minio server --address=0.0.0.0:32000 --console-addr
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://iamghf.top/an-zhuang-minio.html">https://iamghf.top/an-zhuang-minio.html</a>
+                    <a href="https://iamghf.top/tong-yong-java-yun-xing-jiao-ben.html">https://iamghf.top/tong-yong-java-yun-xing-jiao-ben.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -450,12 +529,16 @@ nohup /hldata/soft/minio/bin/minio server --address=0.0.0.0:32000 --console-addr
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/minio/">
-                                    <span class="chip bg-color">minio</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
-                                <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6/">
-                                    <span class="chip bg-color">分布式文件</span>
+                                <a href="/tags/shell/">
+                                    <span class="chip bg-color">shell</span>
+                                </a>
+                            
+                                <a href="/tags/springboot/">
+                                    <span class="chip bg-color">springboot</span>
                                 </a>
                             
                         </div>
@@ -626,7 +709,7 @@ nohup /hldata/soft/minio/bin/minio server --address=0.0.0.0:32000 --console-addr
         repo: 'xjbsay',
         owner: 'iamghf',
         admin: "iamghf",
-        id: '2023-10-09T10-58-48',
+        id: '2023-10-09T16-27-07',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -648,9 +731,10 @@ nohup /hldata/soft/minio/bin/minio server --address=0.0.0.0:32000 --console-addr
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/tong-yong-java-yun-xing-jiao-ben.html">
                     <div class="card-image">
@@ -674,9 +758,9 @@ APP
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -689,6 +773,7 @@ APP
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -715,36 +800,35 @@ APP
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/pg-zhu-cong.html">
+                <a href="/an-zhuang-minio.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="postgersql主从配置">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="安装MinIO">
                         
-                        <span class="card-title">postgersql主从配置</span>
+                        <span class="card-title">安装MinIO</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            环境信息pg版本：10.12.1
-主：172.20.0.231
-备：172.20.0.152
-安装目录：PGHOME = /home/nh/pg/pgsql/
-data目录：PGDATA =  /nhdata/busi_db/
-主数据库修改
+                            安装Minio下载地址：https://minio.org.cn/download.shtml#/linux
+编辑启动脚本
+#!/bin/sh
+export MINIO_ROOT_USER=admin
+export MINIO_ROOT_P
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
-                                    大数据
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
                                 </a>
                             
                             
@@ -754,20 +838,12 @@ data目录：PGDATA =  /nhdata/busi_db/
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/postgresql/">
-                        <span class="chip bg-color">postgresql</span>
+                    <a href="/tags/minio/">
+                        <span class="chip bg-color">minio</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-                        <span class="chip bg-color">主从复制</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%B8%BB%E4%BB%8E%E5%88%87%E6%8D%A2/">
-                        <span class="chip bg-color">主从切换</span>
+                    <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6/">
+                        <span class="chip bg-color">分布式文件</span>
                     </a>
                     
                 </div>
