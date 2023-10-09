@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2021-05-06T10:23:36.143Z</updated>
+  <updated>2023-10-09T03:04:15.705Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>安装MinIO</title>
+    <link href="https://iamghf.top/an-zhuang-minio.html"/>
+    <id>https://iamghf.top/an-zhuang-minio.html</id>
+    <published>2023-10-09T02:58:48.000Z</published>
+    <updated>2023-10-09T03:04:15.705Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;安装Minio&quot;&gt;&lt;a href=&quot;#安装Minio&quot; class=&quot;headerlink&quot; title=&quot;安装Minio&quot;&gt;&lt;/a&gt;安装Minio&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;下载地址&lt;/strong&gt;：&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="minio" scheme="https://iamghf.top/tags/minio/"/>
+    
+      <category term="分布式文件" scheme="https://iamghf.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>postgersql主从配置</title>
     <link href="https://iamghf.top/pg-zhu-cong.html"/>
     <id>https://iamghf.top/pg-zhu-cong.html</id>
     <published>2020-11-20T06:26:16.000Z</published>
-    <updated>2021-05-06T10:23:36.143Z</updated>
+    <updated>2023-10-09T02:48:16.690Z</updated>
     
     <summary type="html">
     
@@ -54,7 +83,7 @@
     <link href="https://iamghf.top/wang-luo-io-mo-xing.html"/>
     <id>https://iamghf.top/wang-luo-io-mo-xing.html</id>
     <published>2020-09-24T07:45:02.000Z</published>
-    <updated>2021-05-06T10:23:36.149Z</updated>
+    <updated>2023-10-09T02:48:16.691Z</updated>
     
     <summary type="html">
     
@@ -83,7 +112,7 @@
     <link href="https://iamghf.top/reactor-mo-shi.html"/>
     <id>https://iamghf.top/reactor-mo-shi.html</id>
     <published>2020-09-24T07:41:32.000Z</published>
-    <updated>2021-05-06T10:23:36.136Z</updated>
+    <updated>2023-10-09T02:48:16.688Z</updated>
     
     <summary type="html">
     
@@ -112,7 +141,7 @@
     <link href="https://iamghf.top/svn-chang-yong-ming-ling.html"/>
     <id>https://iamghf.top/svn-chang-yong-ming-ling.html</id>
     <published>2020-09-24T07:39:51.000Z</published>
-    <updated>2021-05-06T10:23:36.150Z</updated>
+    <updated>2023-10-09T02:48:16.690Z</updated>
     
     <summary type="html">
     
@@ -139,7 +168,7 @@
     <link href="https://iamghf.top/mac-cha-kan-jdk.html"/>
     <id>https://iamghf.top/mac-cha-kan-jdk.html</id>
     <published>2020-09-24T07:37:16.000Z</published>
-    <updated>2021-05-06T10:23:36.137Z</updated>
+    <updated>2023-10-09T02:48:16.690Z</updated>
     
     <summary type="html">
     
@@ -168,7 +197,7 @@
     <link href="https://iamghf.top/jia-gou-yan-jin-zhi-lu.html"/>
     <id>https://iamghf.top/jia-gou-yan-jin-zhi-lu.html</id>
     <published>2020-09-24T01:15:59.000Z</published>
-    <updated>2021-05-06T10:23:36.148Z</updated>
+    <updated>2023-10-09T02:48:16.691Z</updated>
     
     <summary type="html">
     
@@ -199,7 +228,7 @@
     <link href="https://iamghf.top/linux-fang-huo-qiang.html"/>
     <id>https://iamghf.top/linux-fang-huo-qiang.html</id>
     <published>2020-09-23T09:58:15.000Z</published>
-    <updated>2021-05-06T10:23:36.139Z</updated>
+    <updated>2023-10-09T02:48:16.690Z</updated>
     
     <summary type="html">
     
@@ -233,7 +262,7 @@
     <link href="https://iamghf.top/docker-an-zhuang-oracle.html"/>
     <id>https://iamghf.top/docker-an-zhuang-oracle.html</id>
     <published>2020-08-17T06:42:37.000Z</published>
-    <updated>2021-05-06T10:23:36.144Z</updated>
+    <updated>2023-10-09T02:48:16.689Z</updated>
     
     <summary type="html">
     
@@ -264,7 +293,7 @@
     <link href="https://iamghf.top/fei-root-an-zhuang-docker.html"/>
     <id>https://iamghf.top/fei-root-an-zhuang-docker.html</id>
     <published>2020-08-17T06:32:30.000Z</published>
-    <updated>2021-05-06T10:23:36.146Z</updated>
+    <updated>2023-10-09T02:48:16.691Z</updated>
     
     <summary type="html">
     
@@ -295,7 +324,7 @@
     <link href="https://iamghf.top/centos-an-zhuang-postgresql.html"/>
     <id>https://iamghf.top/centos-an-zhuang-postgresql.html</id>
     <published>2020-08-17T06:21:11.000Z</published>
-    <updated>2021-05-06T10:23:36.134Z</updated>
+    <updated>2023-10-09T02:48:16.688Z</updated>
     
     <summary type="html">
     
@@ -313,11 +342,11 @@
       <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
     
     
+      <category term="postgresql" scheme="https://iamghf.top/tags/postgresql/"/>
+    
       <category term="centos" scheme="https://iamghf.top/tags/centos/"/>
     
       <category term="linux" scheme="https://iamghf.top/tags/linux/"/>
-    
-      <category term="postgresql" scheme="https://iamghf.top/tags/postgresql/"/>
     
       <category term="数据库" scheme="https://iamghf.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
@@ -328,7 +357,7 @@
     <link href="https://iamghf.top/centos-an-zhuang-mysql.html"/>
     <id>https://iamghf.top/centos-an-zhuang-mysql.html</id>
     <published>2020-08-14T07:45:57.000Z</published>
-    <updated>2021-05-06T10:23:36.141Z</updated>
+    <updated>2023-10-09T02:48:16.689Z</updated>
     
     <summary type="html">
     
@@ -346,11 +375,11 @@
       <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="mysql" scheme="https://iamghf.top/tags/mysql/"/>
-    
       <category term="centos" scheme="https://iamghf.top/tags/centos/"/>
     
       <category term="linux" scheme="https://iamghf.top/tags/linux/"/>
+    
+      <category term="mysql" scheme="https://iamghf.top/tags/mysql/"/>
     
   </entry>
   
@@ -359,7 +388,7 @@
     <link href="https://iamghf.top/cornerstone.html"/>
     <id>https://iamghf.top/cornerstone.html</id>
     <published>2020-06-06T07:27:20.000Z</published>
-    <updated>2020-08-17T06:18:52.990Z</updated>
+    <updated>2023-10-09T02:38:14.994Z</updated>
     
     <summary type="html">
     
@@ -392,7 +421,7 @@
     <link href="https://iamghf.top/beyondcompare.html"/>
     <id>https://iamghf.top/beyondcompare.html</id>
     <published>2020-05-11T05:48:56.000Z</published>
-    <updated>2020-08-17T06:18:52.989Z</updated>
+    <updated>2023-10-09T02:38:14.993Z</updated>
     
     <summary type="html">
     
@@ -423,7 +452,7 @@
     <link href="https://iamghf.top/servlet-gong-zuo-yuan-li.html"/>
     <id>https://iamghf.top/servlet-gong-zuo-yuan-li.html</id>
     <published>2020-04-21T07:02:31.000Z</published>
-    <updated>2020-05-28T05:42:22.576Z</updated>
+    <updated>2023-10-09T02:38:14.994Z</updated>
     
     <summary type="html">
     
@@ -452,7 +481,7 @@
     <link href="https://iamghf.top/qi-yong-https.html"/>
     <id>https://iamghf.top/qi-yong-https.html</id>
     <published>2020-04-14T07:30:20.000Z</published>
-    <updated>2020-05-28T05:38:45.782Z</updated>
+    <updated>2023-10-09T02:38:14.997Z</updated>
     
     <summary type="html">
     
@@ -486,7 +515,7 @@
     <link href="https://iamghf.top/man-wei-yu-zhou-qi-shi-ye-jiu-jiang-liao-yi-jian-shi.html"/>
     <id>https://iamghf.top/man-wei-yu-zhou-qi-shi-ye-jiu-jiang-liao-yi-jian-shi.html</id>
     <published>2020-04-10T07:48:32.000Z</published>
-    <updated>2020-05-28T05:38:45.784Z</updated>
+    <updated>2023-10-09T02:38:14.998Z</updated>
     
     <summary type="html">
     
@@ -514,7 +543,7 @@
     <link href="https://iamghf.top/wang-xian-dan-xian-fu-yong.html"/>
     <id>https://iamghf.top/wang-xian-dan-xian-fu-yong.html</id>
     <published>2020-03-25T07:18:55.000Z</published>
-    <updated>2020-05-28T05:38:45.785Z</updated>
+    <updated>2023-10-09T02:38:14.999Z</updated>
     
     <summary type="html">
     
@@ -547,7 +576,7 @@
     <link href="https://iamghf.top/shu-mei-pai-kai-xiang.html"/>
     <id>https://iamghf.top/shu-mei-pai-kai-xiang.html</id>
     <published>2020-03-24T08:22:00.000Z</published>
-    <updated>2020-05-28T05:38:45.783Z</updated>
+    <updated>2023-10-09T02:38:14.998Z</updated>
     
     <summary type="html">
     
@@ -583,7 +612,7 @@
     <link href="https://iamghf.top/shu-mei-pai-an-zhuang-openwrt.html"/>
     <id>https://iamghf.top/shu-mei-pai-an-zhuang-openwrt.html</id>
     <published>2020-03-21T06:42:56.000Z</published>
-    <updated>2020-05-28T05:38:45.783Z</updated>
+    <updated>2023-10-09T02:38:14.998Z</updated>
     
     <summary type="html">
     
@@ -611,38 +640,6 @@
       <category term="openwrt" scheme="https://iamghf.top/tags/openwrt/"/>
     
       <category term="lede" scheme="https://iamghf.top/tags/lede/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>隐私泄露下的数据暗网：大数据广告精准推送原理</title>
-    <link href="https://iamghf.top/da-shu-ju-guang-gao-jing-zhun-tui-song-yuan-li.html"/>
-    <id>https://iamghf.top/da-shu-ju-guang-gao-jing-zhun-tui-song-yuan-li.html</id>
-    <published>2020-03-20T06:59:02.000Z</published>
-    <updated>2020-05-28T05:38:45.782Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;自打人类进化中出现了商业的那一刻起，营销，就成为了人类钻研的核心。交易的本质是价值交换，但世界上不存在永远对等的价值，所以交换中存在套利空间，这些套利空间，成就了商业的价值。逐利是人的本性，这是刻在基因里的。&lt;/p&gt;
-&lt;p&gt;如何把一件产品附加上额外的价值，卖给自己的同类，换
-        
-      
-    
-    </summary>
-    
-    
-      <category term="大数据" scheme="https://iamghf.top/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
-    
-    
-      <category term="大数据" scheme="https://iamghf.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
-    
-      <category term="隐私泄露" scheme="https://iamghf.top/tags/%E9%9A%90%E7%A7%81%E6%B3%84%E9%9C%B2/"/>
-    
-      <category term="精准推送" scheme="https://iamghf.top/tags/%E7%B2%BE%E5%87%86%E6%8E%A8%E9%80%81/"/>
     
   </entry>
   

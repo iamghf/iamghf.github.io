@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>安装MinIO</title>
+      <link href="/an-zhuang-minio.html"/>
+      <url>/an-zhuang-minio.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="安装Minio"><a href="#安装Minio" class="headerlink" title="安装Minio"></a>安装Minio</h1><p><strong>下载地址</strong>：<a href="https://minio.org.cn/download.shtml#/linux" target="_blank" rel="noopener">https://minio.org.cn/download.shtml#/linux</a></p><p><strong>编辑启动脚本</strong></p><pre class=" language-shell"><code class="language-shell">#!/bin/shexport MINIO_ROOT_USER=adminexport MINIO_ROOT_PASSWORD=admin123nohup /hldata/soft/minio/bin/minio server --address=0.0.0.0:32000 --console-address 0.0.0.0:32001 --config-dir /data/soft/minio /data/soft/minio/data >/data/soft/minio/logs/minio.log 2>&1&</code></pre><pre class=" language-shell"><code class="language-shell">## 添加服务./bin/mc config host add minio http://127.0.0.1:32000 admin admin123## 查看服务列表./bin/mc config host list</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> minio </tag>
+            
+            <tag> 分布式文件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>postgersql主从配置</title>
       <link href="/pg-zhu-cong.html"/>
       <url>/pg-zhu-cong.html</url>
@@ -275,11 +302,11 @@
       
         <tags>
             
+            <tag> postgresql </tag>
+            
             <tag> centos </tag>
             
             <tag> linux </tag>
-            
-            <tag> postgresql </tag>
             
             <tag> 数据库 </tag>
             
@@ -306,11 +333,11 @@
       
         <tags>
             
-            <tag> mysql </tag>
-            
             <tag> centos </tag>
             
             <tag> linux </tag>
+            
+            <tag> mysql </tag>
             
         </tags>
       
