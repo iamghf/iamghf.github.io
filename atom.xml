@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2023-10-09T08:31:17.283Z</updated>
+  <updated>2023-10-24T14:10:01.006Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>m1 mac上openvpn无法连接排查</title>
+    <link href="https://iamghf.top/mac-shang-openvpn-wu-fa-lian-jie-pai-cha.html"/>
+    <id>https://iamghf.top/mac-shang-openvpn-wu-fa-lian-jie-pai-cha.html</id>
+    <published>2023-10-24T14:02:45.000Z</published>
+    <updated>2023-10-24T14:10:01.006Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近公司openvpn突然连不上了，最开始以为是网络调整导致了。等了几天后发现还不行，让同事在window上连接，发现并没有问题，自己用命令行连接也没问题。简单排查后，最后发现是柠檬清理导致的。&lt;br&gt;只需要，把openvpn相关的服务启动打开就行了。&lt;/p&gt;
+&lt;p&gt;&lt;im
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="mac" scheme="https://iamghf.top/tags/mac/"/>
+    
+      <category term="openvpn" scheme="https://iamghf.top/tags/openvpn/"/>
+    
+      <category term="MacBook m1" scheme="https://iamghf.top/tags/MacBook-m1/"/>
+    
+      <category term="vpn" scheme="https://iamghf.top/tags/vpn/"/>
+    
+  </entry>
   
   <entry>
     <title>通用Java部署运行脚本</title>
@@ -601,42 +635,6 @@
       <category term="宽带" scheme="https://iamghf.top/tags/%E5%AE%BD%E5%B8%A6/"/>
     
       <category term="电信" scheme="https://iamghf.top/tags/%E7%94%B5%E4%BF%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树莓派开箱</title>
-    <link href="https://iamghf.top/shu-mei-pai-kai-xiang.html"/>
-    <id>https://iamghf.top/shu-mei-pai-kai-xiang.html</id>
-    <published>2020-03-24T08:22:00.000Z</published>
-    <updated>2023-10-09T02:38:14.998Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;树莓派开箱&quot;&gt;&lt;a href=&quot;#树莓派开箱&quot; class=&quot;headerlink&quot; title=&quot;树莓派开箱&quot;&gt;&lt;/a&gt;树莓派开箱&lt;/h1&gt;&lt;p&gt;默认密码： pi/raspberry&lt;/p&gt;
-&lt;p&gt;sudo apt-get update —
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="docker" scheme="https://iamghf.top/tags/docker/"/>
-    
-      <category term="frp" scheme="https://iamghf.top/tags/frp/"/>
-    
-      <category term="树莓派" scheme="https://iamghf.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-      <category term="portainer" scheme="https://iamghf.top/tags/portainer/"/>
-    
-      <category term="nginx" scheme="https://iamghf.top/tags/nginx/"/>
     
   </entry>
   

@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>m1 mac上openvpn无法连接排查</title>
+      <link href="/mac-shang-openvpn-wu-fa-lian-jie-pai-cha.html"/>
+      <url>/mac-shang-openvpn-wu-fa-lian-jie-pai-cha.html</url>
+      
+        <content type="html"><![CDATA[<p>最近公司openvpn突然连不上了，最开始以为是网络调整导致了。等了几天后发现还不行，让同事在window上连接，发现并没有问题，自己用命令行连接也没问题。简单排查后，最后发现是柠檬清理导致的。<br>只需要，把openvpn相关的服务启动打开就行了。</p><p><img src="https://img.iamghf.top/md/202310242209350.png" alt="image-20231024220925380"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mac </tag>
+            
+            <tag> openvpn </tag>
+            
+            <tag> MacBook m1 </tag>
+            
+            <tag> vpn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>通用Java部署运行脚本</title>
       <link href="/tong-yong-java-yun-xing-jiao-ben.html"/>
       <url>/tong-yong-java-yun-xing-jiao-ben.html</url>
