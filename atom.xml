@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2023-10-24T14:10:01.006Z</updated>
+  <updated>2023-10-25T05:47:46.157Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>macbook彩虹圈卡顿问题解决</title>
+    <link href="https://iamghf.top/macbook-cai-hong-quan-qia-dun-wen-ti-jie-jue.html"/>
+    <id>https://iamghf.top/macbook-cai-hong-quan-qia-dun-wen-ti-jie-jue.html</id>
+    <published>2023-10-25T05:37:20.000Z</published>
+    <updated>2023-10-25T05:47:46.157Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;手头MacBook Pro M1 14寸的电脑自从系统升级到13后，就经常出现转彩虹圈圈，而且一旦卡顿开始，除非重启，否则问题不会有所好转。电话咨询了技术支持后，重启，出现 LOGO 之前按住 shift
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="MacBook pro" scheme="https://iamghf.top/tags/MacBook-pro/"/>
+    
+      <category term="m1" scheme="https://iamghf.top/tags/m1/"/>
+    
+      <category term="卡顿" scheme="https://iamghf.top/tags/%E5%8D%A1%E9%A1%BF/"/>
+    
+      <category term="中文输入法" scheme="https://iamghf.top/tags/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/"/>
+    
+      <category term="彩虹圈" scheme="https://iamghf.top/tags/%E5%BD%A9%E8%99%B9%E5%9C%88/"/>
+    
+  </entry>
   
   <entry>
     <title>m1 mac上openvpn无法连接排查</title>
@@ -602,39 +637,6 @@
     
     
       <category term="漫威" scheme="https://iamghf.top/tags/%E6%BC%AB%E5%A8%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网线单线复用</title>
-    <link href="https://iamghf.top/wang-xian-dan-xian-fu-yong.html"/>
-    <id>https://iamghf.top/wang-xian-dan-xian-fu-yong.html</id>
-    <published>2020-03-25T07:18:55.000Z</published>
-    <updated>2023-10-09T02:38:14.999Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;网线单线复用&quot;&gt;&lt;a href=&quot;#网线单线复用&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://iamghf.top/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="VLAN" scheme="https://iamghf.top/tags/VLAN/"/>
-    
-      <category term="交换机" scheme="https://iamghf.top/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/"/>
-    
-      <category term="宽带" scheme="https://iamghf.top/tags/%E5%AE%BD%E5%B8%A6/"/>
-    
-      <category term="电信" scheme="https://iamghf.top/tags/%E7%94%B5%E4%BF%A1/"/>
     
   </entry>
   

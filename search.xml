@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>macbook彩虹圈卡顿问题解决</title>
+      <link href="/macbook-cai-hong-quan-qia-dun-wen-ti-jie-jue.html"/>
+      <url>/macbook-cai-hong-quan-qia-dun-wen-ti-jie-jue.html</url>
+      
+        <content type="html"><![CDATA[<p>手头MacBook Pro M1 14寸的电脑自从系统升级到13后，就经常出现转彩虹圈圈，而且一旦卡顿开始，除非重启，否则问题不会有所好转。电话咨询了技术支持后，重启，出现 LOGO 之前按住 shift 键进入安全模式，一周内没有出现问题，但后面又频繁出现。一周内至少两次。最近系统又升级到最新的14，问题依然存在。网上翻阅资料，出现卡顿后，在活动监视器把中文输入法强行关闭，就不卡了，也不会转圈。推断是中文输入法导致iCloud卡住，从而导致系统卡顿。</p><p>终极解决方案：</p><ol><li><p>将系统回退到12。</p></li><li><p>或者删除自带的中文输入法，使用第三方输入法。</p></li></ol><p>希望苹果能尽快解决这个bug。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MacBook pro </tag>
+            
+            <tag> m1 </tag>
+            
+            <tag> 卡顿 </tag>
+            
+            <tag> 中文输入法 </tag>
+            
+            <tag> 彩虹圈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>m1 mac上openvpn无法连接排查</title>
       <link href="/mac-shang-openvpn-wu-fa-lian-jie-pai-cha.html"/>
       <url>/mac-shang-openvpn-wu-fa-lian-jie-pai-cha.html</url>
