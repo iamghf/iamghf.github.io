@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>搭建一个拖垮公司的技术架构</title>
+      <link href="/ru-he-da-jian-yi-ge-tuo-kua-gong-si-de-ji-zhu-jia-gou.html"/>
+      <url>/ru-he-da-jian-yi-ge-tuo-kua-gong-si-de-ji-zhu-jia-gou.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="系统主链路尽可能单点"><a href="#系统主链路尽可能单点" class="headerlink" title="系统主链路尽可能单点"></a>系统主链路尽可能单点</h2><p>单点系统，就像苏伊士运河一样，一旦航道出故障，整个运输系统都瘫痪，非常酸爽。</p><p><strong>单点就像单身，开始的时候滋味不好受，但是不用担心，因为后面你就习惯了</strong>。</p><h2 id="程序中多用循环"><a href="#程序中多用循环" class="headerlink" title="程序中多用循环"></a>程序中多用循环</h2><p>无限死循环，是老K最爱用的编程技巧之一，当你看到CPU利用率百分百的时候，你就知道应该甩锅给运维了。</p><p>这年头，没点特长技能还真不行。<strong>比如我，玩得一手好乐器—-退堂鼓，打得特好</strong>。</p><h2 id="系统间增加依赖"><a href="#系统间增加依赖" class="headerlink" title="系统间增加依赖"></a>系统间增加依赖</h2><p>在系统里增加内部依赖、外部依赖、第三方依赖。总之，能依赖的，决不自己动手写。</p><p>有今天的成就，主要是因为我的动手能力强，<strong>我这辈子只有两件事不会：这也不会，那也不会</strong>。</p><h2 id="不做服务补偿"><a href="#不做服务补偿" class="headerlink" title="不做服务补偿"></a>不做服务补偿</h2><p>很多东西，错过就是错过，没法补偿，这就是人生。</p><p>作为架构师，要有哲学高度。</p><p>所以说小伙子，<strong>你只看到了第二层，而你把我只想成了第一层，实际上我是第五层</strong>，你知道我讲的是什么意思吗？</p><h2 id="不做幂等设计"><a href="#不做幂等设计" class="headerlink" title="不做幂等设计"></a>不做幂等设计</h2><p>凭啥后端接口要做幂等性设计？前端提交的时候不做判断吗？全都丢给后端开发做？</p><p>大家都是打工人，<strong>人要脸，树要皮，电线杆子要水泥</strong>。</p><h2 id="不设置超时"><a href="#不设置超时" class="headerlink" title="不设置超时"></a>不设置超时</h2><p>连接超时、读超时，有多大设置多大，不管内部调用还是外部调用，都设置成60分钟。</p><p>只要努力搞，没有时间搞不砸的事情。做不成时间的朋友，就做时间的炮友。</p><h2 id="不控制流量"><a href="#不控制流量" class="headerlink" title="不控制流量"></a>不控制流量</h2><p>让流量来得猛烈一些吧，千万别限流，什么漏桶算法、令牌桶算法，<strong>那都不如啤酒桶算法—-喝完就睡，爱谁谁</strong>。</p><p>还控制啥流量啊？你连体重都控制不了，趁早放弃吧。你看看八戒，<strong>走了十万八千里也没见瘦下来，而且，他还吃素</strong>。</p><h2 id="不做监控预警"><a href="#不做监控预警" class="headerlink" title="不做监控预警"></a>不做监控预警</h2><p>大家都是职场成年人，做好分内事，别多管闲事。</p><p>工作几年以后，我明白一个道理：<strong>熟练的运用“关我屁事”和“关你屁事”，可以省下人生80%的时间</strong>。</p><h2 id="没有重试策略"><a href="#没有重试策略" class="headerlink" title="没有重试策略"></a>没有重试策略</h2><p>服务调用失败，你还想重试？我可不是随便的接口。</p><p><strong>人生不能重来，更不能乱来</strong>。</p><p>不信？<strong>你让医生，给你开点后悔药，再来杯忘情水，医生立马送你去精神病院</strong>。</p><h2 id="不做系统隔离"><a href="#不做系统隔离" class="headerlink" title="不做系统隔离"></a>不做系统隔离</h2><p>千万别做系统隔离，要挂一起挂。</p><p>什么是真正的兄弟？<strong>就是当兄弟需要女人的时候，挺身而出做他的女人</strong>。</p><p>面对困<strong>男</strong>，要排除万<strong>男</strong>，迎<strong>男</strong>而上。</p><h2 id="代码同步调用"><a href="#代码同步调用" class="headerlink" title="代码同步调用"></a>代码同步调用</h2><p>做系统就要步调一致、讲究和谐，尽量同步调用，多写bug。</p><p><strong>通常我写bug的时候，喜欢中午写，知道为什么吗？因为早晚会有报应</strong>。</p><h2 id="不做热数据缓存"><a href="#不做热数据缓存" class="headerlink" title="不做热数据缓存"></a>不做热数据缓存</h2><p>RPC的意义是什么？就是被调用啊。疯狂地调用，是对一个服务最起码的尊重。</p><p>你知道为什么大项目上线都要选个好日子吗？<strong>这么说吧，你认为上线以后还会有好日子吗？</strong></p><h2 id="不做系统分级"><a href="#不做系统分级" class="headerlink" title="不做系统分级"></a>不做系统分级</h2><p>对系统要一视同仁，不要区分核心系统、非核心系统，你有考虑过系统的感受吗？</p><p>如果你被分门别类，你会开心吗？回想起来，<strong>小时候我们都很快乐，就是因为那个时候的我们，丑和穷得都还不是那么明显</strong>。</p><h2 id="没有服务降级"><a href="#没有服务降级" class="headerlink" title="没有服务降级"></a>没有服务降级</h2><p>服务降级就low了，就算宕机也要一起扛。</p><p><strong>人生没有白走的路，如果有，那就是微信运动出bug了</strong>。</p><h2 id="无灰度和回滚方案"><a href="#无灰度和回滚方案" class="headerlink" title="无灰度和回滚方案"></a>无灰度和回滚方案</h2><p>上线全凭运气，没有回滚方案！就是那么自信。</p><p>我这个人，长这么大没学到别的本事，就掌握了一项特殊技能，<strong>白天不用安眠药也能安眠，晚上不用兴奋剂也能兴奋</strong>。</p><p>论熬夜发布，我从来没服过谁。</p><h2 id="程序多做远程调用"><a href="#程序多做远程调用" class="headerlink" title="程序多做远程调用"></a>程序多做远程调用</h2><p>能远程调用的，绝不本地调用，都5G时代了，网络延迟那点事不算什么。</p><p>再说了，做人要有点耐心，女朋友约会迟到一小时，你敢发火吗？</p><h2 id="不做熔断机制"><a href="#不做熔断机制" class="headerlink" title="不做熔断机制"></a>不做熔断机制</h2><p>炒股炒昏头了吧，做啥熔断机制？你问过韭零后吗？基金都绿成啥样了，他喊熔断了吗？</p><p><strong>作为韭菜，学费还是要交的，趁年轻的时候多交点，这样到老了再交你就习惯了</strong>。</p><h2 id="不做代码扫描"><a href="#不做代码扫描" class="headerlink" title="不做代码扫描"></a>不做代码扫描</h2><p>要有工匠精神，自己代码自己review，机器哪里懂得欣赏你的代码艺术？</p><p>我那骚气的注释、奇妙的函数、神乎其技的Copy/Paste。<strong>每次看代码，都被自己的才华吓到</strong>。</p><h2 id="不做线上压测"><a href="#不做线上压测" class="headerlink" title="不做线上压测"></a>不做线上压测</h2><p>上线就完了，后面的事情交给菩萨吧。</p><p>一分耕耘，一分收获。<strong>天下没有免费的午餐，所以我一般都睡到下午才起床</strong>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 架构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>统一事件管理</title>
       <link href="/tong-yi-shi-jian-guan-li.html"/>
       <url>/tong-yi-shi-jian-guan-li.html</url>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2023-11-02T07:41:03.056Z</updated>
+  <updated>2023-11-02T08:18:16.139Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>搭建一个拖垮公司的技术架构</title>
+    <link href="https://iamghf.top/ru-he-da-jian-yi-ge-tuo-kua-gong-si-de-ji-zhu-jia-gou.html"/>
+    <id>https://iamghf.top/ru-he-da-jian-yi-ge-tuo-kua-gong-si-de-ji-zhu-jia-gou.html</id>
+    <published>2023-11-02T08:13:45.000Z</published>
+    <updated>2023-11-02T08:18:16.139Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;系统主链路尽可能单点&quot;&gt;&lt;a href=&quot;#系统主链路尽可能单点&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="架构" scheme="https://iamghf.top/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>统一事件管理</title>
     <link href="https://iamghf.top/tong-yi-shi-jian-guan-li.html"/>
     <id>https://iamghf.top/tong-yi-shi-jian-guan-li.html</id>
     <published>2023-11-02T07:31:42.000Z</published>
-    <updated>2023-11-02T07:41:03.056Z</updated>
+    <updated>2023-11-02T07:41:16.621Z</updated>
     
     <summary type="html">
     
@@ -606,40 +633,6 @@
       <category term="Servlet" scheme="https://iamghf.top/tags/Servlet/"/>
     
       <category term="tomcat" scheme="https://iamghf.top/tags/tomcat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>启用https</title>
-    <link href="https://iamghf.top/qi-yong-https.html"/>
-    <id>https://iamghf.top/qi-yong-https.html</id>
-    <published>2020-04-14T07:30:20.000Z</published>
-    <updated>2023-10-09T02:38:14.997Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;基于 acme.sh从Let’s Encrypt生成免费的泛域名证书&lt;/p&gt;
-&lt;h2 id=&quot;安装acme-sh&quot;&gt;&lt;a href=&quot;#安装acme-sh&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://iamghf.top/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="acme.sh" scheme="https://iamghf.top/tags/acme-sh/"/>
-    
-      <category term="ssl" scheme="https://iamghf.top/tags/ssl/"/>
-    
-      <category term="Let’s Encrypt" scheme="https://iamghf.top/tags/Let%E2%80%99s-Encrypt/"/>
-    
-      <category term="https" scheme="https://iamghf.top/tags/https/"/>
     
   </entry>
   
