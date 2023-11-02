@@ -1,0 +1,1188 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="统一事件管理, 网络,树莓派,编程,Java,大数据,Flink,ChatGPT">
+    <meta name="description" content="我折腾 我快乐">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>统一事件管理 | ghf</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+    <!-- Clarity tracking code for https://iamghf.top/ -->
+    <script>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "j9amie3njm");
+    </script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="ghf" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ghf</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://iamghf.top/wiki" class="waves-effect waves-light">
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Wiki</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ghf</div>
+        <div class="logo-desc">
+            
+            我折腾 我快乐
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://iamghf.top/wiki" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-list"></i>
+			
+			Wiki
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">统一事件管理</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%91%8A%E8%AD%A6/">
+                                <span class="chip bg-color">告警</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%BA%8B%E4%BB%B6/">
+                                <span class="chip bg-color">事件</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%9B%91%E6%8E%A7/">
+                                <span class="chip bg-color">监控</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                软件系统
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-11-02
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    23 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><a href="https://mp.weixin.qq.com/s?__biz=Mzg2NzU2MDcwNg==&mid=2247484022&idx=1&sn=d2b9ccd50d9146c642059a4ac9228168&chksm=ceb8fe1bf9cf770d110051a9d70cfb5420a7c7975158a49202a43427f5c1be13aee8992d8589&scene=132&exptype=timeline_recommend_article_extendread_extendread_for_notrec#wechat_redirect" target="_blank" rel="noopener">转载</a></p>
+<p>在生活中，我的衣柜里永远只有深蓝、黑色和灰色三种颜色的衣服。我很少改变，总是给人一种中规中矩的印象。</p>
+<p>在工作中，我不喜欢墨守成规，而是喜欢接受新事物、新方法和新技术，以打破和优化现有的管理、流程、制度和技术等。我持怀疑的、辩证的态度去看待所研发的产品，以更好、更有效率的方式去支持业务的数字化转型。</p>
+<p>我写这篇文章的原因是发现我们的客户、我们自身以及竞争对手等仍在使用十多年前的流程和思想来思考业务和产品的未来。这样所做的产品是没有任何生命力的。做产品必须明确该产品未来的业务发展方向，否则研发出的东西只是应对当前可见的客户需求（项目需求而非产品需求）。只有精准把握业务未来的方向，才能设计出长期、分阶段、持续可销售且有价值产品。</p>
+<p>本文，我将从统一事件管理的过去、现在和未来进行分析，探讨统一事件管理的未来发展趋势，主要包括：</p>
+<ul>
+<li><p>单一告警管理</p>
+</li>
+<li><p>统一告警管理</p>
+</li>
+<li><p>统一事件（incident）管理</p>
+</li>
+<li><p>智能事件（incident）分析及处置</p>
+</li>
+<li><p>总结</p>
+</li>
+</ul>
+<h2 id="单一告警管理"><a href="#单一告警管理" class="headerlink" title="单一告警管理"></a>单一告警管理</h2><p><strong>面临问题</strong></p>
+<p>在这个阶段，由于所运维系统架构简单，而且数据比较少，运维团队还能够很好地应对系统进行运维，并无任何不适。</p>
+<p><strong>主要特征</strong></p>
+<p>本阶段的告警管理大约可以追溯到15年前，相关特征可总结如下：</p>
+<ul>
+<li><p>技术上：大多数系统都是单体应用，系统复杂性非常低，在这个阶段不同的监控工具监控不同的专业领域（机房环境、主机、网络等）。</p>
+</li>
+<li><p>告警种类：比较单一，一般只有有限一种或几种，因此告警的处理也比较简单，很容易让人掌握。</p>
+</li>
+<li><p>人员组成：由于告警的种类单一，对人员的学习成本就会比较低。各不同应用厂商会提供对系统运维的日常手册，出了问题运维团队不需要太多的技术能力和专业技能，只要能够按照手册进行处理即可，如果不能解决只能升级到厂商即可。</p>
+</li>
+<li><p>组织流程：由于分散的监控工具，需要一个统一的地方和流程能够配合进行告警的分配和处置，</p>
+<p>因此早期阶段会采用工单系统。产生告警后进入手工流程或工单系统（较大型组织），进行告警工单的分派和流转，流程通常都比较短，这时处置会比较高效。</p>
+</li>
+</ul>
+<p><strong>业务功能范围</strong></p>
+<p><img src="https://img.iamghf.top/md/202311021537530.png" alt="图片"></p>
+<p>主要业务功能包括：</p>
+<ul>
+<li>监控系统生成异常事件：监控源配置阈值或异常检测算法，生成异常事件(event)。</li>
+<li>对告警进行源端压缩：在配置告警策略时，会一并配置针对告警对象在一定时间范围内连续达到多少次异常之后会生成告警。</li>
+<li>生成告警：生成告警并存储。</li>
+<li>告警通知：会配置相应的通知模板、通知策略并完成对告警的通知。</li>
+<li>告警中心：会有一个告警中心，针对当前监控源产生的告警进行统一存放。</li>
+<li>同步工单：一些流程化比较规范的组织，会通过一些工单类的系统完成对告警转工单的开立，由工单来驱动告警的处置。</li>
+</ul>
+<h2 id="统一告警管理"><a href="#统一告警管理" class="headerlink" title="统一告警管理"></a>统一告警管理</h2><p><strong>面临问题</strong></p>
+<p>在进行统一告警的建设之前，我们发现如下问题：</p>
+<ul>
+<li>告警量大：由于云战略和数字化转型，导致系统的复杂性、应用的数量增加，使得监控对象、监控方法工具等产生的告警量成倍增长。</li>
+<li>人员增长：由于告警量的增大，以及不同领域的组件问题突出，造成人员规模的增长。</li>
+<li>成本增加：人员的增长直接导致成本的巨大支出。</li>
+<li>告警噪音：虽然人员的增长很大，但是依旧不能处理所有的告警，很多告警是无效的，需要对告警进行有效的降噪处理。</li>
+<li>工具重复建设：告警的处理流程基本是一致的，但是因为监控工具的分散，导致不同的流程需要在不同的监控工具进行落地，如：告警工作台、告警分析处置、告警数据的丰富、告警的通知等，不同工具的相同功能重复建设。</li>
+</ul>
+<p><strong>主要特征</strong></p>
+<p>本阶段大约在7年前，相关的特征可总结如下：</p>
+<ul>
+<li>技术上：基于SOA和分布式系统架构的复杂系统已经成为常态。系统变得越来越复杂，因此需要越来越多的监控工具，例如应用监控、用户体验监控、基础设置监控、数据库监控、存储设备、中间件、交易链路等，监控工具不断丰富。</li>
+<li>告警种类：由于技术复杂性的提高，需要更多的监控工具，进而产生越来越多的告警种类和告警。</li>
+<li>人员组成：不同的技术组件以及系统架构的复杂性，要求具有不同领域的专家来专职负责本领域的运维工作，如ORACLE DBA、存储、网络、应用领域的专家等。对应本领域内的专家仅专攻本领域内的问题分析及处置，因此随着系统复杂性的增加，运维团队也需要成倍增加。</li>
+<li>组织流程：随着人员规模的增加，管理方面迫切需要一些有效的流程来协调人员、加速决策效率。以下列出两种不同的做法，它们在不同的流程选择上所带来的系统研发成本、人力投入成本、管理成本、流程线路拉长程度是完全不同的：<ul>
+<li>方法一：我们看到一些南方小城商行采取的做法是，在告警生成后第一时间发出通知，然后完成与工单系统的集成，将告警同步到工单系统中。接下来，工单系统将驱动告警的分派、确认、指派、分析、处置和关闭等操作。运维人员在接收到告警后，还需要登录工单系统进行认领。在分析处置环节，需要登录统一告警查看告警基本信息、登录监控源查看指标曲线以验证告警是否真实，然后再登录自动化平台手动执行一些代码或脚本，容易出错。总结如下缺点：</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://img.iamghf.top/md/202311021537521.png" alt="图片"></p>
+<ul>
+<li><p>流程过长：不利于快速处理告警。</p>
+</li>
+<li><p>集成成本高：需要建立同工单系统的双向信息同步。</p>
+</li>
+<li><p>调查分析效率低：由于工单系统本身是一套流程性的平台，不适合进行调查和分析。这就导致当人们接收到工单后，无法从一个统一的界面完成告警的调查、分析、处置等操作，导致效率过低。</p>
+</li>
+<li><p>方法二：我们也观察到很多银行和头部的券商企业并不会墨守成规，会对流程进行适当的调整。为了快速处置告警并恢复生产，他们会进行以下优化：</p>
+</li>
+</ul>
+<p><img src="https://img.iamghf.top/md/202311021537674.png" alt="图片"></p>
+<ul>
+<li>缩短流程：由于每个告警都已经明确指定了负责处理的运维团队，因此一旦告警产生，相应的运维人员会在第一时间得到通知。运维人员可以立即登录到统一告警平台，并利用该平台的集成能力获取推荐的信息和知识进行分析，以提高排障效率。对于严重的告警，生产恢复后会在工单系统中补充工单以备审计，整个流程非常高效。</li>
+<li>调查分析速度快：统一告警定位为运维人员的日常工作平台，完成了与指标、日志、trace等的集成，并提供了一些自动化或智能化的数据分析功能，帮助运维人员快速分析和处置告警，加速生产恢复。</li>
+<li>集成信息：为了满足运维人员分析和处理告警的需求，统一告警平台与指标、日志、trace、变更单、知识库等进行了集成。</li>
+</ul>
+<ul>
+<li>依赖告警平台提供的信息及集成能力：还有一些南方的小银行表示他们的二线从来不会登录告警平台，只进工单系统。我认为本质原因是他们没有认识到工单系统仅仅是一个流程平台，而对于告警的分析和处理，他们已经习惯了用最笨的方法——登录不同的平台去查信息、手动分析告警。而不思考通过工具系统提高信息收集和分析的效率，以及将分析结果提供给人来做决策，从而提高效率。</li>
+</ul>
+<h2 id="业务功能范围"><a href="#业务功能范围" class="headerlink" title="业务功能范围"></a>业务功能范围</h2><p><img src="https://img.iamghf.top/md/202311021537270.png" alt="图片"></p>
+<p>主要业务功能包括：</p>
+<ul>
+<li>集成：拥有不同监控源告警的集成、变更、自动化平台、指标、日志等的集成能力。</li>
+<li>数据清洗及标准化：企业为了后续告警的分析、处置需求，通常会制定统一的告警数据模型规范。该系统可以针对不同厂商的监控源系统所产生的告警进行统一的数据清洗及标准化操作，然后将数据存入统一告警管理平台。</li>
+<li>数据丰富：由于监控源为了保障快速对接入的指标进行监控的需求，一般只会抛出告警对象、发生时间、发生了什么问题、什么指标发生的问题这四个重要信息，但为了满足对告警的通知、分析、处理需求，需要通过一些数据源完成告警数据的丰富。</li>
+<li>过滤及维护期：针对被运维人员识别为告警噪音的告警需要进行过滤处理。对于在变更阶段所产生的告警，不需要进行通知，这就需要维护期管理的能力。</li>
+<li>压缩降噪：是该系统的核心能力。它可以针对同一告警对象、同一时间段的多个重复告警进行压缩，以降低告警噪音量。</li>
+<li>通知：针对压缩之后的告警，按合适的时间、通过合适的渠道、通知给正确的人进行处置。</li>
+<li>告警工作台是运维人员的统一告警管理工作平台。它可以查看权限控制范围内的告警列表、详情、压缩的原始告警列表、自动收集近期变更及日志和指标信息并展示相关曲线，以及针对告警的认领、指派、关闭、恢复、静默等操作的能力。</li>
+</ul>
+<h2 id="统一事件管理"><a href="#统一事件管理" class="headerlink" title="统一事件管理"></a>统一事件管理</h2><p><strong>面临问题</strong></p>
+<p>在进入本阶段之前，仍然存在以下问题：</p>
+<ul>
+<li>告警量大：尽管在统一告警阶段已经对告警进行了统一的管理、过滤和压缩治理，但要处理的告警量仍然很大，需要一种方法能够更进一步地完成告警的收敛。</li>
+<li>关系复杂：难以识别相互之间的影响。</li>
+<li>人员增长：为了应对数字化转型带来的压力，人员规模持续增长。</li>
+<li>协作不畅：传统的团队分工以及基于工单的流程系统导致相互之间的协作不畅。每次出现事件，需要不同团队之间反复沟通以确认业务上技术上的影响范围，然后再通过工单流系统发起工单，效率低下。</li>
+</ul>
+<p><strong>主要特征</strong></p>
+<p>本阶段的主要特征类似于统一告警管理阶段，但在管理对象、业务流程、组织结构等方面发生了很大的变化：</p>
+<p><img src="https://img.iamghf.top/md/202311021537067.png" alt="图片"></p>
+<ul>
+<li>技术方面：由于数字化转型的需求，对研发效率、系统稳定性、快速满足客户需求等方面提出了更高的要求。大型企业要同时面对老旧的系统架构和新的分布式架构所带来的挑战。即使是规模较小的新创业团队也会采用复杂的分布式应用来保障应用程序的灵活性和高开发效率。</li>
+<li>组织结构方面：一切皆服务。服务所有权模型是一种用于管理现代IT系统的有效模型。它能够将运维团队、开发团队和测试团队连接起来，促进协作，快速响应所运维的IT服务设施，并按服务方式对业务系统的模块进行细粒度的拆分和管理。这种模型更符合现代分布式架构的研发及运维一体化团队组成结构。（后续我会整理针对传统IT架构下的服务所有权模型如何自治建模，以及在应急及事件处置场景下如何替代CMDB使之更容易落地）</li>
+<li>管理及处置对象：由传统的告警转变为事件 (incident)。当发生告警时，可以按照告警路由规则路由到不同的服务模型，对告警进行进一步的收敛生成事件。并将收敛后的事件信息通过各种通知渠道通知给所在的运维团队。其所带来的价值改变如下图所示：</li>
+</ul>
+<p><img src="https://img.iamghf.top/md/202311021538320.png" alt="图片"></p>
+<ul>
+<li><p>人员：由于推行了一系列有效的管理手段、服务所有权模型、告警收敛为事件，人员规模不再像统一告警阶段那样无限制地增长。</p>
+</li>
+<li><p>流程：通过实行服务所有权，业务服务和技术服务得以有效结合。客户的业务投诉和内部用户的电话或工单报障会首先同步到统一事件管理平台，并根据客户投诉所在的业务服务自动创建相应的事件，驱动分析和处理。当事件处理完成后，最新的结果和状态信息会同步给客户服务渠道和工单系统，然后由客户服务团队通知最终用户，避免中间工单环节流转来流转去，加快效率。</p>
+</li>
+</ul>
+<p><strong>业务功能范围</strong></p>
+<p><img src="https://img.iamghf.top/md/202311021538048.png" alt="图片"></p>
+<p>统一事件管理平台在统一告警管理平台的基础上增强了以下能力：</p>
+<ul>
+<li>服务模型管理：服务模型管理是统一事件管理平台的一个增强能力。服务模型除了兼容传统技术架构，可以对业务系统的模块进行细粒度的拆分和管理，还能更好地适应分布式微服务架构，很好地表达服务之间的相互依赖关系。通过服务模型管理，无论是业务服务还是技术服务出现问题，都能更快地定位问题，快速恢复服务，提高系统的稳定性和可靠性。</li>
+<li>服务可视化及影响分析：可以通过可视化的方式展示业务服务由哪些技术服务组件构成，以及它们之间的依赖关系。并可以通过可视化的方式来展示服务之间的关联关系。当发生问题时，通过服务可视化及影响分析，可以追踪一个事件的起源以及它的上下游的影响情况，帮助企业快速了解问题的规模和范围，并采取相应的措施。</li>
+<li>告警关联生成事件（incident）：处理的对象不再是告警，而是有关联关系的事件。可以通过多种方式（如下图所示）将相互之间有关联关系或影响关系的告警组合成事件。运维人员在处理事件时，可以提供更丰富的告警上下文信息，并可以有效降低要处理的告警数量，加速对事件的分析及恢复过程。</li>
+</ul>
+<p><img src="https://img.iamghf.top/md/202311021538434.png" alt="图片"></p>
+<ul>
+<li>用户组绑定服务模型：通过用户组的管理方式将开发、测试、运维团队形成对服务的所有权管理模式，构建开发、运维一体化团队，确保每一个服务都有对应的用户组进行运维。当发生问题时，初级问题由用户组内部的运维团队负责解决，而高级问题则可以直接由测试或开发人员来完成，增强协作效率。</li>
+<li>通知事件（incident）而非告警：通过单个告警会形成大量的噪音干扰，而对最终的运维团队而言，更想知道发生了什么业务、什么服务、什么系统在什么时间发生了什么问题。例如：[二代支付系统]的[跨行转帐服务(1000089)]交易缓慢，支持该业务的3台应用服务器出现GCCOUNT、CPU使用率等5种类型的告警，共计33条关联告警。事件编码:INC202308281535401001，发生时间:2023年08月28日15:35:40。</li>
+<li>事件（incident）管理工作台：形成统一的事件管理工作台，不同的用户群组可以根据自己的数据权限查看相应的事件，并在该工作台上完成对事件的调查、分析和处理操作。</li>
+</ul>
+<h2 id="智能事件分析及处置"><a href="#智能事件分析及处置" class="headerlink" title="智能事件分析及处置"></a>智能事件分析及处置</h2><p><strong>面临问题</strong></p>
+<p>在进入本阶段的设计之前，主要存在如下问题：</p>
+<ul>
+<li>历史处置方案及知识难以有效借鉴。</li>
+<li>占用大量的专家资源，专家经验难以工具化。</li>
+<li>处置效率慢，缺乏自动化排查及分析手段，无法快速定位并修复问题。</li>
+<li>难以从历史事件中获取更深入的洞见。</li>
+</ul>
+<p>…</p>
+<p><strong>主要特征</strong></p>
+<ul>
+<li>积极推行SRE的运维文化：SRE文化的核心是通过事后的复盘分析找到问题的根本原因，通过工程的方法将问题彻底解决，防止下次再次发生，或不能彻底杜绝的情况下可以通过自动化的手段来再次捕捉问题，并进行自动化的响应。通过该文化的落地使运维团队不断治理发现的事件，从而使开发运维团队从告警噪音中解放出来，有更多的时间和精力放到如何优化现有的工具、系统，为客户创造更大的价值上。</li>
+<li>专家经验需要沉淀：通过管理流程和技术手段相结合的方式，使专家对事件的处置经验沉淀到系统中。当再次发生类似的事件时，可以快速借鉴之前类似事件的分析过程和处置方案，加速业务恢复过程。</li>
+<li>可编排的自动化能力：不同情境下的事情是变化的，但是针对人类进行问题排查的过程是相同的。因此，需要一套可编排的自动化排查系统（产品级的），能够根据不同事件情境进行参数化配置。通过按照运维人员针对不同情境的事件变化配置不同的排查策略，当事件发生时能够快速触发排查并产生结论报告，以节省大量的人力，提高排查分析及自动化处置的效率。例如：<ul>
+<li>验证告警与实际情况是否相符：当数据库主机DOWN机时，主机管理员通常会首先使用ping方法进行主机探活操作，以验证是否误报。通过自动化的方法，可以大大降低这类告警的噪音，同时会节省人工排查的时间成本。</li>
+<li>某行二代支付系统故障排查：当发现二代支付系统故障时，首先需要根据告警信息来判断是来报异常、往报异常、渠道异常等情况。如果是来报异常，则可以判断是行外系统异常而非行内系统。这时需要排查前置机是否出现异常。如果前置机未出现异常，则会认为是他行给到的交易出现了问题。重点排查哪个银行发来的交易引起了问题。</li>
+<li>…</li>
+</ul>
+</li>
+<li>推行智能化：包括智能化的根因推荐、智能化的相似事件识别、已知事件的识别和判断、以及针对事件推送相应的知识和处置建议。同时，结合可编排的自动化能力，最终实现数据中心的自治和自愈能力。</li>
+<li>人员规模：由于SRE运维文化的导入，自动化和智能化的普及，团队规模的工作负载会越来越少。</li>
+<li>成为企业数字化转型必不可少的基础设施：智能事件分析及处置平台将成为企业数字化转型必不可少的基础设施。通过该中心，可以链接监控源、变更管理、自动化平台、知识库、通知渠道、客户服务团队、IT服务团队、测试及开发团队，驱动协调整个体系使其高效运转，从而将IT风险最小化。</li>
+</ul>
+<h2 id="业务功能范围-1"><a href="#业务功能范围-1" class="headerlink" title="业务功能范围"></a>业务功能范围</h2><p><img src="https://img.iamghf.top/md/202311021538039.png" alt="图片"></p>
+<p>在统一事件管理平台的基础上提供了如下能力：</p>
+<p><strong>相似事件识别</strong></p>
+<p>在事件处理完成后，需要将事件的分析处理过程记录到智能事件分析和处置平台。当下次类似事件发生时，智能算法会根据事件的特征识别出来，并推荐历史上针对该类事件的处置策略，从而加速事件处理过程。</p>
+<p><strong>可编排的自动化分析能力</strong></p>
+<p>可编排的自动化分析能力是实现AIOPS的最后一公里的关键。在2018年，PAGERDUTY以1亿美金收购了RUNDECK，splunk以3.5亿美金收购了Phantom，以加强其可编排的自动能力。这种能力是智能化运维的核心组件。下面我们看一个主机down机的用例，来看一下该产品所具备的能力：</p>
+<p><img src="https://img.iamghf.top/md/202311021538893.png" alt="图片"></p>
+<ul>
+<li>首先，设置一个触发器来捕捉告警或事件。在这个例子中，我们针对服务器宕机告警进行配置。如上图中圈1位置所示，当告警产生时，如果alert_source=’zabbix’且alert_title=’SERVER_DOWN’，则触发该分析流程。</li>
+<li>进入流程逻辑处理层：<ul>
+<li>第一步：如上图圈2所示，先执行ping指令进行主机探活。执行完成后，解析脚本执行的结果，并生成针对该步骤的中间变量存放在上图圈5所在的位置，以供全局流程使用。</li>
+<li>第二步：如上图圈3所示，执行主机探活返回结果状态的判断。如果STATUS=TRUE，则表示当前主机处于活动状态。</li>
+<li>第三步：如上图圈4所示，如果主机可以ping通，则表明当前告警为误报，需要执行“告警操作”中的“告警关闭”，这样就不会产生告警噪音的通知。如果主机ping不通，则表明主机确实已经down机，当前流程即结束。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://img.iamghf.top/md/202311021538741.png" alt="图片"></p>
+<ul>
+<li>其它功能说明：<ul>
+<li>配置触发条件支持：<ul>
+<li>捕捉告警或事件进行触发</li>
+<li>通过数据库创建某些记录、更新记录来触发</li>
+<li>定时触发：比较适用于定时对告警进行清理或其它一些特殊的批量操作</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://img.iamghf.top/md/202311021538508.png" alt="图片"></p>
+<ul>
+<li>配置执行逻辑：<ul>
+<li>支持条件判断</li>
+<li>支持对数据集的逐条处理逻辑</li>
+<li>支持调用其它的分析流程，如之前创建了一个针对WEBLOGIC告警的排查逻辑，当业务系统发生问题时，也同时要排障WEBLOGIC，这时就可以直接调用其它排查流程。</li>
+<li>等待时间比较适合对告警进行延时类的操作，如延时等待恢复信号再进行通知的流程。</li>
+</ul>
+</li>
+</ul>
+<p><strong>根因推荐</strong></p>
+<p><img src="https://img.iamghf.top/md/202311021539245.png" alt="图片"></p>
+<p>当完成告警聚合为事件后，事件中可能包含多个告警的异常信号。为了找到问题是由什么告警所引起的，系统需要推荐可能的根因，将其推送到运维人员的事件详情页面上以协助其进行判断。运维人员进行分析后，会将结果反馈给系统，算法将重新优化算法的推荐结果。</p>
+<p><strong>已知事件识别</strong></p>
+<p><img src="https://img.iamghf.top/md/202311021539658.png" alt="图片"></p>
+<p>在事件处理过程中，运维人员会总结出大量规律，形成已知事件。针对这些已知事件，会配置快速恢复策略。当出现这种问题时，会触发全自动化或半自动化的处置策略。例如：</p>
+<ul>
+<li>示例1：当 WEBLOGIC 出现 FULLGC 告警，并且在同一时间段出现应用交易响应时间过长的告警时，应该针对该告警主机上 WEBLOGIC 进行的DUPMP 信息收集和服务重启操作，以快速解决该事件。</li>
+<li>示例2：某交易的处理时间变长，且在同一时段出现了该交易的某台AP主机打开文件句柄超限的告警。如果出现这两种类型的告警，则需要对该AP主机进行重启操作。</li>
+<li>…</li>
+</ul>
+<p>在识别出已知事件之后，可以向运维人员推荐处理动作，如上图所示，由运维人员经过判断之后手动触发执行。</p>
+<p><strong>处置方案推荐</strong></p>
+<p>如上图所示，针对已知事件识别之后可以推荐其处置方案。</p>
+<p><strong>知识推荐</strong></p>
+<p>如上图所示，针对已知事件识别之后可以推荐其相关知识和手册。</p>
+<p><strong>自动化处置库管理</strong></p>
+<p>在进行自动化处置时，必须将每个对象类型及其可执行的操作关联起来。这样，在出现已知故障或运维人员分析之后，可以快速锁定针对告警对象可执行的操作列表。可执行的操作一般由自动化平台、云管平台等同步过来，并进行有效的分类管理。真正的执行操作由统一事件管理平台调用自动化平台或云管平台提供的API完成最终的执行动作。</p>
+<p><img src="https://img.iamghf.top/md/202311021539983.png" alt="图片"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>统一事件管理平台的建设非常重要：它是企业数字化转型的基础设施，可以连接监控源、变更管理、自动化平台、知识库、通知渠道、客户服务团队、IT服务团队、测试及开发团队。通过对产生的风险事件进行有效管理，可以驱动整个体系高效运转，最小化IT风险。</li>
+<li>对统一事件管理的认识也非常重要：不论是国内的厂商还是客户，都需要打破固化的思维以及老旧的ITSM流程规范，采用新科技、新方法、新流程和新工具来武装自己，不断优化事件处理流程，从而使数据中心高效运转。</li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top" rel="external nofollow noreferrer">ghf</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top/tong-yi-shi-jian-guan-li.html">https://iamghf.top/tong-yi-shi-jian-guan-li.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://iamghf.top" target="_blank">ghf</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%91%8A%E8%AD%A6/">
+                                    <span class="chip bg-color">告警</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BA%8B%E4%BB%B6/">
+                                    <span class="chip bg-color">事件</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%9B%91%E6%8E%A7/">
+                                    <span class="chip bg-color">监控</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">one for all, all for one</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '7140a41ed2ddd46c10c7',
+        clientSecret: '9f81b92236315959b71eb3c245a4f02f922a7651',
+        repo: 'xjbsay',
+        owner: 'iamghf',
+        admin: "iamghf",
+        id: '2023-11-02T15-31-42',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/tong-yi-shi-jian-guan-li.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="统一事件管理">
+                        
+                        <span class="card-title">统一事件管理</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            转载
+在生活中，我的衣柜里永远只有深蓝、黑色和灰色三种颜色的衣服。我很少改变，总是给人一种中规中矩的印象。
+在工作中，我不喜欢墨守成规，而是喜欢接受新事物、新方法和新技术，以打破和优化现有的管理、流程、制度和技术等。我持怀疑的、辩证的态度去
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%91%8A%E8%AD%A6/">
+                        <span class="chip bg-color">告警</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6/">
+                        <span class="chip bg-color">事件</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%9B%91%E6%8E%A7/">
+                        <span class="chip bg-color">监控</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/macbook-cai-hong-quan-qia-dun-wen-ti-jie-jue.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="macbook彩虹圈卡顿问题解决">
+                        
+                        <span class="card-title">macbook彩虹圈卡顿问题解决</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            手头MacBook Pro M1 14寸的电脑自从系统升级到13后，就经常出现转彩虹圈圈，而且一旦卡顿开始，除非重启，否则问题不会有所好转。电话咨询了技术支持后，重启，出现 LOGO 之前按住 shift 键进入安全模式，一周内没有出现问题
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    软件系统
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MacBook-pro/">
+                        <span class="chip bg-color">MacBook pro</span>
+                    </a>
+                    
+                    <a href="/tags/m1/">
+                        <span class="chip bg-color">m1</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%A1%E9%A1%BF/">
+                        <span class="chip bg-color">卡顿</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/">
+                        <span class="chip bg-color">中文输入法</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BD%A9%E8%99%B9%E5%9C%88/">
+                        <span class="chip bg-color">彩虹圈</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://iamghf.top" target="_blank">ghf</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">湘ICP备18008192号-1</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/iamghf" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:841567545@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=841567545" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 841567545" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2023-10-25T05:47:46.157Z</updated>
+  <updated>2023-11-02T07:41:03.056Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>统一事件管理</title>
+    <link href="https://iamghf.top/tong-yi-shi-jian-guan-li.html"/>
+    <id>https://iamghf.top/tong-yi-shi-jian-guan-li.html</id>
+    <published>2023-11-02T07:31:42.000Z</published>
+    <updated>2023-11-02T07:41:03.056Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="告警" scheme="https://iamghf.top/tags/%E5%91%8A%E8%AD%A6/"/>
+    
+      <category term="事件" scheme="https://iamghf.top/tags/%E4%BA%8B%E4%BB%B6/"/>
+    
+      <category term="监控" scheme="https://iamghf.top/tags/%E7%9B%91%E6%8E%A7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>macbook彩虹圈卡顿问题解决</title>
     <link href="https://iamghf.top/macbook-cai-hong-quan-qia-dun-wen-ti-jie-jue.html"/>
     <id>https://iamghf.top/macbook-cai-hong-quan-qia-dun-wen-ti-jie-jue.html</id>
     <published>2023-10-25T05:37:20.000Z</published>
-    <updated>2023-10-25T05:47:46.157Z</updated>
+    <updated>2023-10-25T05:52:05.776Z</updated>
     
     <summary type="html">
     
@@ -609,34 +640,6 @@
       <category term="Let’s Encrypt" scheme="https://iamghf.top/tags/Let%E2%80%99s-Encrypt/"/>
     
       <category term="https" scheme="https://iamghf.top/tags/https/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>漫威宇宙其实也就讲了一件事</title>
-    <link href="https://iamghf.top/man-wei-yu-zhou-qi-shi-ye-jiu-jiang-liao-yi-jian-shi.html"/>
-    <id>https://iamghf.top/man-wei-yu-zhou-qi-shi-ye-jiu-jiang-liao-yi-jian-shi.html</id>
-    <published>2020-04-10T07:48:32.000Z</published>
-    <updated>2023-10-09T02:38:14.998Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;整个宇宙就好比一个git项目，其中有一群叫做美国队长，钢铁侠，惊奇队长，浩克，索尔等人在维护这个项目，兢兢业业的修理bug。&lt;/p&gt;
-&lt;p&gt;某一天出现了一个天才程序员，叫灭霸，也在这个项目中开发，他意识到，这个项目已经很庞大了，光是编译都要几个小时，运行起来负重累累，而服务
-        
-      
-    
-    </summary>
-    
-    
-      <category term="趣闻" scheme="https://iamghf.top/categories/%E8%B6%A3%E9%97%BB/"/>
-    
-    
-      <category term="漫威" scheme="https://iamghf.top/tags/%E6%BC%AB%E5%A8%81/"/>
     
   </entry>
   
