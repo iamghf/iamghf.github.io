@@ -4,6 +4,47 @@
   
     
     <entry>
+      <title>Google搜索技巧</title>
+      <link href="/google-sou-suo-ji-qiao.html"/>
+      <url>/google-sou-suo-ji-qiao.html</url>
+      
+        <content type="html"><![CDATA[<p>知识爆炸时代，如何快速从海量信息中，获取到自己需要的信息。推荐以下常用的Google搜索小技巧。</p><h2 id="“”"><a href="#“”" class="headerlink" title="“”"></a>“”</h2><p>限定关键字。用法：”关键字”。 在搜索中输入关键字，但搜索出来的结果可能是分词后的结果，使用”“后，搜索结果是不会分词。</p><p><img src="https://img.iamghf.top/md/202311031048344.png" alt="image-20231103104819214"></p><h2 id="intitle"><a href="#intitle" class="headerlink" title="intitle"></a>intitle</h2><p>限定标题。用法：intitle: 关键字。 搜索出来的结果，标题中会包含关键字。</p><p><img src="https://img.iamghf.top/md/202311031050171.png" alt="image-20231103105037636"></p><h2 id="allintitle"><a href="#allintitle" class="headerlink" title="allintitle"></a>allintitle</h2><p>限定标题多个关键字.用法： allintitle:关键字1 关键字2</p><p><img src="https://img.iamghf.top/md/202311031052754.png" alt="image-20231103105231011"></p><h2 id="intext"><a href="#intext" class="headerlink" title="intext"></a>intext</h2><p>限定内容关键字。用法：intext:关键字。</p><p><img src="https://img.iamghf.top/md/202311031054943.png" alt="image-20231103105403448"></p><h2 id="site"><a href="#site" class="headerlink" title="site"></a>site</h2><p>搜索制定网站的内容，用法：关键字 site: 网站。如：Linux site:iamghf.top</p><p><img src="https://img.iamghf.top/md/202311031034138.png" alt="image-20231103103435927"></p><h2 id="filetype"><a href="#filetype" class="headerlink" title="filetype"></a>filetype</h2><p>指定文件类型。用法filetype:文件类型。如filetype:pdf。搜素出来的结果都是pdf文件。</p><p><img src="https://img.iamghf.top/md/202311031057895.png" alt="image-20231103105702293"></p><h2 id="imagesize"><a href="#imagesize" class="headerlink" title="imagesize"></a>imagesize</h2><p>限定图片尺寸。用法imagesize: 图片尺寸。如imagesize:1920X1080, 搜索结果为1920X1080尺寸大小的图片。</p><p><img src="https://img.iamghf.top/md/202311031059426.png" alt="image-20231103105920376"></p><p><strong>ps.</strong>  以上条件可以进行自由组合。如 intext:”2023财富报告”。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> google </tag>
+            
+            <tag> 搜索 </tag>
+            
+            <tag> 技巧 </tag>
+            
+            <tag> 信息获取 </tag>
+            
+            <tag> 搜索条件 </tag>
+            
+            <tag> 用法 </tag>
+            
+            <tag> intitle </tag>
+            
+            <tag> filetype </tag>
+            
+            <tag> site </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Costco 代购店推荐</title>
       <link href="/costco-dai-gou-dian-tui-jian.html"/>
       <url>/costco-dai-gou-dian-tui-jian.html</url>
@@ -690,6 +731,14 @@
             <tag> 宽带 </tag>
             
             <tag> 电信 </tag>
+            
+            <tag> 单线复用 </tag>
+            
+            <tag> 满速带宽 </tag>
+            
+            <tag> 千兆 </tag>
+            
+            <tag> 提速 </tag>
             
         </tags>
       
