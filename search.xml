@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>小红书引流</title>
+      <link href="/xiao-hong-shu-yin-liu.html"/>
+      <url>/xiao-hong-shu-yin-liu.html</url>
+      
+        <content type="html"><![CDATA[<p>正常来说，小红书发链接是无法点击的！<br>所以无法通过链接去引流！<br>但是，小红书自家的域名却可以点击！<br>于是，就有了一次大胆的尝试~</p><p>小红书有一个严重的bug，就是他识别的并不是根域名，而是只要二级域名包含了<a href="http://www.xiaohongshu.com/" target="_blank" rel="noopener">www.xiaohongshu.com</a>就是一个可以点击的链接！</p><p>实现方式简单来说就是：*<em>小红书域名+自己的域名 *</em></p><p>自己的域名： abc.com</p><p>小红书的域名：<a href="http://www.xionghongshu.com" target="_blank" rel="noopener">www.xionghongshu.com</a></p><p>在域名解析中增加一条记录 <a href="http://www.xionghongshu.com.abc.com" target="_blank" rel="noopener">www.xionghongshu.com.abc.com</a></p><p>然后发送到小红书，就是一个可以点击的链接！</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>改成你二维码图片地址<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">max-width</span><span class="token punctuation">:</span><span class="token number">100%</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wechat-enable-text-zoom-em<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Content-Type<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/html; charset<span class="token punctuation">=</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>IE<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>color-scheme<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>light dark<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width,initial-scale<span class="token punctuation">=</span>1.0,maximum-scale<span class="token punctuation">=</span>1.0,user-scalable<span class="token punctuation">=</span>0,viewport-fit<span class="token punctuation">=</span>cover<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">        <span class="token comment" spellcheck="true">// 这里是跳转到微信的Url Scheme</span>        <span class="token comment" spellcheck="true">// 自己看微信小程序开发文档生成</span>    location<span class="token punctuation">.</span>href<span class="token operator">=</span><span class="token string">"weixin://dl/business/?t=xxx"</span><span class="token punctuation">;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre><p>以上示例代码，就是你自定义的一个页面，然后小红书打开，显示二维码并且跳转到微信小程序暂时你的微信二维码就实现了引流了！</p><p><strong>这样玩可能会封你小红书，仅供学习~</strong></p><p><a href="https://www.52pojie.cn/thread-1860887-1-1.html" target="_blank" rel="noopener"><em>摘自</em></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 小红书 </tag>
+            
+            <tag> 引流 </tag>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Google搜索技巧</title>
       <link href="/google-sou-suo-ji-qiao.html"/>
       <url>/google-sou-suo-ji-qiao.html</url>
