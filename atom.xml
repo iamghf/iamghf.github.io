@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2023-11-30T03:42:36.242Z</updated>
+  <updated>2023-12-27T12:18:06.811Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -17,11 +17,83 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>部署chatglm3</title>
+    <link href="https://iamghf.top/chatglm3.html"/>
+    <id>https://iamghf.top/chatglm3.html</id>
+    <published>2023-12-27T12:12:40.000Z</published>
+    <updated>2023-12-27T12:18:06.811Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;MacBook部署chatglm3-6b&quot;&gt;&lt;a href=&quot;#MacBook部署chatglm3-6b&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="chatglm3" scheme="https://iamghf.top/tags/chatglm3/"/>
+    
+      <category term="MacBook M1 Pro" scheme="https://iamghf.top/tags/MacBook-M1-Pro/"/>
+    
+      <category term="chatgpt" scheme="https://iamghf.top/tags/chatgpt/"/>
+    
+      <category term="大模型" scheme="https://iamghf.top/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+      <category term="chatglm3-6b" scheme="https://iamghf.top/tags/chatglm3-6b/"/>
+    
+      <category term="本地部署" scheme="https://iamghf.top/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装配置conda</title>
+    <link href="https://iamghf.top/an-zhuang-pei-zhi-conda.html"/>
+    <id>https://iamghf.top/an-zhuang-pei-zhi-conda.html</id>
+    <published>2023-12-27T12:09:35.000Z</published>
+    <updated>2023-12-27T12:11:38.684Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;安装配置conda环境&quot;&gt;&lt;a href=&quot;#安装配置conda环境&quot; class=&quot;headerlink&quot; title=&quot;安装配置conda环境&quot;&gt;&lt;/a&gt;安装配置conda环境&lt;/h1&gt;&lt;h2 id=&quot;关于conda&quot;&gt;&lt;a href=&quot;#关于conda&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="python" scheme="https://iamghf.top/tags/python/"/>
+    
+      <category term="conda" scheme="https://iamghf.top/tags/conda/"/>
+    
+      <category term="anaconda" scheme="https://iamghf.top/tags/anaconda/"/>
+    
+      <category term="miniconda" scheme="https://iamghf.top/tags/miniconda/"/>
+    
+      <category term="pip" scheme="https://iamghf.top/tags/pip/"/>
+    
+  </entry>
+  
+  <entry>
     <title>小红书引流</title>
     <link href="https://iamghf.top/xiao-hong-shu-yin-liu.html"/>
     <id>https://iamghf.top/xiao-hong-shu-yin-liu.html</id>
     <published>2023-11-30T03:28:30.000Z</published>
-    <updated>2023-11-30T03:42:36.242Z</updated>
+    <updated>2023-11-30T03:43:22.819Z</updated>
     
     <summary type="html">
     
@@ -587,70 +659,6 @@
       <category term="docker" scheme="https://iamghf.top/tags/docker/"/>
     
       <category term="root" scheme="https://iamghf.top/tags/root/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>centos安装Postgresql</title>
-    <link href="https://iamghf.top/centos-an-zhuang-postgresql.html"/>
-    <id>https://iamghf.top/centos-an-zhuang-postgresql.html</id>
-    <published>2020-08-17T06:21:11.000Z</published>
-    <updated>2023-10-09T02:48:16.688Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;centos-离线安装Postgresql&quot;&gt;&lt;a href=&quot;#centos-离线安装Postgresql&quot; class=&quot;headerlink&quot; title=&quot;centos 离线安装Postgresql&quot;&gt;&lt;/a&gt;centos
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="postgresql" scheme="https://iamghf.top/tags/postgresql/"/>
-    
-      <category term="centos" scheme="https://iamghf.top/tags/centos/"/>
-    
-      <category term="linux" scheme="https://iamghf.top/tags/linux/"/>
-    
-      <category term="数据库" scheme="https://iamghf.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>非root安装mysql</title>
-    <link href="https://iamghf.top/centos-an-zhuang-mysql.html"/>
-    <id>https://iamghf.top/centos-an-zhuang-mysql.html</id>
-    <published>2020-08-14T07:45:57.000Z</published>
-    <updated>2023-10-09T02:48:16.689Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;非root安装mysql&quot;&gt;&lt;a href=&quot;#非root安装mysql&quot; class=&quot;headerlink&quot; title=&quot;非root安装mysql&quot;&gt;&lt;/a&gt;非root安装mysql&lt;/h1&gt;&lt;h2 id=&quot;本机上传压缩包&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="centos" scheme="https://iamghf.top/tags/centos/"/>
-    
-      <category term="linux" scheme="https://iamghf.top/tags/linux/"/>
-    
-      <category term="mysql" scheme="https://iamghf.top/tags/mysql/"/>
     
   </entry>
   

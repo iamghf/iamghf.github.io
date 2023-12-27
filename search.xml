@@ -4,6 +4,74 @@
   
     
     <entry>
+      <title>部署chatglm3</title>
+      <link href="/chatglm3.html"/>
+      <url>/chatglm3.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="MacBook部署chatglm3-6b"><a href="#MacBook部署chatglm3-6b" class="headerlink" title="MacBook部署chatglm3-6b"></a>MacBook部署chatglm3-6b</h1><h2 id="下载代码"><a href="#下载代码" class="headerlink" title="下载代码"></a>下载代码</h2><pre><code>git clone https://github.com/THUDM/ChatGLM3cd ChatGLM3pip install -r requirements.txt</code></pre><h2 id="本地加载模型"><a href="#本地加载模型" class="headerlink" title="本地加载模型"></a>本地加载模型</h2><p><a href="https://huggingface.co/THUDM/chatglm3-6b" target="_blank" rel="noopener">Huggingface</a>  国内网络问题推荐使用镜像站：<a href="https://hf-mirror.com/" target="_blank" rel="noopener">hf-mirror</a> 支持断点续传</p><h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><p>MacBook M1 Pro 16g 部署</p><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> transformers <span class="token keyword">import</span> AutoTokenizer<span class="token punctuation">,</span> AutoModel<span class="token comment" spellcheck="true"># 本地模型</span>model_directory <span class="token operator">=</span> <span class="token string">"模型地址路径（推荐绝对路径）"</span><span class="token comment" spellcheck="true">#model_directory = "THUDM/chatglm3-6b"</span>tokenizer <span class="token operator">=</span> AutoTokenizer<span class="token punctuation">.</span>from_pretrained<span class="token punctuation">(</span>model_directory<span class="token punctuation">,</span> trust_remote_code<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>model <span class="token operator">=</span> AutoModel<span class="token punctuation">.</span>from_pretrained<span class="token punctuation">(</span>model_directory<span class="token punctuation">,</span> trust_remote_code<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">.</span>half<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">(</span><span class="token string">'mps'</span><span class="token punctuation">)</span>model <span class="token operator">=</span> model<span class="token punctuation">.</span>eval<span class="token punctuation">(</span><span class="token punctuation">)</span>response<span class="token punctuation">,</span> history <span class="token operator">=</span> model<span class="token punctuation">.</span>chat<span class="token punctuation">(</span>tokenizer<span class="token punctuation">,</span> <span class="token string">"你好"</span><span class="token punctuation">,</span> history<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span></code></pre><p><img src="https://img.iamghf.top/md/202312271505023.png" alt="image-20231227150509116"></p><p>速度感人，20分钟才出结果。电脑配置不行放弃治疗。。。</p><p>mac优化：</p><pre><code>将/ChatGLM3/composite_demo/client.py中的第140行左右中的device_map = “auto”改为device_map = “mps”</code></pre><p>环境变量：</p><p>export MODEL_PATH=本地模型路径。指定从本地加载模型</p><p>Jupyter 内核，可以通过 <code>export IPYKERNEL=&lt;kernel_name&gt;</code> 来指定。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> chatglm3 </tag>
+            
+            <tag> MacBook M1 Pro </tag>
+            
+            <tag> chatgpt </tag>
+            
+            <tag> 大模型 </tag>
+            
+            <tag> chatglm3-6b </tag>
+            
+            <tag> 本地部署 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>安装配置conda</title>
+      <link href="/an-zhuang-pei-zhi-conda.html"/>
+      <url>/an-zhuang-pei-zhi-conda.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="安装配置conda环境"><a href="#安装配置conda环境" class="headerlink" title="安装配置conda环境"></a>安装配置conda环境</h1><h2 id="关于conda"><a href="#关于conda" class="headerlink" title="关于conda"></a>关于conda</h2><pre><code>conda是一个配置隔离python环境的工具因为有些时候我们需要不同版本的python或不同版本的pip模块（比如你需要跑两个从github上下下来的代码，他们的tensorflow版本一个要求1.0一个要求2.0）conda既可以实现pip模块不同版本共存，也可以实现python不同版本共存conda只是一个工具，它有两种发行版，分别是Anaconda和Miniconda    anaconda是一个大而全的工具集合，包括了非常多常用的pip模块（如numpy、pandas、scipy、matplotlib等），它还有图形化的管理工具等    miniconda是一个单纯的conda工具，仅自带极少的python必要的包，干净纯粹，可以按照自己的需求构建任意环境    miniconda比anaconda小非常多，可以实现全部日常需求，只不过需要自己动手</code></pre><h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><p>miniconda下载地址: <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/</a></p><p>anaconda下载地址: <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a> </p><p>MacOs为例，下载当前最新的安装包<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2023.09-0-MacOSX-arm64.pkg" target="_blank" rel="noopener">Anaconda3-2023.09-0-MacOSX-arm64.pkg</a></p><p>双击执行安装即可。</p><h2 id="配置源"><a href="#配置源" class="headerlink" title="配置源"></a>配置源</h2><pre class=" language-shell"><code class="language-shell">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/conda config --set show_channel_urls yes</code></pre><p>原理是修改在～目录下的.condarc里的配置，直接打开此文件复制进去也可以。</p><p>修改后若想换回原来的源，执行命令：</p><pre class=" language-shell"><code class="language-shell">conda config --remove-key channels</code></pre><h2 id="创建环境"><a href="#创建环境" class="headerlink" title="创建环境"></a>创建环境</h2><pre class=" language-shell"><code class="language-shell">conda create -n xxxx python=3.5   #创建python3.5的，名字为xxxx的虚拟环境</code></pre><p>示例：</p><pre class=" language-shell"><code class="language-shell"># 创建版本为2.7的名为venv27conda create --name venv27 python=2.7# 查看已有的虚拟环境conda env list# 进入venv27虚拟环境conda activate venv27# 查看python版本python -V# 退出此虚拟环境（默认进去base环境）conda deactivate# 退出base 环境 到达点击默认环境conda deactivate</code></pre><h2 id="查看环境"><a href="#查看环境" class="headerlink" title="查看环境"></a>查看环境</h2><pre class=" language-shell"><code class="language-shell">conda env list</code></pre><h2 id="切换环境"><a href="#切换环境" class="headerlink" title="切换环境"></a>切换环境</h2><pre class=" language-shell"><code class="language-shell">conda activate xxx</code></pre><h2 id="删除环境"><a href="#删除环境" class="headerlink" title="删除环境"></a>删除环境</h2><pre><code>conda remove -n xxxx --all   #删除xxxx虚拟环境conda clean -p      #删除没有用的包 conda clean -t      #删除无用的tar包 conda clean -y --all #删除所有的安装包及cache</code></pre><h2 id="管理包"><a href="#管理包" class="headerlink" title="管理包"></a>管理包</h2><pre><code>#pip 安装本地包 pip install   ～/Downloads/a.whl #conda 安装本地包 conda install --use-local  ~/Downloads/a.tar.bz2conda list         #查看已安装的包conda list  -n xxx       #指定查看xxx虚拟环境下安装的包conda update xxx   #更新xxx包 conda uninstall xxx   #卸载xxx包</code></pre><p>参考:</p><p><a href="https://zhuanlan.zhihu.com/p/378258193" target="_blank" rel="noopener">1</a> </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> conda </tag>
+            
+            <tag> anaconda </tag>
+            
+            <tag> miniconda </tag>
+            
+            <tag> pip </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>小红书引流</title>
       <link href="/xiao-hong-shu-yin-liu.html"/>
       <url>/xiao-hong-shu-yin-liu.html</url>
