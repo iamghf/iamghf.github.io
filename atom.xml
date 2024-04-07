@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2023-12-27T12:18:06.811Z</updated>
+  <updated>2024-04-07T10:20:47.723Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>BurpSuite破解</title>
+    <link href="https://iamghf.top/burpsuite-po-jie.html"/>
+    <id>https://iamghf.top/burpsuite-po-jie.html</id>
+    <published>2024-04-07T09:23:15.000Z</published>
+    <updated>2024-04-07T10:20:47.723Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;BurpSuite-破解&quot;&gt;&lt;a href=&quot;#BurpSuite-破解&quot; class=&quot;headerlink&quot; title=&quot;BurpSuite 破解&quot;&gt;&lt;/a&gt;BurpSuite
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="Mac" scheme="https://iamghf.top/tags/Mac/"/>
+    
+      <category term="破解" scheme="https://iamghf.top/tags/%E7%A0%B4%E8%A7%A3/"/>
+    
+      <category term="BurpSuite" scheme="https://iamghf.top/tags/BurpSuite/"/>
+    
+  </entry>
+  
+  <entry>
     <title>部署chatglm3</title>
     <link href="https://iamghf.top/chatglm3.html"/>
     <id>https://iamghf.top/chatglm3.html</id>
     <published>2023-12-27T12:12:40.000Z</published>
-    <updated>2023-12-27T12:18:06.811Z</updated>
+    <updated>2023-12-27T12:18:46.066Z</updated>
     
     <summary type="html">
     
@@ -58,7 +89,7 @@
     <link href="https://iamghf.top/an-zhuang-pei-zhi-conda.html"/>
     <id>https://iamghf.top/an-zhuang-pei-zhi-conda.html</id>
     <published>2023-12-27T12:09:35.000Z</published>
-    <updated>2023-12-27T12:11:38.684Z</updated>
+    <updated>2023-12-27T12:18:46.064Z</updated>
     
     <summary type="html">
     
@@ -628,37 +659,6 @@
       <category term="docker" scheme="https://iamghf.top/tags/docker/"/>
     
       <category term="oracle" scheme="https://iamghf.top/tags/oracle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>非root安装docker</title>
-    <link href="https://iamghf.top/fei-root-an-zhuang-docker.html"/>
-    <id>https://iamghf.top/fei-root-an-zhuang-docker.html</id>
-    <published>2020-08-17T06:32:30.000Z</published>
-    <updated>2023-10-09T02:48:16.691Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;非root安装docker&quot;&gt;&lt;a href=&quot;#非root安装docker&quot; class=&quot;headerlink&quot; title=&quot;非root安装docker&quot;&gt;&lt;/a&gt;非root安装docker&lt;/h1&gt;&lt;h2 id=&quot;添加docker组&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="linux" scheme="https://iamghf.top/tags/linux/"/>
-    
-      <category term="docker" scheme="https://iamghf.top/tags/docker/"/>
-    
-      <category term="root" scheme="https://iamghf.top/tags/root/"/>
     
   </entry>
   
