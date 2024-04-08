@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2024-04-07T10:21:07.425Z</updated>
+  <updated>2024-04-08T02:10:17.938Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -15,6 +15,74 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTTP Request Smuggling</title>
+    <link href="https://iamghf.top/web-lou-dong-1.html"/>
+    <id>https://iamghf.top/web-lou-dong-1.html</id>
+    <published>2024-04-08T01:48:05.000Z</published>
+    <updated>2024-04-08T02:10:17.938Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;HTTP-Request-Smuggling&quot;&gt;&lt;a href=&quot;#HTTP-Request-Smuggling&quot; class=&quot;headerlink&quot; title=&quot;HTTP Request Smuggling&quot;&gt;&lt;/a&gt;HTTP Request
+        
+      
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://iamghf.top/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="网络安全" scheme="https://iamghf.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="漏洞" scheme="https://iamghf.top/tags/%E6%BC%8F%E6%B4%9E/"/>
+    
+      <category term="smuggling" scheme="https://iamghf.top/tags/smuggling/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cookie、Session、Token、JWT的区别</title>
+    <link href="https://iamghf.top/cookie-session-token-jwt-de-qu-bie.html"/>
+    <id>https://iamghf.top/cookie-session-token-jwt-de-qu-bie.html</id>
+    <published>2024-04-08T01:38:17.000Z</published>
+    <updated>2024-04-08T01:46:27.185Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Cookie、Session、Token、JWT的区别&quot;&gt;&lt;a href=&quot;#Cookie、Session、Token、JWT的区别&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程语言" scheme="https://iamghf.top/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="cookie" scheme="https://iamghf.top/tags/cookie/"/>
+    
+      <category term="session" scheme="https://iamghf.top/tags/session/"/>
+    
+      <category term="token" scheme="https://iamghf.top/tags/token/"/>
+    
+      <category term="jwt" scheme="https://iamghf.top/tags/jwt/"/>
+    
+      <category term="认证" scheme="https://iamghf.top/tags/%E8%AE%A4%E8%AF%81/"/>
+    
+      <category term="网络安全" scheme="https://iamghf.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>BurpSuite破解</title>
@@ -594,71 +662,6 @@
       <category term="高并发" scheme="https://iamghf.top/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
     
       <category term="架构" scheme="https://iamghf.top/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux防火墙</title>
-    <link href="https://iamghf.top/linux-fang-huo-qiang.html"/>
-    <id>https://iamghf.top/linux-fang-huo-qiang.html</id>
-    <published>2020-09-23T09:58:15.000Z</published>
-    <updated>2023-10-09T02:48:16.690Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Linux中有两种防火墙软件，CentOS7.0以上使用的是firewall，CentOS7.0以下使用的是iptables&lt;/p&gt;
-&lt;h2 id=&quot;firewall&quot;&gt;&lt;a href=&quot;#firewall&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="linux" scheme="https://iamghf.top/tags/linux/"/>
-    
-      <category term="firewall" scheme="https://iamghf.top/tags/firewall/"/>
-    
-      <category term="iptables" scheme="https://iamghf.top/tags/iptables/"/>
-    
-      <category term="防火墙" scheme="https://iamghf.top/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker安装oracle</title>
-    <link href="https://iamghf.top/docker-an-zhuang-oracle.html"/>
-    <id>https://iamghf.top/docker-an-zhuang-oracle.html</id>
-    <published>2020-08-17T06:42:37.000Z</published>
-    <updated>2023-10-09T02:48:16.689Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;docker安装oracle&quot;&gt;&lt;a href=&quot;#docker安装oracle&quot; class=&quot;headerlink&quot; title=&quot;docker安装oracle&quot;&gt;&lt;/a&gt;docker安装oracle&lt;/h1&gt;&lt;h2 id=&quot;获取镜像&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="linux" scheme="https://iamghf.top/tags/linux/"/>
-    
-      <category term="docker" scheme="https://iamghf.top/tags/docker/"/>
-    
-      <category term="oracle" scheme="https://iamghf.top/tags/oracle/"/>
     
   </entry>
   
