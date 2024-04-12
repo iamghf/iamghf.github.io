@@ -1,0 +1,1281 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="大模型LLM在Text2SQL上的应用实践, 网络,树莓派,编程,Java,大数据,Flink,ChatGPT,spring,微服务,springcloud">
+    <meta name="description" content="我折腾 我快乐">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>大模型LLM在Text2SQL上的应用实践 | ghf</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+    <!-- Clarity tracking code for https://iamghf.top/ -->
+    <script>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "j9amie3njm");
+    </script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="ghf" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ghf</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://iamghf.top/wiki" class="waves-effect waves-light">
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Wiki</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ghf</div>
+        <div class="logo-desc">
+            
+            我折腾 我快乐
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://iamghf.top/wiki" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-list"></i>
+			
+			Wiki
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">大模型LLM在Text2SQL上的应用实践</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+        
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/">
+                                <span class="chip bg-color">大模型</span>
+                            </a>
+                        
+                            <a href="/tags/llm/">
+                                <span class="chip bg-color">llm</span>
+                            </a>
+                        
+                            <a href="/tags/text2sql/">
+                                <span class="chip bg-color">text2sql</span>
+                            </a>
+                        
+                            <a href="/tags/langchain/">
+                                <span class="chip bg-color">langchain</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/AI/" class="post-category">
+                                AI
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-04-12
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    9 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="大模型LLM在Text2SQL上的应用实践"><a href="#大模型LLM在Text2SQL上的应用实践" class="headerlink" title="大模型LLM在Text2SQL上的应用实践"></a>大模型LLM在Text2SQL上的应用实践</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>目前，大模型的一个热门应用方向Text2SQL，它可以帮助用户快速生成想要查询的SQL语句，再结合可视化技术可以降低使用数据的门槛，更便捷的支持决策。本文将从以下四个方面介绍LLM在Text2SQL应用上的基础实践。</p>
+<p>· Text2SQL概述</p>
+<p>· LangChain基础知识</p>
+<p>· 基于SQLDatabaseChain的Text2SQL实践</p>
+<p>· 后续计划</p>
+<h2 id="Text2SQL概述"><a href="#Text2SQL概述" class="headerlink" title="Text2SQL概述"></a>Text2SQL概述</h2><p>Text-to-SQL（或者Text2SQL），顾名思义就是把文本转化为SQL语言，更学术一点的定义是：把数据库领域下的自然语言（Natural Language，NL）问题，转化为在关系型数据库中可以执行的结构化查询语言（Structured Query Language，SQL），因此Text-to-SQL也可以被简写为NL2SQL。</p>
+<p><img src="https://img.iamghf.top/md/202404121107833" alt="图片"></p>
+<p>· 输入：自然语言问题，比如“<em>查询表t_user的相关信息，结果按id降序排序，只保留前10个数据</em> ”</p>
+<p>· 输出：SQL，比如 “<em>SELECT \</em> FROM t_user ORDER BY id DESC LIMIT 10*”</p>
+<p>Text2SQL应用主要是帮助用户减少开发时间，降低开发成本。“打破人与结构化数据之间的壁垒”，即普通用户可以通过自然语言描述完成复杂数据库的查询工作，得到想要的结果。</p>
+<p><img src="https://img.iamghf.top/md/202404121108802" alt="架构"></p>
+<p>基于LLM的应用开发基本架构如上图，本文介绍以LangChain + OpenAI + RDB的方式来实现Text2SQL的实践方案。</p>
+<h2 id="LangChain基础知识"><a href="#LangChain基础知识" class="headerlink" title="LangChain基础知识"></a>LangChain基础知识</h2><p>LangChain是一个面向大语言模型的应用开发框架，如果将大语言模型比作人的大脑，那么可以将LangChain可以比作人的五官和四肢，它可以将外部数据源、工具和大语言模型连接在一起，既可以补充大语言模型的输入，也可以承接大语言模型的输出。</p>
+<p>LangChain提供各种不同的组件帮助使用LLM，如下图所示，核心组件有Models、Indexes、Chains、Memory、Prompt以及Agent。</p>
+<p><img src="https://img.iamghf.top/md/202404121111236" alt="图片"></p>
+<h3 id="3-1-Models"><a href="#3-1-Models" class="headerlink" title="3.1 Models"></a>3.1 Models</h3><p>LangChain本身不提供LLM，提供通用的接口访问LLM，可以很方便的更换底层的LLM以及自定义自己的LLM。主要有2大类的Models：</p>
+<p>1）LLM：将文本字符串作为输入并返回文本字符串的模型，类似OpenAI的text-davinci-003</p>
+<p>2）Chat Models：由语言模型支持将聊天消息列表作为输入并返回聊天消息的模型。一般使用的ChatGPT以及Claude为Chat Models。</p>
+<p>与模型交互可以通过给予Prompt的方式，LangChain通过PromptTemplate的方式方便我们构建以及复用Prompt。</p>
+<p>代码示例如下：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> langchain <span class="token keyword">import</span> PromptTemplate
+
+<span class="token comment" spellcheck="true"># 定义提示模板</span>
+prompt <span class="token operator">=</span> PromptTemplate<span class="token punctuation">(</span>input_variables<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"question"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> template<span class="token operator">=</span><span class="token triple-quoted-string string">"""
+  简洁和专业的来回答用户的问题。
+
+  如果无法从中得到答案，请说 “根据已知信息无法回答该问题” 或 “没有提供足够的相关信息”，不允许在答案中添加编造成分，答案请使用中文。 
+问题是：{question}"""</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>prompt<span class="token punctuation">.</span>format_prompt<span class="token punctuation">(</span>question<span class="token operator">=</span><span class="token string">"如何进行数据治理"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<h3 id="3-2-Indexes"><a href="#3-2-Indexes" class="headerlink" title="3.2 Indexes"></a>3.2 Indexes</h3><p>索引和外部数据进行集成，用于从外部数据获取答案。如下图所示，主要的步骤：</p>
+<p>· 通过Document Loaders加载各种不同类型的数据源</p>
+<p>· 通过Text Splitters进行文本语义分割</p>
+<p>· 通过Vectorstore进行非结构化数据的向量存储</p>
+<p>· 通过Retriever进行文档数据检索</p>
+<p><img src="https://img.iamghf.top/md/202404121112599" alt="图片"></p>
+<h3 id="3-3-Chains"><a href="#3-3-Chains" class="headerlink" title="3.3 Chains"></a>3.3 Chains</h3><p>LangChain通过chain将各个组件进行链接，以及chain之间进行链接，用于简化复杂应用程序的实现。其中主要有LLMChain、SQLDatabase Chain以及Sequential Chain。</p>
+<h4 id="3-3-1-LLMChain"><a href="#3-3-1-LLMChain" class="headerlink" title="3.3.1 LLMChain"></a>3.3.1 LLMChain</h4><p>最基本的链为LLMChain，由PromptTemplate、LLM和OutputParser组成。LLM的输出一般为文本，OutputParser用于让LLM结构化输出并进行结果解析，方便后续的调用。</p>
+<p><img src="https://img.iamghf.top/md/202404121112175" alt="图片"></p>
+<p>其实现原理如图所示，包含三步：</p>
+<p>· 输入问题</p>
+<p>· 拼接提示，根据提示模板将问题转化为提示</p>
+<p>· 模型推理，输出答案</p>
+<p>代码如下所示：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> langchain<span class="token punctuation">.</span>prompts <span class="token keyword">import</span> PromptTemplate
+<span class="token keyword">from</span> langchain<span class="token punctuation">.</span>chains <span class="token keyword">import</span> LLMChain
+<span class="token keyword">from</span> langchain <span class="token keyword">import</span> OpenAI
+<span class="token keyword">import</span> os
+
+os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Your openai key"</span>
+<span class="token comment" spellcheck="true"># 定义模型</span>
+llm <span class="token operator">=</span> OpenAI<span class="token punctuation">(</span>temperature<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 定义提示模板</span>
+prompt <span class="token operator">=</span> PromptTemplate<span class="token punctuation">(</span>input_variables<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"question"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> template<span class="token operator">=</span><span class="token triple-quoted-string string">"""
+    简洁和专业的来回答用户的问题。
+
+    如果无法从中得到答案，请说 “根据已知信息无法回答该问题” 或 “没有提供足够的相关信息”，不允许在答案中添加编造成分，答案请使用中文。
+
+    问题是：{question}"""</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 定义chain</span>
+chain <span class="token operator">=</span> LLMChain<span class="token punctuation">(</span>llm<span class="token operator">=</span>llm<span class="token punctuation">,</span> prompt<span class="token operator">=</span>prompt<span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 执行chain</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>chain<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token string">"如何开展数据治理"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<h4 id="3-3-2-SQLDatabaseChain"><a href="#3-3-2-SQLDatabaseChain" class="headerlink" title="3.3.2 SQLDatabaseChain"></a>3.3.2 SQLDatabaseChain</h4><p>SQLDatabaseChain能够通过模型自动生成SQL并执行，其实现原理如图所示，包含如下过程：</p>
+<p><img src="https://img.iamghf.top/md/202404121112394" alt="图片"></p>
+<p>· 输入问题；</p>
+<p>· 获取数据库Schema，Schema包含数据库所有表的建表语句和数据示例，LangChain支持多种关系型数据库，包括MariaDB、MySQL、SQLite、ClickHouse、PrestoDB等；</p>
+<p>· 拼接提示，根据提示模板将问题、数据库Schema转化为提示，并且提示中包含指示，要求模型在理解问题和数据库Schema的基础上，能够按一定的格式输出查询SQL、查询结果和问题答案等；</p>
+<p>· 模型推理，这一步预期模型根据问题、数据库Schema推理、输出的答案中包含查询SQL，并从中提取出查询SQL；</p>
+<p>· 执行查询SQL，从数据库中获取查询结果；</p>
+<p>· 拼接提示，和上一次拼接的提示基本一致，只是其中的提示中包含了前两步已获取的查询SQL、查询结果；</p>
+<p>· 模型推理，这一步预期模型根据问题、数据库Schema、查询SQL和查询结果推理出最终的问题答案。</p>
+<h4 id="3-3-3-SequentialChain"><a href="#3-3-3-SequentialChain" class="headerlink" title="3.3.3 SequentialChain"></a>3.3.3 SequentialChain</h4><p>SequentialChains是按预定义顺序执行的链。SimpleSequentialChain为顺序链的最简单形式，其中每个步骤都有一个单一的输入/输出，一个步骤的输出是下一个步骤的输入。SequentialChain为顺序链更通用的形式，允许多个输入/输出。</p>
+<h3 id="3-4-Memory"><a href="#3-4-Memory" class="headerlink" title="3.4 Memory"></a>3.4 Memory</h3><p>正常情况下Chain无状态的，每次交互都是独立的，无法知道之前历史交互的信息。LangChain使用Memory组件保存和管理历史消息，这样可以跨多轮进行对话，在当前会话中保留历史会话的上下文。Memory组件支持多种存储介质，可以与Mongo、Redis、SQLite等进行集成，以及简单直接形式就是Buffer Memory。</p>
+<h3 id="3-5-Agent"><a href="#3-5-Agent" class="headerlink" title="3.5 Agent"></a>3.5 Agent</h3><p>Agent字面含义就是代理，如果说LLM是大脑，Agent就是代理大脑使用工具Tools。目前的大模型一般都存在知识过时、逻辑计算能力低等问题，通过Agent访问工具，可以去解决这些问题。目前这个领域特别活跃，诞生了类似AutoGPT、BabyAGI、AgentGPT等一堆优秀的项目。传统使用LLM，需要给定Prompt一步一步地达成目标，通过Agent是给定目标，其会自动规划并达到目标。</p>
+<h2 id="基于SQLDatabaseChain的Text2SQL实践"><a href="#基于SQLDatabaseChain的Text2SQL实践" class="headerlink" title="基于SQLDatabaseChain的Text2SQL实践"></a>基于SQLDatabaseChain的Text2SQL实践</h2><h3 id="4-1-简介"><a href="#4-1-简介" class="headerlink" title="4.1 简介"></a>4.1 简介</h3><p>LangChain提供基于LLM的SQLDatabaseChain，可以利用LLM的能力将自然语言的query转化为SQL，连接DB进行查询，并利用LLM来组装润色结果，返回最终answer。</p>
+<p>在后台，LangChain 使用<code>SQLAlchemy</code>连接到 SQL 数据库。因此，<code>SQLDatabaseChain</code>可以与 SQLAlchemy 支持的任何 SQL 方言一起使用，例如 MS SQL、MySQL、MariaDB、PostgreSQL、Oracle和 SQLite。</p>
+<h3 id="4-2-数据准备"><a href="#4-2-数据准备" class="headerlink" title="4.2 数据准备"></a>4.2 数据准备</h3><p>本案例使用SQLite 和示例Chinook 数据库，用户可按照<a href="https://database.guide/2-sample-databases-sqlite/" target="_blank" rel="noopener">https://database.guide/2-sample-databases-sqlite/</a> 上的说明进行设置。Chinook表示一个数字多媒体商店，包含了顾客（Customer）、雇员（Employee）、歌曲（Track）、订单（Invoice）及其相关的表和数据，数据模型如下图所示。</p>
+<p><img src="https://img.iamghf.top/md/202404121115655" alt="图片"></p>
+<h3 id="4-3-实践过程"><a href="#4-3-实践过程" class="headerlink" title="4.3 实践过程"></a>4.3 实践过程</h3><p><strong>需求：</strong>测试中文提问“总共有多少员工？”，即英文提问“How many employees are there?”</p>
+<p><strong>期望：</strong>模型先给出查询Employee表记录数的SQL，再根据查询结果给出最终的答案。</p>
+<p><strong>（1）测试中文提问</strong>，代码如下所示：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> langchain<span class="token punctuation">.</span>llms <span class="token keyword">import</span> OpenAI
+<span class="token keyword">from</span> langchain<span class="token punctuation">.</span>utilities <span class="token keyword">import</span> SQLDatabase
+<span class="token keyword">from</span> langchain_experimental<span class="token punctuation">.</span>sql <span class="token keyword">import</span> SQLDatabaseChain
+<span class="token keyword">import</span> os
+
+os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Your openai key"</span>
+
+db <span class="token operator">=</span> SQLDatabase<span class="token punctuation">.</span>from_uri<span class="token punctuation">(</span><span class="token string">"sqlite:///..../Chinook.db"</span><span class="token punctuation">)</span>
+llm <span class="token operator">=</span> OpenAI<span class="token punctuation">(</span>temperature<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+db_chain <span class="token operator">=</span> SQLDatabaseChain<span class="token punctuation">.</span>from_llm<span class="token punctuation">(</span>llm<span class="token punctuation">,</span> db<span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+db_chain<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token string">"总共有多少员工?"</span><span class="token punctuation">)</span></code></pre>
+<p>输出结果如下：</p>
+<p><img src="https://img.iamghf.top/md/202404121115347" alt="图片"></p>
+<p>这里我们使用商业化的OpenAI，并将其temperature设为0，因为查询DB不太需要创造性和多样性。从返回的过程来看，自然语言被翻译成了SQL，得到查询结果后，解析包装结果，最终返回我们可以理解的答案。这里LLM成功将“总共”转成select count(*)，并准确地识别出表名，且最终组装出正确的结果。</p>
+<blockquote>
+<p><strong>注意：</strong>对于数据敏感项目，可以在 SQLDatabaseChain 初始化中指定 return_direct=True，以直接返回 SQL 查询的输出，而无需任何其他格式设置。这样可以防止 LLM 看到数据库中的任何内容。<strong>但请注意，默认情况下，LLM 仍然可以访问数据库方案（即所用方言、表名和列名）</strong>。</p>
+</blockquote>
+<p><strong>（2）测试英文提问</strong>，也可以得到我们想要的结果：</p>
+<p><img src="https://img.iamghf.top/md/202404121116286" alt="图片"></p>
+<p>通过上例，我们可以借助LangChain提供的SQLDatabaseChain，轻松地连接LLM与Database，自然语言的方式输入，自然语言的方式输出，借助LLM的强大能力来理解问题、生成SQL查询数据并输出结果。</p>
+<h2 id="五、后续计划"><a href="#五、后续计划" class="headerlink" title="五、后续计划"></a>五、后续计划</h2><p>随着大模型的发展，LangChain是目前最火的LLM开发框架之一，能和外部数据源交互、能集成各种常用的组件等等，大大降低了LLM应用开发的门槛。基于SQLDatabaseChain实现的Text2SQL只是最基础的实践方式，但对于逻辑复杂的查询在稳定性、可靠性、安全性方面可能无法达到预期，比如输出幻觉问题、数据安全问题。如何解决或减少该类问题的出现，可改进的措施和方案在后续专题中继续讨论，大家一起群策群力。总之，实现高稳定、高可靠的基于LLM的应用，是一个持续改进的过程，是一个多种技术相结合的过程。</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzkzMzQxODU3Mg==&mid=2247486388&idx=1&sn=9ed0d499322f89a8f74b39ca48d4cea8&chksm=c24d8897f53a0181d63dde6df905a216af7217d03d70709ddd0ab376d293fc0a6406497e0f37&scene=21#wechat_redirect" target="_blank" rel="noopener">原文地址</a></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top" rel="external nofollow noreferrer">ghf</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top/llm.html">https://iamghf.top/llm.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://iamghf.top" target="_blank">ghf</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/">
+                                    <span class="chip bg-color">大模型</span>
+                                </a>
+                            
+                                <a href="/tags/llm/">
+                                    <span class="chip bg-color">llm</span>
+                                </a>
+                            
+                                <a href="/tags/text2sql/">
+                                    <span class="chip bg-color">text2sql</span>
+                                </a>
+                            
+                                <a href="/tags/langchain/">
+                                    <span class="chip bg-color">langchain</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">one for all, all for one</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '7140a41ed2ddd46c10c7',
+        clientSecret: '9f81b92236315959b71eb3c245a4f02f922a7651',
+        repo: 'xjbsay',
+        owner: 'iamghf',
+        admin: "iamghf",
+        id: '2024-04-12T11-05-37',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/llm.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="大模型LLM在Text2SQL上的应用实践">
+                        
+                        <span class="card-title">大模型LLM在Text2SQL上的应用实践</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            大模型LLM在Text2SQL上的应用实践前言目前，大模型的一个热门应用方向Text2SQL，它可以帮助用户快速生成想要查询的SQL语句，再结合可视化技术可以降低使用数据的门槛，更便捷的支持决策。本文将从以下四个方面介绍LLM在Text2S
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/AI/" class="post-category">
+                                    AI
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/">
+                        <span class="chip bg-color">大模型</span>
+                    </a>
+                    
+                    <a href="/tags/llm/">
+                        <span class="chip bg-color">llm</span>
+                    </a>
+                    
+                    <a href="/tags/text2sql/">
+                        <span class="chip bg-color">text2sql</span>
+                    </a>
+                    
+                    <a href="/tags/langchain/">
+                        <span class="chip bg-color">langchain</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/web-lou-dong-1.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="HTTP Request Smuggling">
+                        
+                        <span class="card-title">HTTP Request Smuggling</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            HTTP Request Smuggling简单介绍攻击者通过构造特殊结构的请求，干扰网站服务器对请求的处理，从而实现攻击目标
+前提知识
+注：以下文章中的前端指的是(代理服务器、CDN、WAF,负载均衡,Nginx,HAproxy等)
+
+P
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    网络技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">网络安全</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%BC%8F%E6%B4%9E/">
+                        <span class="chip bg-color">漏洞</span>
+                    </a>
+                    
+                    <a href="/tags/smuggling/">
+                        <span class="chip bg-color">smuggling</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://iamghf.top" target="_blank">ghf</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">湘ICP备18008192号-1</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/iamghf" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:841567545@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=841567545" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 841567545" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
