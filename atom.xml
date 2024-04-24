@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2024-04-18T02:53:51.810Z</updated>
+  <updated>2024-04-24T02:40:43.626Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -17,11 +17,98 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>OAuth2.0 协议原理</title>
+    <link href="https://iamghf.top/20240424002.html"/>
+    <id>https://iamghf.top/20240424002.html</id>
+    <published>2024-04-24T02:37:29.000Z</published>
+    <updated>2024-04-24T02:40:43.626Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;OAuth2-0-协议原理&quot;&gt;&lt;a href=&quot;#OAuth2-0-协议原理&quot; class=&quot;headerlink&quot; title=&quot;OAuth2.0 协议原理&quot;&gt;&lt;/a&gt;OAuth2.0 协议原理&lt;/h1&gt;&lt;p&gt;OAuth 2.0
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程语言" scheme="https://iamghf.top/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="oauth2.0s" scheme="https://iamghf.top/tags/oauth2-0s/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从神经网络到 Hugging Face</title>
+    <link href="https://iamghf.top/20240424001.html"/>
+    <id>https://iamghf.top/20240424001.html</id>
+    <published>2024-04-24T02:31:29.000Z</published>
+    <updated>2024-04-24T02:36:29.672Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;从神经网络到-Hugging-Face&quot;&gt;&lt;a href=&quot;#从神经网络到-Hugging-Face&quot; class=&quot;headerlink&quot; title=&quot;从神经网络到 Hugging Face&quot;&gt;&lt;/a&gt;从神经网络到 Hugging Face&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://iamghf.top/categories/AI/"/>
+    
+    
+      <category term="chatgpt" scheme="https://iamghf.top/tags/chatgpt/"/>
+    
+      <category term="神经网络" scheme="https://iamghf.top/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="深度学习" scheme="https://iamghf.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="huggingface" scheme="https://iamghf.top/tags/huggingface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>金融大模型技术创新与应用探索</title>
+    <link href="https://iamghf.top/20240422001.html"/>
+    <id>https://iamghf.top/20240422001.html</id>
+    <published>2024-04-22T05:51:17.000Z</published>
+    <updated>2024-04-22T06:02:34.529Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;金融大模型技术创新与应用探索&quot;&gt;&lt;a href=&quot;#金融大模型技术创新与应用探索&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://iamghf.top/categories/AI/"/>
+    
+    
+      <category term="金融大模型" scheme="https://iamghf.top/tags/%E9%87%91%E8%9E%8D%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HTTP多版本对比</title>
     <link href="https://iamghf.top/20240418001.html"/>
     <id>https://iamghf.top/20240418001.html</id>
     <published>2024-04-18T02:31:47.000Z</published>
-    <updated>2024-04-18T02:53:51.810Z</updated>
+    <updated>2024-04-22T05:46:00.593Z</updated>
     
     <summary type="html">
     
@@ -580,102 +667,6 @@
       <category term="中文输入法" scheme="https://iamghf.top/tags/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/"/>
     
       <category term="彩虹圈" scheme="https://iamghf.top/tags/%E5%BD%A9%E8%99%B9%E5%9C%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>m1 mac上openvpn无法连接排查</title>
-    <link href="https://iamghf.top/mac-shang-openvpn-wu-fa-lian-jie-pai-cha.html"/>
-    <id>https://iamghf.top/mac-shang-openvpn-wu-fa-lian-jie-pai-cha.html</id>
-    <published>2023-10-24T14:02:45.000Z</published>
-    <updated>2023-10-24T14:10:01.006Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;最近公司openvpn突然连不上了，最开始以为是网络调整导致了。等了几天后发现还不行，让同事在window上连接，发现并没有问题，自己用命令行连接也没问题。简单排查后，最后发现是柠檬清理导致的。&lt;br&gt;只需要，把openvpn相关的服务启动打开就行了。&lt;/p&gt;
-&lt;p&gt;&lt;im
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="mac" scheme="https://iamghf.top/tags/mac/"/>
-    
-      <category term="openvpn" scheme="https://iamghf.top/tags/openvpn/"/>
-    
-      <category term="MacBook m1" scheme="https://iamghf.top/tags/MacBook-m1/"/>
-    
-      <category term="vpn" scheme="https://iamghf.top/tags/vpn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通用Java部署运行脚本</title>
-    <link href="https://iamghf.top/tong-yong-java-yun-xing-jiao-ben.html"/>
-    <id>https://iamghf.top/tong-yong-java-yun-xing-jiao-ben.html</id>
-    <published>2023-10-09T08:27:07.000Z</published>
-    <updated>2023-10-09T08:31:17.283Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;记录下jar 部署发布脚本。&lt;/p&gt;
-&lt;pre class=&quot; language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;#!/bin/bash
-#
-        
-      
-    
-    </summary>
-    
-    
-      <category term="编程语言" scheme="https://iamghf.top/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    
-      <category term="Java" scheme="https://iamghf.top/tags/Java/"/>
-    
-      <category term="shell" scheme="https://iamghf.top/tags/shell/"/>
-    
-      <category term="springboot" scheme="https://iamghf.top/tags/springboot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装MinIO</title>
-    <link href="https://iamghf.top/an-zhuang-minio.html"/>
-    <id>https://iamghf.top/an-zhuang-minio.html</id>
-    <published>2023-10-09T02:58:48.000Z</published>
-    <updated>2023-10-09T03:10:58.118Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;安装Minio&quot;&gt;&lt;a href=&quot;#安装Minio&quot; class=&quot;headerlink&quot; title=&quot;安装Minio&quot;&gt;&lt;/a&gt;安装Minio&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;下载地址&lt;/strong&gt;：&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="minio" scheme="https://iamghf.top/tags/minio/"/>
-    
-      <category term="分布式文件" scheme="https://iamghf.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6/"/>
     
   </entry>
   

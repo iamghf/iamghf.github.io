@@ -1,0 +1,1247 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="金融大模型技术创新与应用探索, 网络,树莓派,编程,Java,大数据,Flink,ChatGPT,spring,微服务,springcloud">
+    <meta name="description" content="我折腾 我快乐">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>金融大模型技术创新与应用探索 | ghf</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+    <!-- Clarity tracking code for https://iamghf.top/ -->
+    <script>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "j9amie3njm");
+    </script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="ghf" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ghf</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://iamghf.top/wiki" class="waves-effect waves-light">
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Wiki</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ghf</div>
+        <div class="logo-desc">
+            
+            我折腾 我快乐
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://iamghf.top/wiki" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-list"></i>
+			
+			Wiki
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">金融大模型技术创新与应用探索</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+        
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%87%91%E8%9E%8D%E5%A4%A7%E6%A8%A1%E5%9E%8B/">
+                                <span class="chip bg-color">金融大模型</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/AI/" class="post-category">
+                                AI
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-04-22
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    15 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="金融大模型技术创新与应用探索"><a href="#金融大模型技术创新与应用探索" class="headerlink" title="金融大模型技术创新与应用探索"></a>金融大模型技术创新与应用探索</h1><p>大模型时代已来临，每个组织以及每个人的知识体系都需要重塑，思考如何更好地利用 AI 工具提升效率，以应对未来的变化。而始终不变的是，我们要持续学习，时刻保持好奇心，以不变应对未来更多的变化。本文将分享金融行业对大模型技术的探索与实践。</p>
+<p>*<em>主要内容包括以下几大部分 *</em></p>
+<ol>
+<li>从通用大模型到金融大模型</li>
+<li>金融大模型的训练技术创新</li>
+<li>金融大模型的评测方法创新</li>
+<li>金融大模型的应用实践创新</li>
+<li>总结：金融大模型迭代路径</li>
+</ol>
+<h2 id="01-从通用大模型到金融大模型"><a href="#01-从通用大模型到金融大模型" class="headerlink" title="01 从通用大模型到金融大模型"></a>01 从通用大模型到金融大模型</h2><h3 id="1-大模型涌现超预期能力，有望为金融行业创造价值增量"><a href="#1-大模型涌现超预期能力，有望为金融行业创造价值增量" class="headerlink" title="1.大模型涌现超预期能力，有望为金融行业创造价值增量"></a>1.大模型涌现超预期能力，有望为金融行业创造价值增量</h3><p><img src="https://img.iamghf.top/md/202404221354383" alt="图片"></p>
+<p>金融行业具有三大特性：</p>
+<ul>
+<li>数据驱动：金融是一个关于数据的生意，所有的决定都需要通过分析数据来做决策。</li>
+<li>高度知识化密集产业：金融是一个高度知识化密集的行业，有非常多的专业领域知识，不在这一行业中的人是很难知道的。另外，金融内部也有理财、保险、信贷等不同的细分领域，知识结构复杂密集。</li>
+<li>业务流程极其复杂：金融是需要非常多人工去协作的一个产业，业务流程极其复杂。</li>
+</ul>
+<p>这三个特性其实跟大模型本身的逻辑理解记忆等能力是非常匹配的。所以我们一直认为金融领域是一个天然的大模型的最佳应用场景。我们也希望通过探索为金融行业带来更多的价值增量。</p>
+<h3 id="2-通用模型难胜任金融任务，大模型落地金融面临挑战"><a href="#2-通用模型难胜任金融任务，大模型落地金融面临挑战" class="headerlink" title="2.通用模型难胜任金融任务，大模型落地金融面临挑战"></a>2.通用模型难胜任金融任务，大模型落地金融面临挑战</h3><p><img src="https://img.iamghf.top/md/202404221354634" alt="图片"></p>
+<p>我们为什么需要一个金融行业自己的大模型呢？因为当前通用模型的能力还存在缺陷。主要包括以下三个方面：</p>
+<ul>
+<li>金融知识挑战：金融行业有自己领域内的专业知识，比如 KS、MOB、COB 等专业术语，通用大模型可能不了解。</li>
+<li>金融能力挑战：大模型目前还存在幻觉问题、计算准确性问题、遗忘问题等。金融行业是数据驱动的业务，对数据准确性要求比较高，通用大模型存在的这些问题无法满足金融行业的需求。</li>
+<li>应用成本挑战：通用模型的成本相对较高，我们希望通过行业模型去降低应用成本。</li>
+</ul>
+<p>基于以上三个挑战，我们认为做金融领域的行业大模型是非常有必要的。</p>
+<h3 id="3-面对成本挑战，专项增强的领域模型更显高性价比"><a href="#3-面对成本挑战，专项增强的领域模型更显高性价比" class="headerlink" title="3.面对成本挑战，专项增强的领域模型更显高性价比"></a>3.面对成本挑战，专项增强的领域模型更显高性价比</h3><p><img src="https://img.iamghf.top/md/202404221354086" alt="图片"></p>
+<p>上图左边的基础数据源自 meta 论文。可以看到，LLaMA-2 模型训练 2T tokens，用 A100 大概需要多少时间。如果参数是 70B，原论文里写的是需要 172 万卡时，折成 48 台 A100 机器，就需要 187  天，也就是半年的时间，这还是在训练过程中没有任何训练故障，训练效率和效果没有任何反复的情况下的一个时间。假设中间有一些机器发生故障，或者效果不及预期需要迭代，那用 48 台 A100 机器训练，可能就需要一年时间。这个训练成本对于很多企业来讲是极其昂贵的。</p>
+<p>再来看下推理的资源，如果是一个 70B 的大模型，它所需要显卡内存是 129G，也就是需要两张 A100。所以对于大多数企业来讲，通用模型的训练和推理成本是非常高昂的。</p>
+<p>上图右边是行业大厂的一些探索。比如微软有一篇论文提到，一个高质量的领域数据，能够让模型表现出比它参数大五倍的模型相近的效果。这一点很容易理解，如果把大模型当成一个人，一个天赋一般的选手，通过后天的不断努力，并且只专心某一个行业，那他在这个行业取得的成就可能会比天赋好的人更高。比如一个 13B 模型通过不断调优，它在金融领域内某个场景的效果会比通用的 70B  的效果更好。所以我们希望用一个更小的模型，通过不断学习行业知识，达到一个更大模型的效果。</p>
+<h3 id="4-为解决通用模型不胜任问题，自研金融大模型"><a href="#4-为解决通用模型不胜任问题，自研金融大模型" class="headerlink" title="4.为解决通用模型不胜任问题，自研金融大模型"></a>4.为解决通用模型不胜任问题，自研金融大模型</h3><p><img src="https://img.iamghf.top/md/202404221354622" alt="图片"></p>
+<p>为解决上述通用大模型在金融领域的问题，包括成本问题等，我们自研金融大模型。我们对自研模型主要做了以下优化：</p>
+<ul>
+<li>中文增强</li>
+<li>金融增强</li>
+<li>对话增强</li>
+<li>应用增强</li>
+</ul>
+<h2 id="02-金融大模型的训练技术创新"><a href="#02-金融大模型的训练技术创新" class="headerlink" title="02 金融大模型的训练技术创新**"></a>02 金融大模型的训练技术创新**</h2><h3 id="1-为大模型注入专业金融知识，训练专业金融能力"><a href="#1-为大模型注入专业金融知识，训练专业金融能力" class="headerlink" title="1.为大模型注入专业金融知识，训练专业金融能力"></a>1.为大模型注入专业金融知识，训练专业金融能力</h3><p><img src="https://img.iamghf.top/md/202404221354518" alt="图片"></p>
+<p>要提升大模型的金融专业能力，就要从小抓起，在它生命的每一个阶段，注入专业的知识体系。在预训练阶段，增加更丰富的金融语料，提升金融知识储备；在指令微调阶段，也要扩充不同场景的指令；在对齐环节，保证专业的金融数据和标注，满足行业偏好。接下来具体介绍其中的每个部分。</p>
+<ul>
+<li>数据准备：</li>
+</ul>
+<p><img src="https://img.iamghf.top/md/202404221354362" alt="图片"></p>
+<p>数据质量是模型效果的保障。首先数据要丰富，这是必备的条件。我们在这一环节做了非常多的工作，也设计了一套通用的数据流水线。从文本的抽取到数据的清洗，再到最后做一些人工的校验和评估，不断反复迭代。原始的中文数据，通过篇章级的过滤，一直到最后质量模型的排序，大概可以形成 32% 的中文数据。最后，形成了 10TB 的通用语料，加上 1TB 的金融语料。当然我们还在做更多的数据，特别是一些行业领域内专有数据的清洗。</p>
+<ul>
+<li>增量预训练：</li>
+</ul>
+<p>在数据准备完之后，就要去做预训练。需要针对中文场景做词表构建，对此，行业内大概有两种解决方案。一种是通过字粒度去扩充，因为汉字只看一个单词的话相对有限，大概数量是 5K 到 8K。另外一种就是很多中文大模型所采用的方法，即大量引入中文词汇，这样词表会比较大。考虑到对原有模型要尽量减少破坏，所以我们最终采用了字粒度扩容的方式，加入了 7K 的中文字符。这使得我们的整个词表大小达到 39K，词表压缩率为 48%。</p>
+<p>在预训练阶段词表优化完之后，训练采用的是两阶段的优化方式，使得收敛更加稳定。第一阶段主要还是解决新加词表的泛化能力，我们仅更新模型词表的 embedding 以及解码线性层，使模型能够适应新的词表。在整个过程中，数据分布与原始的数据分布基本是一致的，就是为了保证模型的稳定性。在训练过程中我们发现，通过少量数据，能够使模型的 loss 达到平稳。所以第一阶段只训练了 40B 的 token。第二阶段对模型进行全量的更新，这时会训练大量的中文语料和英文语料。在这一阶段，我们训练了 300B 的 token。</p>
+<p><img src="https://img.iamghf.top/md/202404221354169" alt="图片"></p>
+<p>数据配比直接影响基座模型的训练质量。开始时整体的中英语料是 3 比 1。在英文数据上，一开始仅加入了少量的金融数据。随着整个训练过程的不断优化，金融数据的比例也越来越高。在训练过程中，要保证原有的英文能力。</p>
+<ul>
+<li>指令微调：SFT 数据的丰富性和多样性直接影响对齐效果。在数据生成上，分为通用数据生成和金融专业领域数据生成。整体配比大概是 4 比 1。我们通过不同方式的自动生成以及人工改写，最后生成一个包含许多种类的 SFT 数据结果。</li>
+</ul>
+<p><img src="https://img.iamghf.top/md/202404221354593" alt="图片"></p>
+<p>采用两阶段指令微调，保证通用能力的同时，提升金融问答能力。第一阶段是通过混合微调，用海量开源指令数据，同时加入一些预训练数据，保证其泛化性，并且可以有效减少幻觉问题。第二阶段是通过高质量的指令微调数据，提升整体的对话能力。整体的训练方式与预训练是一致的。</p>
+<h3 id="2-价值对齐：通过强化学习对齐价值偏好"><a href="#2-价值对齐：通过强化学习对齐价值偏好" class="headerlink" title="2.价值对齐：通过强化学习对齐价值偏好"></a>2.价值对齐：通过强化学习对齐价值偏好</h3><p>接下来要做的是价值对齐，就是使模型的三观与我们一致，我们使用强化学习技术来对齐价值偏好。首先基于人类反馈做 reward model，这里我们选择 pair wise 的方式，并通过大量的人工标注排序。之后用 PPO  算法进行优化。未来，价值对齐会是做大模型非常核心的一个壁垒。</p>
+<h3 id="3-应用增强：升级系统工程，弥补大模型本身能力欠缺"><a href="#3-应用增强：升级系统工程，弥补大模型本身能力欠缺" class="headerlink" title="3.应用增强：升级系统工程，弥补大模型本身能力欠缺"></a>3.应用增强：升级系统工程，弥补大模型本身能力欠缺</h3><p><img src="https://img.iamghf.top/md/202404221354735" alt="图片"></p>
+<p>在数据微调以及价值对齐后，非常重要的一点是大模型与应用相结合、相绑定，因为所有模型的构建都是为了解决企业实际的问题。为了更好地为业务服务，需要提升大模型的整体能力，比如计算能力、多轮对话以及分析的能力等等。</p>
+<h3 id="4-工程优化：大模型训练效率面临诸多瓶颈"><a href="#4-工程优化：大模型训练效率面临诸多瓶颈" class="headerlink" title="4.工程优化：大模型训练效率面临诸多瓶颈"></a>4.工程优化：大模型训练效率面临诸多瓶颈</h3><p><img src="https://img.iamghf.top/md/202404221355489" alt="图片"></p>
+<p>当前算力带宽的发展与模型参数的扩大是不匹配的。如何通过技术手段解决这一问题，是一个关键瓶颈，在这方面当时我们也做了很多探索。</p>
+<ul>
+<li>突破内存与计算墙，提高训练吞吐。比如提升 batch size，优化模型占用显存的比例。通用的方式是 ZERO 的方式。在实践过程中，我们根据不同的方法来做不同的适配，并做不同算子的优化。通过优化，显存占用比例降低了 87%，batch size 提升了三倍，整体的训练吞吐能力提升了 36%。另外是计算复杂度，行业内用的比较多的是 Flash Attention，我们优化了很多底层算子，使用效率也有大幅提升。充分优化后，整体的训练吞吐比原来提升了 26%。</li>
+<li>打破带宽墙，提升分布式效率。除了前面讲的内存以及计算复杂度的优化，另外一个重点是通讯效率的优化。通讯效率的优化包括算法和硬件两方面。算法方面，通过不同的算法提升 IO 效率，在金融行业用的比较多。另外在硬件上也可以做非常多的优化。目前我们搭了一个高速的网络，最高能支持八千多张卡，单机吞吐 800G。整体训练效率提升了三倍。另外，在做 GPU 分布式优化的时候，一个关键指标就是随着集群规模的扩大，单卡的 ROI 是否有折损。因为随着集群的扩大，通讯会变得越来越复杂，一个单卡的效率会变低。我们在 512 张卡以上规模的集群，整体的吞吐加速比基本是线性的，在 640 张卡下仍然可以达到 94%。</li>
+</ul>
+<h2 id="03-金融大模型的评测方法创新"><a href="#03-金融大模型的评测方法创新" class="headerlink" title="03 金融大模型的评测方法创新"></a>03 金融大模型的评测方法创新</h2><p>对于大模型来说，评估体系是非常重要的。如何设计考察的内容和题目，是至关重要的一个工作。</p>
+<h3 id="1-大模型评测难题：主流榜单可靠性受质疑力"><a href="#1-大模型评测难题：主流榜单可靠性受质疑力" class="headerlink" title="1.大模型评测难题：主流榜单可靠性受质疑力"></a>1.大模型评测难题：主流榜单可靠性受质疑力</h3><p><img src="https://img.iamghf.top/md/202404221355842" alt="图片"></p>
+<p>现在国内很多榜单是公开的，但是确实只能作为参考，不是说它没有意义，它起到了指引方向的作用。但在做大模型的过程中，要明晰大模型的每一个环节，明确每一步大模型能力的目标。如果训练一个模型，过了很长时间到结尾的时候才看到它的效果不佳，再去返工，那么造成的损失会是非常巨大的。</p>
+<h3 id="2-拒绝榜单绑架，用评测指引模型优化方向"><a href="#2-拒绝榜单绑架，用评测指引模型优化方向" class="headerlink" title="2.拒绝榜单绑架，用评测指引模型优化方向"></a>2.拒绝榜单绑架，用评测指引模型优化方向</h3><p><img src="https://img.iamghf.top/md/202404221355097" alt="图片"></p>
+<p>我们自己的评估体系是横评看差距，纵评看提升。横评是在每个环节看不同模型在各个项目上的优劣。纵评是看同一模型在不同阶段、不同版本，甚至不同优化方式下的效果。</p>
+<h3 id="3-预训练阶段：评测指标走势判断是否符合预期"><a href="#3-预训练阶段：评测指标走势判断是否符合预期" class="headerlink" title="3.预训练阶段：评测指标走势判断是否符合预期"></a>3.预训练阶段：评测指标走势判断是否符合预期</h3><p><img src="https://img.iamghf.top/md/202404221355397" alt="图片"></p>
+<p>针对每个环节，我们也做了非常多的评测体系。首先是通用知识的预训练环节，有多维度的自动评测集。除了看 loss 之外，还会看其他 NLP 相关评测指标。也会看它在新的未知数据下的 PPL。对于每个评测指标，会在整个训练过程中进行实时地监控。</p>
+<h3 id="4-微调阶段：全面评估大模型“涌现”出的新能力"><a href="#4-微调阶段：全面评估大模型“涌现”出的新能力" class="headerlink" title="4.微调阶段：全面评估大模型“涌现”出的新能力"></a>4.微调阶段：全面评估大模型“涌现”出的新能力</h3><p><img src="https://img.iamghf.top/md/202404221355302" alt="图片"></p>
+<p>在微调阶段，因为有对话测评，所以除了自动化的评估之外，也需要更多的人工介入。我们制定了非常多的人工评测方法，以保证整个对话的效果是完全符合预期的。</p>
+<h3 id="5-强化阶段：评估相较微调阶段是否有能力提升"><a href="#5-强化阶段：评估相较微调阶段是否有能力提升" class="headerlink" title="5.强化阶段：评估相较微调阶段是否有能力提升"></a>5.强化阶段：评估相较微调阶段是否有能力提升</h3><p><img src="https://img.iamghf.top/md/202404221355820" alt="图片"></p>
+<p>在强化阶段，主要是看两方面的标准，一方面经过强化学习之后，模型本身能力不能下降；另一方面是在安全性、有用性和稳定性这三个指标上要有明显提升，保证整个强化阶段达到预期。</p>
+<h3 id="6-从模型训练到场景落地：像评测人一样测评大模型"><a href="#6-从模型训练到场景落地：像评测人一样测评大模型" class="headerlink" title="6.从模型训练到场景落地：像评测人一样测评大模型"></a>6.从模型训练到场景落地：像评测人一样测评大模型</h3><p><img src="https://img.iamghf.top/md/202404221355533" alt="图片"></p>
+<p>无论是从大模型整体的训练，还是从大模型评测，我们都要像看人一样去看它。我们希望能够构建一个更加丰富完善的评测体系，去评估出大模型的各项能力，整个体系也在不断优化中。</p>
+<h2 id="04-金融大模型的应用实践创新"><a href="#04-金融大模型的应用实践创新" class="headerlink" title="04 金融大模型的应用实践创新"></a>04 金融大模型的应用实践创新</h2><p>最后介绍一下金融行业大模型应用方面的探索。</p>
+<h3 id="1-营销：个性化素材结合差异产品，重塑开放获客新模式"><a href="#1-营销：个性化素材结合差异产品，重塑开放获客新模式" class="headerlink" title="1.营销：个性化素材结合差异产品，重塑开放获客新模式"></a>1.营销：个性化素材结合差异产品，重塑开放获客新模式</h3><p><img src="https://img.iamghf.top/md/202404221355317" alt="图片"></p>
+<p>第一个是通过大模型的生产能力，使营销获客的效率大幅提升。获客是所有行业的一大难点。之前我们很难做到差异化的获客，因为要给用户展示不同的文案广告，要实时获取用户的需求，特别像文案广告这种内容，如果是通过设计师去做的话，可能需要几小时或者天级。而通过大模型，可以实时地获取用户画像，然后实时地生成用户所需的内容。</p>
+<h3 id="2-服务：体质降本，营销服务一体化"><a href="#2-服务：体质降本，营销服务一体化" class="headerlink" title="2.服务：体质降本，营销服务一体化"></a>2.服务：体质降本，营销服务一体化</h3><p><img src="https://img.iamghf.top/md/202404221355931" alt="图片"></p>
+<p>第二个应用场景是服务。传统的机器人很难做到人与机器自然地交流。大模型出来之后，提高了对话能力的天花板。之前做不到的事情，现在能做到了。未来人与机器的自然交流成为了可能。我们在这方面也做了很多探索，比如让大模型辅助人工客服，获得了 25% 的提效。</p>
+<p>另外，我们也找了一些简单的小场景，让大模型全面替代人工客服，当然在保证质量的同时，不能有客诉。未来大模型会为企业整体的效率提升和成本降低带来大幅改善。</p>
+<h3 id="3-运营：数据驱动的业务运营新范式"><a href="#3-运营：数据驱动的业务运营新范式" class="headerlink" title="3.运营：数据驱动的业务运营新范式"></a>3.运营：数据驱动的业务运营新范式</h3><p><img src="https://img.iamghf.top/md/202404221355151" alt="图片"></p>
+<p>第三个应用是运营。因为金融行业是一个数据驱动的行业，每天要做非常多的经济指标统计、业务指标统计、报表分析，并基于此做各种预测。分析预测的质量取决于数据科学家，而数据科学家能力不一，结果可能存在差异，因此需要大量的数据对齐和认知对齐工作。如果利用大模型，能够统一标准，从而大幅提升决策效率。</p>
+<h3 id="4-办公：无处不在、无缝衔接的办公助手"><a href="#4-办公：无处不在、无缝衔接的办公助手" class="headerlink" title="4.办公：无处不在、无缝衔接的办公助手"></a>4.办公：无处不在、无缝衔接的办公助手</h3><p><img src="https://img.iamghf.top/md/202404221355487" alt="图片"></p>
+<p>第四个应用是智能办公。大模型能够提升员工获取知识的效率，帮助每一个员工提升个人角色的能力。当你到一家新公司，一个新行业，很多知识是不知道的，这时就可以直接咨询辅助助手，获得详细的专业知识，帮助你快速进入角色。</p>
+<h3 id="5-风控：提升感知和决策能力，智能风控更主动更实时"><a href="#5-风控：提升感知和决策能力，智能风控更主动更实时" class="headerlink" title="5.风控：提升感知和决策能力，智能风控更主动更实时"></a>5.风控：提升感知和决策能力，智能风控更主动更实时</h3><p><img src="https://img.iamghf.top/md/202404221355929" alt="图片"></p>
+<p>最后要讲的应用场景是风控，这是与金融强相关的一个场景。风险控制是金融领域的核心问题之一，而风险本身是一个决策问题，通过大模型，可以将其理解和处理数据的能力与原有的决策式风控相结合，使风控能力得到进一步加强。</p>
+<h2 id="05-总结：金融大模型迭代路径"><a href="#05-总结：金融大模型迭代路径" class="headerlink" title="05 总结：金融大模型迭代路径"></a>05 总结：金融大模型迭代路径</h2><p><img src="https://img.iamghf.top/md/202404221356070" alt="图片"></p>
+<p>最后对前面的介绍做一个简单的总结，介绍一下大模型的迭代路径。大模型的迭代应该是模型训练与评估应用双轮驱动，持续迭代的。就像我们每个员工一样，在你的工作场景中要持续地学习创新，保持好奇心，得到工作反馈，再根据反馈不断进步。</p>
+<p><a href="https://mp.weixin.qq.com/s/AdAd0mK1DCSdQDAROFIkIg" target="_blank" rel="noopener">原文地址</a></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top" rel="external nofollow noreferrer">ghf</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top/20240422001.html">https://iamghf.top/20240422001.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://iamghf.top" target="_blank">ghf</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E9%87%91%E8%9E%8D%E5%A4%A7%E6%A8%A1%E5%9E%8B/">
+                                    <span class="chip bg-color">金融大模型</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">one for all, all for one</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '7140a41ed2ddd46c10c7',
+        clientSecret: '9f81b92236315959b71eb3c245a4f02f922a7651',
+        repo: 'xjbsay',
+        owner: 'iamghf',
+        admin: "iamghf",
+        id: '2024-04-22T13-51-17',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/20240424001.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="从神经网络到 Hugging Face">
+                        
+                        <span class="card-title">从神经网络到 Hugging Face</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            从神经网络到 Hugging Face神经网络和深度学习简史一 深度信念网络2006年，加拿大多伦多大学教授杰弗里·辛顿在研究如何训练多层神经网络，他已经在神经网络领域默默耕耘了三十多年，尽管在这个领域他算得上是泰斗级的人物，但由于神经网络
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-24
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/AI/" class="post-category">
+                                    AI
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/chatgpt/">
+                        <span class="chip bg-color">chatgpt</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">神经网络</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
+                    </a>
+                    
+                    <a href="/tags/huggingface/">
+                        <span class="chip bg-color">huggingface</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/20240418001.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="HTTP多版本对比">
+                        
+                        <span class="card-title">HTTP多版本对比</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            HTTP多版本对比上个世纪90年代初期，蒂姆·伯纳斯-李（Tim Berners-Lee）及其 CERN的团队共同努力，制定了互联网的基础，定义了互联网的四个构建模块：
+
+超文本文档格式（HTML）
+数据传输协议（HTTP）
+用于查看超文本
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    网络技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/http/">
+                        <span class="chip bg-color">http</span>
+                    </a>
+                    
+                    <a href="/tags/QUIC/">
+                        <span class="chip bg-color">QUIC</span>
+                    </a>
+                    
+                    <a href="/tags/tcp-ip/">
+                        <span class="chip bg-color">tcp/ip</span>
+                    </a>
+                    
+                    <a href="/tags/udp/">
+                        <span class="chip bg-color">udp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://iamghf.top" target="_blank">ghf</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">湘ICP备18008192号-1</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/iamghf" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:841567545@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=841567545" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 841567545" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
