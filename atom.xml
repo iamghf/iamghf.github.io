@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2024-04-24T02:44:53.439Z</updated>
+  <updated>2024-04-25T07:20:59.421Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>图解Transformer工作原理</title>
+    <link href="https://iamghf.top/20240425001.html"/>
+    <id>https://iamghf.top/20240425001.html</id>
+    <published>2024-04-25T03:02:06.000Z</published>
+    <updated>2024-04-25T07:20:59.421Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;图解Transformer工作原理&quot;&gt;&lt;a href=&quot;#图解Transformer工作原理&quot; class=&quot;headerlink&quot; title=&quot;图解Transformer工作原理&quot;&gt;&lt;/a&gt;图解Transformer工作原理&lt;/h1&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://iamghf.top/categories/AI/"/>
+    
+    
+      <category term="Transformer" scheme="https://iamghf.top/tags/Transformer/"/>
+    
+      <category term="NLP" scheme="https://iamghf.top/tags/NLP/"/>
+    
+  </entry>
+  
+  <entry>
     <title>OAuth2.0 协议原理</title>
     <link href="https://iamghf.top/20240424002.html"/>
     <id>https://iamghf.top/20240424002.html</id>
     <published>2024-04-24T02:37:29.000Z</published>
-    <updated>2024-04-24T02:44:53.439Z</updated>
+    <updated>2024-04-24T08:42:33.363Z</updated>
     
     <summary type="html">
     
@@ -39,7 +68,7 @@
       <category term="编程语言" scheme="https://iamghf.top/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="oauth2.0s" scheme="https://iamghf.top/tags/oauth2-0s/"/>
+      <category term="oauth 2.0" scheme="https://iamghf.top/tags/oauth-2-0/"/>
     
   </entry>
   
@@ -632,41 +661,6 @@
       <category term="事件" scheme="https://iamghf.top/tags/%E4%BA%8B%E4%BB%B6/"/>
     
       <category term="监控" scheme="https://iamghf.top/tags/%E7%9B%91%E6%8E%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>macbook彩虹圈卡顿问题解决</title>
-    <link href="https://iamghf.top/macbook-cai-hong-quan-qia-dun-wen-ti-jie-jue.html"/>
-    <id>https://iamghf.top/macbook-cai-hong-quan-qia-dun-wen-ti-jie-jue.html</id>
-    <published>2023-10-25T05:37:20.000Z</published>
-    <updated>2023-10-25T05:52:05.776Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;手头MacBook Pro M1 14寸的电脑自从系统升级到13后，就经常出现转彩虹圈圈，而且一旦卡顿开始，除非重启，否则问题不会有所好转。电话咨询了技术支持后，重启，出现 LOGO 之前按住 shift
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="MacBook pro" scheme="https://iamghf.top/tags/MacBook-pro/"/>
-    
-      <category term="m1" scheme="https://iamghf.top/tags/m1/"/>
-    
-      <category term="卡顿" scheme="https://iamghf.top/tags/%E5%8D%A1%E9%A1%BF/"/>
-    
-      <category term="中文输入法" scheme="https://iamghf.top/tags/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/"/>
-    
-      <category term="彩虹圈" scheme="https://iamghf.top/tags/%E5%BD%A9%E8%99%B9%E5%9C%88/"/>
     
   </entry>
   
