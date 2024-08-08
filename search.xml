@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>某网站登陆鉴权逆向分析</title>
+      <link href="/20240808.html"/>
+      <url>/20240808.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="某网站登陆鉴权逆向分析"><a href="#某网站登陆鉴权逆向分析" class="headerlink" title="某网站登陆鉴权逆向分析"></a>某网站登陆鉴权逆向分析</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>近段时候需要频繁访问某网址查询数据，人工方式效率太低，有没有方式实现自动化？记录下调试过程。</p><h2 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h2><p>谷歌f12 调试</p><p>抓包分析</p><h2 id="难点"><a href="#难点" class="headerlink" title="难点"></a>难点</h2><p>前端js都做了混淆，调试繁琐</p><p>调用参数做了加密</p><p>网页做了302跳转</p><h2 id="登录流程"><a href="#登录流程" class="headerlink" title="登录流程"></a>登录流程</h2><p><img src="https://img.iamghf.top/md/202408081142406.png" alt="image-20240808114235820"></p><p>结果部分验证：</p><p><img src="https://img.iamghf.top/md/202408081144719.png" alt="image-20240808114415907"></p><p><img src="https://img.iamghf.top/md/202408081147678.png" alt="image-20240808114724065"></p><p><img src="https://img.iamghf.top/md/202408081150296.png" alt="image-20240808115003470"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 破解 </tag>
+            
+            <tag> 逆向 </tag>
+            
+            <tag> 加解密 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>KimiChat隐藏的16条官方提示词</title>
       <link href="/20240506001.html"/>
       <url>/20240506001.html</url>

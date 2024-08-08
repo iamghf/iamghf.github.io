@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2024-05-06T07:51:42.249Z</updated>
+  <updated>2024-08-08T03:52:54.123Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>某网站登陆鉴权逆向分析</title>
+    <link href="https://iamghf.top/20240808.html"/>
+    <id>https://iamghf.top/20240808.html</id>
+    <published>2024-08-08T03:31:22.000Z</published>
+    <updated>2024-08-08T03:52:54.123Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;某网站登陆鉴权逆向分析&quot;&gt;&lt;a href=&quot;#某网站登陆鉴权逆向分析&quot; class=&quot;headerlink&quot; title=&quot;某网站登陆鉴权逆向分析&quot;&gt;&lt;/a&gt;某网站登陆鉴权逆向分析&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://iamghf.top/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="破解" scheme="https://iamghf.top/tags/%E7%A0%B4%E8%A7%A3/"/>
+    
+      <category term="逆向" scheme="https://iamghf.top/tags/%E9%80%86%E5%90%91/"/>
+    
+      <category term="加解密" scheme="https://iamghf.top/tags/%E5%8A%A0%E8%A7%A3%E5%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>KimiChat隐藏的16条官方提示词</title>
     <link href="https://iamghf.top/20240506001.html"/>
     <id>https://iamghf.top/20240506001.html</id>
     <published>2024-05-06T07:49:34.000Z</published>
-    <updated>2024-05-06T07:51:42.249Z</updated>
+    <updated>2024-05-06T07:51:51.484Z</updated>
     
     <summary type="html">
     
@@ -632,41 +663,6 @@
       <category term="filetype" scheme="https://iamghf.top/tags/filetype/"/>
     
       <category term="site" scheme="https://iamghf.top/tags/site/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Costco 代购店推荐</title>
-    <link href="https://iamghf.top/costco-dai-gou-dian-tui-jian.html"/>
-    <id>https://iamghf.top/costco-dai-gou-dian-tui-jian.html</id>
-    <published>2023-11-02T08:50:37.000Z</published>
-    <updated>2023-11-02T09:10:04.880Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;推荐一家Costco代购店。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://m.tb.cn/h.5R0VbX0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;苏小小CostcoSAM甄选&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-    
-      <category term="生活" scheme="https://iamghf.top/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="costco" scheme="https://iamghf.top/tags/costco/"/>
-    
-      <category term="开市客" scheme="https://iamghf.top/tags/%E5%BC%80%E5%B8%82%E5%AE%A2/"/>
-    
-      <category term="代购" scheme="https://iamghf.top/tags/%E4%BB%A3%E8%B4%AD/"/>
-    
-      <category term="淘宝" scheme="https://iamghf.top/tags/%E6%B7%98%E5%AE%9D/"/>
     
   </entry>
   
