@@ -1,0 +1,1385 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="人生苦短，我用PyCharm, 网络,树莓派,编程,Java,大数据,Flink,ChatGPT,spring,微服务,springcloud">
+    <meta name="description" content="我折腾 我快乐">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>人生苦短，我用PyCharm | ghf</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+    <!-- Clarity tracking code for https://iamghf.top/ -->
+    <script>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "j9amie3njm");
+    </script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="ghf" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ghf</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://iamghf.top/" class="waves-effect waves-light">
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Wiki</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ghf</div>
+        <div class="logo-desc">
+            
+            我折腾 我快乐
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://iamghf.top/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-list"></i>
+			
+			Wiki
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">人生苦短，我用PyCharm</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+        
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/tags/pycharm/">
+                                <span class="chip bg-color">pycharm</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                软件系统
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-10-14
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.2k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    23 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="人生苦短，我用PyCharm"><a href="#人生苦短，我用PyCharm" class="headerlink" title="人生苦短，我用PyCharm"></a>人生苦短，我用PyCharm</h1><p>导读：PyCharm 是一种 Python IDE，可以帮助程序员节约时间，提高生产效率。那么具体如何使用呢？本文从 PyCharm 安装到插件、外部工具、专业版功能等进行了一一介绍，希望能够帮助到大家。</p>
+<p>在本文中，我们并不会提供非常完善的指南，但是会介绍 PyCharm 最主要的一些能力，了解这些后，后面就需要我们在实践中再具体学习了。</p>
+<p>JetBrains 开发的 PyCharm 差不多是 Python 最常用的 IDE。PyCharm 可以为我们节省大量时间，它能够管理代码，并完成大量其他任务，如 debug 和可视化等。</p>
+<p>本文将介绍：</p>
+<ul>
+<li>PyCharm 安装</li>
+<li>在 PyCharm 中写代码</li>
+<li>在 PyCharm 中运行代码</li>
+<li>在 PyCharm 中进行代码 debug 和测试</li>
+<li>在 PyCharm 中编辑已有项目</li>
+<li>在 PyCharm 中搜索和导航</li>
+<li>在 PyCharm 中使用版本控制</li>
+<li>在 PyCharm 中使用插件和外部工具</li>
+<li>使用 PyCharm Professional 功能，如 Django 支持和科学模式</li>
+</ul>
+<p>本文假设读者熟悉 Python 开发，且计算机中已安装某个版本的 Python。该教程将使用 Python 3.6 版本，屏幕截图和 demo 均来自 macOS 系统。由于 PyCharm 可在所有主流平台上运行，读者在其他系统中会看到略微不同的 UI 元素，可能需要调整某些命令。</p>
+<h3 id="01、PyCharm-安装"><a href="#01、PyCharm-安装" class="headerlink" title="01、PyCharm 安装"></a>01、PyCharm 安装</h3><p>本文将使用 PyCharm Community Edition 2019.1 版本，该版本免费且可在所有主流平台上使用。只有最后一部分「PyCharm Professional 功能」使用的是 PyCharm Professional Edition 2019.1 版本。</p>
+<p>推荐使用 JetBrains Toolbox App 安装 PyCharm。使用该 App，你可以安装不同的 JetBrains 产品或者同一产品的不同版本，并在必要的情况下更新、回滚和轻松删除任意工具。你还可以在恰当的 IDE 及版本中快速打开任意项目。</p>
+<p>Toolbox App 安装指南，参见 JetBrains 官方文档：</p>
+<p><a href="https://www.jetbrains.com/help/pycharm/installation-guide.html#toolbox" target="_blank" rel="noopener">https://www.jetbrains.com/help/pycharm/installation-guide.html#toolbox</a></p>
+<p>该 App 会根据你的操作系统提供合适的安装说明。如果它无法准确识别系统，你可以在右上角的下拉列表中找到合适的系统。</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092628.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>安装成功后，启动该 app 并接受用户协议。在 Tools 选项下，你可以看到一个可用产品列表。从中找到 PyCharm Community，并点击 Install。</p>
+<p>好啦，现在你的机器上已经安装 PyCharm 了。如果不想使用 Toolbox app，你可以单独安装 PyCharm。</p>
+<p>启动 PyCharm，你将看到导入设置弹窗。PyCharm 会自动检测出这是首次安装，并为你选择「Do not import settings」选项。点击 OK，之后 PyCharm 会让你选择键盘映射（keymap scheme）。保留默认设置，点击右下角的「Next: UI Themes」：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092637.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>PyCharm 将询问选择深色模式 Darcula 还是浅色模式。你可以选择自己喜欢的模式，并点击「Next: Launcher Script」：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092643.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>本教程将使用深色模式 Darcula。</p>
+<p>在下一个页面上，直接保留默认设置，并点击「Next: Featured plugins」，这时 PyCharm 将展示可用插件列表。点击「Start using PyCharm」，现在你可以写代码了！</p>
+<h3 id="02、在-PyCharm-中写代码"><a href="#02、在-PyCharm-中写代码" class="headerlink" title="02、在 PyCharm 中写代码"></a>02、在 PyCharm 中写代码</h3><p>在 PyCharm 中，你可以在「项目」中执行任意操作。因此，首先你需要创建一个项目。</p>
+<p>安装和打开 PyCharm 后，你会看到欢迎页面。点击「Create New Project」，出现「New Project」弹窗：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092649.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>指定项目位置，打开 Project Interpreter 列表，选择创建新的项目解释器或者使用已有的解释器。选择「New environment using」，打开其右方的下拉列表，选择 Virtualenv、Pipenv 或 Conda。这些工具可以为不同项目单独创建 Python 环境，从而分别保存不同项目所需的依赖项。</p>
+<p>你可以选择其中任意一个，本教程使用的是 Virtualenv。选择后，指定环境位置，从 Python 解释器列表中选择要安装在系统中的 base interpreter。通常，保持默认设置即可。下面有两个可选框：在新环境中继承全局包环境、令当前环境可以用其它所有项目，两个都不要选。</p>
+<p>点击右下角的「Create」，创建新项目：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092655.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>屏幕上出现「Tip of the Day」弹窗，在每次启动时 PyCharm 通过该弹窗提供 trick。关掉该弹窗。</p>
+<p>现在我们可以开始新的 Python 程序了。如果你使用的是 Mac 系统，使用 Cmd+N 键；如果你使用的是 Windows 或 Linux 系统，使用 Alt+Ins 键。然后选择 Python File。你也可以在菜单中选择 File → New。将新文件命名为 guess_game.py 并点击 OK。你将看到如下 PyCharm 窗口：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092701.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>至于测试代码，我们来快速写一个简单的猜谜游戏，即程序选择一个数字让用户来猜，在每一次猜测时，程序将告诉用户他猜的数字比神秘数字大还是小，用户猜中数字时游戏结束。以下是该游戏的代码：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092707.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>直接键入上述代码，而不是复制粘贴。你会看到如下画面：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092714.gif" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>如上图所示，PyCharm 提供 Intelligent Coding Assistance 功能，可以执行代码补全、代码检查、错误高亮显示和快速修复建议。比如键入 main 并点击 tab 键，PyCharm 会自动补全整个 main 从句。</p>
+<p>此外，如果你在条件句前忘记键入 if，在该句子最后增添.if 并点击 Tab 键，PyCharm 将修复该 if 条件句。该用法同样适用于 True.while。这即是 PyCharm 的 Postfix Completion 功能，它可以帮助用户减少退格键使用次数。</p>
+<h3 id="03、在-PyCharm-中运行代码"><a href="#03、在-PyCharm-中运行代码" class="headerlink" title="03、在 PyCharm 中运行代码"></a>03、在 PyCharm 中运行代码</h3><p>现在你已经编码完成该游戏，可以运行了。</p>
+<p>该游戏程序有三种运行方式：</p>
+<ol>
+<li>在 Mac 系统中使用快捷键 Ctrl+Shift+R，在 Windows 或 Linux 系统中，使用快捷键 Ctrl+Shift+F10。</li>
+<li>右键单击背景，从菜单中选择「Run 『guess_game』」。</li>
+<li>由于该程序具备<strong>main</strong> 从句，你可以点击<strong>main</strong> 从句左侧的绿色小箭头，选择「Run 『guess_game』」。</li>
+</ol>
+<p>使用以上任一方式运行该程序，窗口底部会出现终端面板（Terminal pane），显示你的代码输出结果：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092720.gif" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>你可以玩一下这个游戏，看看自己能否猜中数字。（专业建议：从 50 开始猜。）</p>
+<h3 id="04、在-PyCharm-中进行代码-debug"><a href="#04、在-PyCharm-中进行代码-debug" class="headerlink" title="04、在 PyCharm 中进行代码 debug"></a>04、在 PyCharm 中进行代码 debug</h3><p>找到神秘数字了吗？如果找到了，你可能会看到一些奇怪的东西：程序没有打印出祝贺信息和显示退出按钮，而是重新开始了。这就是 bug 所在。要想发现程序重新开始的原因，你需要 debug。</p>
+<p>首先，点击第 8 行代码左侧的空白区域，设置断点：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092725.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>断点即程序运行到这一行时会自动停止，你可以探索断点处之后的代码有什么错误。接下来，从以下三种方式中选择一种开始 debug：</p>
+<ol>
+<li>在 Mac 系统中使用 Ctrl+Shift+D 键，在 Windows 或 Linux 系统中使用 Shift+Alt+F9 键。</li>
+<li>右键单击背景，选择「Debug 『guess_game』」。</li>
+<li>点击<strong>main</strong>从句左侧的绿色小箭头，选择「Debug 『guess_game』」。</li>
+</ol>
+<p>之后，你将看到底部出现 Debug 窗口：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092732.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>按照下列步骤执行程序 debug：</p>
+<ol>
+<li>注意当前行被蓝色高亮显示。</li>
+<li>Debug 窗口显示 random_int 及其值。记录该数字。（上图中该数字为 85。）</li>
+<li>点击 F8 执行当前代码行，并执行到下一行代码。如有必要，你也可以使用 F7 跳转到当前行内的函数。随着你继续执行语句，变量的变化将自动呈现在 Debugger 窗口。</li>
+<li>注意 Debugger 标签右侧有一个 Console 标签。Console 标签和 Debugger 标签相互独立。你可以在 Console 中与程序进行交互，在 Debugger 中执行 debug 动作。</li>
+<li>转向 Console 标签，进入猜测过程。</li>
+<li>键入左侧 Debugger 标签中显示的数字，点击 Enter 键。</li>
+<li>转回 Debugger 标签。</li>
+<li>再次点击 F8，计算 if 语句。注意现在你在第 14 行。为什么不是第 11 行呢？因为第 10 行的 if 语句被计算为 False。那么为什么当你键入数字后它算出来为 False 了呢？</li>
+<li>仔细看第 10 行，注意我们在对比 user_guess 和一个错误的项。我们应该对比用户猜测的数字和 random_int，但此处我们对比的是 randint（从 random 包导入的函数）。</li>
+<li>将 randint 更改为 random_int，按照同样的步骤重新开始 debug。你会发现，这一次到达的是第 11 行，第 10 行算出来为 True：</li>
+</ol>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092737.gif" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>恭喜你，bug 被修复了！</p>
+<h3 id="05、在-PyCharm-中进行代码测试"><a href="#05、在-PyCharm-中进行代码测试" class="headerlink" title="05、在 PyCharm 中进行代码测试"></a>05、在 PyCharm 中进行代码测试</h3><p>不经单元测试的应用都不可靠。PyCharm 可以帮助你快速舒适地写单元测试并运行。默认情况下，unittest 被用作测试运行器，而 PyCharm 还支持其他测试框架，如 pytest、nose、doctest、tox 和 trial。例如，你可以按照以下步骤为项目选择 pytest 测试运行器：</p>
+<ol>
+<li>打开 Settings/Preferences → Tools → Python Integrated Tools 设置对话框。</li>
+<li>在默认测试运行器字段中选择 pytest。</li>
+<li>点击 OK 保存该设置。</li>
+</ol>
+<p>本教程的示例将使用默认测试运行器 unittest。</p>
+<p>在同一个项目中，创建文件 calculator.py，并将以下 Calculator 类放入该文件：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092743.png" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>PyCharm 使得为已有代码创建测试变得轻而易举。打开 calculator.py 文件，执行以下步骤中的任意一个：</p>
+<ul>
+<li>在 Mac 系统中使用 Shift+Cmd+T 键，在 Windows 或 Linux 系统中使用 Ctrl+Shift+T。</li>
+<li>右键单击该类的背景，选择「Go To and Test」。</li>
+<li>在主菜单中吗，选择 Navigate → Test。</li>
+</ul>
+<p>选择「Create New Test…」，得到以下窗口：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092748.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>Target directory、Test file name 和 Test class name 这三项均保留默认设置。选中上图中两种需要测试的方法并点击 OK。好了！PyCharm 自动创建文件 test_calculator.py，并在其中创建了以下 stub test：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092753.png" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>使用以下方法中的任意一个运行测试：</p>
+<ul>
+<li>在 Mac 系统中使用 Ctrl+R 键，在 Windows 或 Linux 系统中使用 Shift+F10 键。</li>
+<li>右键单击背景，选择「Run 『Unittests for test_calculator.py』」。</li>
+<li>点击测试类名称左侧的绿色小箭头，选择「Run 『Unittests for test_calculator.py』」。</li>
+</ul>
+<p>你将看到底部出现测试窗口，所有测试均失败：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092801.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>注意，左侧是测试结果的层次结构，右侧是终端的输出。现在，将代码更改成以下代码，实现 test_add：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092806.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>重新运行测试，你会看到一个测试通过了，另一个则失败。按照如下操作探索不同选项，来展示已通过测试和被忽略测试，按照字母顺序对测试进行排序，以及按照时长对测试进行排序：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092811.gif" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>注意，上图中的 sleep(0.1) 方法的作用是使其中一个测试变慢，以便按时长对测试进行排序。</p>
+<h3 id="06、在-PyCharm-中编辑已有项目"><a href="#06、在-PyCharm-中编辑已有项目" class="headerlink" title="06、在 PyCharm 中编辑已有项目"></a>06、在 PyCharm 中编辑已有项目</h3><p>单文件项目非常适合作为示例，但你通常需要处理较大的项目。这部分将介绍如何使用 PyCharm 处理较大项目。</p>
+<p>为了探索 PyCharm 以项目为中心的特征，你将使用 Alcazar web 框架（该框架用于学习目的）。在本地复制该 repo。</p>
+<p>地址：</p>
+<p><a href="https://realpython.com/optins/view/alcazar-web-framework/" target="_blank" rel="noopener">https://realpython.com/optins/view/alcazar-web-framework/</a></p>
+<p>当你在本地已有项目时，使用以下方法中的任意一个在 PyCharm 中打开项目：</p>
+<ul>
+<li>在主菜单中点击 File → Open。</li>
+<li>在欢迎页面点击 Open。</li>
+</ul>
+<p>之后，在计算机中找到包含该项目的文件夹，并打开。</p>
+<p>如果该项目包含虚拟环境，PyCharm 将自动使用该虚拟环境，并将它作为项目解释器。</p>
+<p>如果你需要配置不同的虚拟环境 virtualenv，在 Mac 上打开 Preferences，或在 Windows 或 Linux 系统中使用 Ctrl+Alt+S 打开 Settings，找到 Project: ProjectName。打开下拉列表，选择 Project Interpreter：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092818.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>从下拉列表中选择 virtualenv。如果没有要选择的项，则点击下拉列表右方的设置按钮选择 Add…其余步骤和创建新项目的步骤相同。</p>
+<h3 id="07、在-PyCharm-中搜索和导航"><a href="#07、在-PyCharm-中搜索和导航" class="headerlink" title="07、在 PyCharm 中搜索和导航"></a>07、在 PyCharm 中搜索和导航</h3><p>在大项目中，我们很难记住每个事物的位置，因此快速导航和搜索非常重要。PyCharm 可以提供这些功能。接下来，我们使用上一节中打开的项目，实践以下快捷键：</p>
+<ul>
+<li>在当前文件中搜索代码段：在 Mac 系统中使用 Cmd+F 键，在 Windows 或 Linux 系统中使用 Ctrl+F 键。</li>
+<li>在整个项目中搜索代码段：在 Mac 系统中使用 Cmd+Shift+F 键，在 Windows 或 Linux 系统中使用 Ctrl+Shift+F 键。</li>
+<li>搜索类：在 Mac 系统中使用 Cmd+O 键，在 Windows 或 Linux 系统中使用 Ctrl+N 键。</li>
+<li>搜索文件：在 Mac 系统中使用 Cmd+Shift+O 键，在 Windows 或 Linux 系统中使用 Ctrl+Shift+N 键。</li>
+<li>如果你不知道要搜索的是文件、类还是代码段，则搜索全部：按两次 Shift 键。</li>
+</ul>
+<p>导航可使用以下快捷键：</p>
+<ul>
+<li>前往变量的声明：在 Mac 系统中使用 Cmd 键，在 Windows 或 Linux 系统中使用 Ctrl 键，然后单击变量。</li>
+<li>寻找类、方法或文件的用法：使用 Alt+F7 键。</li>
+<li>查看近期更改：使用 Shift+Alt+C 键，或者在主菜单中点击 View → Recent Changes。</li>
+<li>查看近期文件：在 Mac 系统中使用 Cmd+E 键，在 Windows 或 Linux 系统中使用 Ctrl+E 键，或者在主菜单中点击 View → Recent Files。</li>
+<li>多次跳转后在导航历史中前进和后退：在 Mac 系统中使用 Cmd+[ / Cmd+] 键，在 Windows 或 Linux 系统中使用 Ctrl+Alt+Left / Ctrl+Alt+Right 键。</li>
+</ul>
+<p>更多细节，参见官方文档：</p>
+<p><a href="https://www.jetbrains.com/help/pycharm/tutorial-exploring-navigation-and-search.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/pycharm/tutorial-exploring-navigation-and-search.html</a></p>
+<h3 id="08、PyCharm-中的版本控制"><a href="#08、PyCharm-中的版本控制" class="headerlink" title="08、PyCharm 中的版本控制"></a>08、PyCharm 中的版本控制</h3><p>版本控制系统（如 Git 和 Mercurial）是现代软件开发世界中最重要的工具之一。因此，IDE 必须支持版本控制。PyCharm 在这方面做得很好，它集成了大量流行的版本控制系统，如 Git（和 Github (<a href="https://github.com/)）、Mercurial、Perforce" target="_blank" rel="noopener">https://github.com/)）、Mercurial、Perforce</a> 和 Subversion。</p>
+<p>注：以下示例中使用的版本控制系统为 Git。</p>
+<h4 id="1-配置版本控制系统（VCS）"><a href="#1-配置版本控制系统（VCS）" class="headerlink" title="1. 配置版本控制系统（VCS）"></a>1. 配置版本控制系统（VCS）</h4><p>要想实现 VCS 集成，你需要在顶部菜单点击 VCS → VCS Operations Popup…，或者在 Mac 系统中使用 Ctrl+V 键，在 Windows 或 Linux 系统中使用 Alt+` 键。选择 Enable Version Control Integration…，你将看到以下窗口：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092827.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>从下拉列表中选择 Git，点击 OK，这样你就为项目设置好了 VCS。（注意，如果你打开的已有项目已经具备版本控制系统，PyCharm 将会发现并自动使用该版本控制系统。）</p>
+<p>这时如果你前往 VCS Operations Popup…，你会发现一个不同的弹窗，它具备选项 git add、git stash、git branch、git commit、git push 等等：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092834.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>如果你找不到所需要的选项，你可以在顶部菜单中点击 VCS，选择 Git，在这里你可以创建和查看 pull request。</p>
+<h4 id="2-提交和冲突处理"><a href="#2-提交和冲突处理" class="headerlink" title="2. 提交和冲突处理"></a>2. 提交和冲突处理</h4><p>这是 PyCharm 中 VCS 集成的两大特征，我个人经常使用并且非常喜欢。假如你完成了工作，打算提交，前往 VCS → VCS Operations Popup… → Commit…，或者在 Mac 系统中使用 Cmd+K 键，在 Windows 或 Linux 系统中使用 Ctrl+K 键。你将看到如下窗口：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092840.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>在该窗口中，你可以：</p>
+<ul>
+<li>选择要提交的文件</li>
+<li>写下提交信息</li>
+<li>在提交前执行各项检查</li>
+<li>查看更改</li>
+<li>点击右下角 Commit 按钮旁边的箭头，选择 Commit and Push…，从而一次性完成提交和 push</li>
+</ul>
+<p>是不是感觉很神奇很迅速？特别是如果你以前经常通过命令行手动执行这些任务时。</p>
+<p>团队合作中会出现合并冲突（merge conflict）。当一个人对你正在处理的文件提交更改时，你们二人更改了同一行导致更改重叠，这时 VCS 无法决定选择你的更改还是队友的更改。那么你可以使用以下箭头和符号来解决这个问题：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092846.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>看起来很奇怪，我们很难分辨应该删除哪些更改、保留哪些更改。不要怕，PyCharm 来了！它可以用更好、更简洁的方法解决冲突。在顶部菜单中前往 VCS，选择 Git，然后选择 Resolve conflicts…。选择存在冲突的文件，点击 Merge，出现以下窗口：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092852.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>在左侧列中，你可以查看自己做的更改。在右侧列中，可以查看队友做的更改。而中间列则显示结果。存在冲突的代码行被高亮显示，你可以在它们旁边看到 X 和 &gt;&gt;/&lt;&lt;。点击箭头表示接受更改，点击 X 则表示拒绝更改。解决所有冲突后，点击 Apply 按钮：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092858.gif" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>在上图中，对于第一个冲突行，作者选择拒绝自己的更改，接受队友的更改。而在第二个冲突行中，作者接受了自己的更改，拒绝了队友的更改。</p>
+<p>使用 PyCharm 中的 VCS 集成还可以执行很多操作。详情参见：</p>
+<p><a href="https://www.jetbrains.com/help/pycharm/version-control-integration.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/pycharm/version-control-integration.html</a></p>
+<h3 id="09、在-PyCharm-中使用插件和外部工具"><a href="#09、在-PyCharm-中使用插件和外部工具" class="headerlink" title="09、在 PyCharm 中使用插件和外部工具"></a>09、在 PyCharm 中使用插件和外部工具</h3><p>在 PyCharm 中你可以找到开发所需的几乎所有功能。如果没找到，那么很可能存在一个插件，向 PyCharm 提供你需要的功能。例如，它们可以：</p>
+<ul>
+<li>添加多语言和多框架支持</li>
+<li>使用快捷键提示（shortcut hint）、文件监视器（file watcher）等提升你的生产效率</li>
+<li>利用代码练习，帮助你学习新的编程语言</li>
+</ul>
+<p>例如，IdeaVim 插件向 PyCharm 添加 Vim 模拟。如果你喜欢 Vim，这个插件可以实现不错的结合。</p>
+<p>Material Theme UI 插件可将 PyCharm 的外观改变为 Material Design 的外观：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092904.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>Vue.js 插件使 PyCharm 支持 Vue.js 项目。Markdown 插件使得在 IDE 内可以编辑 Markdown 文件，并实时预览渲染后的 HTML。</p>
+<p>在 Mac 系统上点击 Preferences → Plugins，在 Windows 或 Linux 系统中点击 Settings → Plugins，你可以在 Marketplace 标签下找到和安装所有可用插件：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092910.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>如果仍然没找到所需插件，你甚至可以自己开发一个。</p>
+<p>如果你找不到合适的插件，又不想自己开发，因为 PyPI 上有可用的包，你可以将这个包作为外部工具添加到 PyCharm。以代码分析器 Flake8 为例。</p>
+<p>首先，在所选 Terminal app 中键入 pip install flake8，从而在虚拟环境中安装 Flake8。或者也可以使用 PyCharm 集成的 Terminal：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092916.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>在 Mac 系统上点击 Preferences → Tools，在 Windows 或 Linux 系统中点击 Settings → Tools，选择 External Tools。然后点击底部 (1) 处的 + 按钮。在弹出的窗口中，输入细节并在两个窗口中点击 OK，如下图所示：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092923.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>上图中，Program (2) 指 Flake8，你可以在虚拟环境文件夹（bin）中找到它。Arguments (3) 表示你想用 Flake8 分析的文件。Working directory 表示项目目录。</p>
+<p>你可以把这里所有项的绝对路径写死，但这就意味着你无法在其他项目中使用该外部工具，只能在一个项目中针对一个文件使用该工具。</p>
+<p>因此你需要使用 Macros。它是$name$格式的变量，根据语境而变化。例如，当你编辑 first.py 时，$FileName$ 为 first.py，当你编辑 second.py 时，$FileName$ 为 second.py。你可以查看它们的列表，点击 Insert Macro… 按钮将其中一个插入。此处你使用了 macros，它们的值会根据你目前处理的项目而改变，Flake8 将继续准确执行其工作。</p>
+<p>要想使用它，你需要创建文件 example.py，并在其中写入以下代码：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092928.png" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>上述代码故意破坏了 Flake8 的一些规则。右键单击文件背景，选择 External Tools → Flake8。Flake8 分析结果将出现在窗口底部：</p>
+<p><img src="https://img.iamghf.top/blog/2019-12-26-092933.jpg" alt="Python最强IDE详细使用指南：人生苦短，我用PyCharm"></p>
+<p>为了使效果更好，你可以为其添加快捷键。在 Mac 系统中选择 Preferences，在 Windows 或 Linux 系统中选择 Settings。然后，点击 Keymap → External Tools → External Tools。双击 Flake8，选择 Add Keyboard Shortcut，出现以下窗口：</p>
+<p>上图中，快捷键是 Ctrl+Alt+A（本教程使用该快捷键）。你可以在文本框中添加喜欢的快捷键，然后在两个窗口中点击 OK。然后，你就可以用该快捷键，在 Flake8 的帮助下分析目前在处理的文件了。</p>
+<h3 id="10、PyCharm-Professional-功能"><a href="#10、PyCharm-Professional-功能" class="headerlink" title="10、PyCharm Professional 功能"></a>10、PyCharm Professional 功能</h3><p>PyCharm Professional 是 PyCharm 的付费版本，具备更多开箱即用的功能和集成。这部分将概览其主要功能，以及官方文档链接（其中详细介绍了每一项功能）。记住，以下功能在 PyCharm Community 版本中均不可用。</p>
+<h4 id="1-Django-支持"><a href="#1-Django-支持" class="headerlink" title="1. Django 支持"></a>1. Django 支持</h4><p>Django 是最流行和最受喜爱的 Python web 框架，PyCharm 对 Django 提供广泛的支持。要确保对 Django 的支持，需要执行以下步骤：</p>
+<ol>
+<li>在 Mac 系统中打开 Preferences，在 Windows 或 Linux 系统中打开 Settings。</li>
+<li>选择 Languages and Frameworks。</li>
+<li>选择 Django。</li>
+<li>检查复选框 Enable Django support。</li>
+<li>应用更改。</li>
+</ol>
+<p>现在确保了对 Django 的支持，你在 PyCharm 中的 Django 开发之旅将轻松很多。具体而言在创建项目时，你会得到一个专用的 Django 项目类型。这表示，当你选择该类型时，你将拥有所有必要文件和设置。这等同于使用 django-admin startproject mysite。</p>
+<p>你也可以在 PyCharm 内直接运行 manage.py 命令。目前支持的 Django 模板，包括以下一些：</p>
+<ul>
+<li>语法和错误高亮显示</li>
+<li>代码补全</li>
+<li>导航</li>
+<li>block 名称补全</li>
+<li>自定义标签和过滤器补全</li>
+<li>标签和过滤器的快速文档</li>
+<li>模板 debug 能力</li>
+</ul>
+<p>除此之外，我们还可以在其他 Django 部分（如视图、URL 和模型）中执行代码补全、对 Django ORM 提供代码追踪支持（code insight support）、对 Django 模型提供模型依赖项关系图。</p>
+<p>更多细节，参见官方文档：</p>
+<p><a href="https://www.jetbrains.com/help/pycharm/django-support7.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/pycharm/django-support7.html</a></p>
+<h4 id="2-数据库支持"><a href="#2-数据库支持" class="headerlink" title="2. 数据库支持"></a>2. 数据库支持</h4><p>现代数据库开发是一个复杂的任务，需要多个支持系统和工作流。这也是 JetBrains 开发独立 IDE DataGrip 的原因。DataGrip 是独立于 PyCharm 的产品，二者的应用场景和授权都不相同。</p>
+<p>但幸运的是，通过 Database tools and SQL 插件（该插件默认开启），PyCharm 可以支持 DataGrip 中的所有特性。在该插件的帮助下，你可以查询、创建和管理数据库，不管数据库在本地、服务器，还是在云端。该插件支持 MySQL、PostgreSQL、Microsoft SQL Server、SQLite、MariaDB、Oracle、Apache Cassandra 等。</p>
+<p>关于该插件的更多用途，请查看文档：</p>
+<p><a href="https://www.jetbrains.com/help/pycharm/relational-databases.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/pycharm/relational-databases.html</a></p>
+<h4 id="3-线程并发可视化（Thread-Concurrency-Visualization）"><a href="#3-线程并发可视化（Thread-Concurrency-Visualization）" class="headerlink" title="3. 线程并发可视化（Thread Concurrency Visualization）"></a>3. 线程并发可视化（Thread Concurrency Visualization）</h4><p>Django Channels、asyncio 和近期框架（如 Starlette (<a href="https://www.starlette.io/)）表明异步" target="_blank" rel="noopener">https://www.starlette.io/)）表明异步</a> Python 编程正逐渐成为趋势。异步编程具备很多好处，但很难写，也很难 debug。在此类案例中，Thread Concurrency Visualization 就是医生，帮助你全面管理多线程应用并进行优化。</p>
+<p>更多细节，参见文档：</p>
+<p><a href="https://www.jetbrains.com/help/pycharm/thread-concurrency-visualization.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/pycharm/thread-concurrency-visualization.html</a></p>
+<h4 id="4-Profiler"><a href="#4-Profiler" class="headerlink" title="4. Profiler"></a>4. Profiler</h4><p>说到优化，profiling 是另一种代码优化方法。profiling 可以帮助你查看代码的哪一部分占用了最多的执行时间。profiler 运行的优先级如下：</p>
+<ol>
+<li>vmprof</li>
+<li>yappi</li>
+<li>cProfile</li>
+</ol>
+<p>如果你没有安装 vmprof 或 yappi，则运行标准 cProfile。</p>
+<p>更多细节，参见：</p>
+<p><a href="https://www.jetbrains.com/help/pycharm/profiler.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/pycharm/profiler.html</a></p>
+<h4 id="4-科学模式"><a href="#4-科学模式" class="headerlink" title="4. 科学模式"></a>4. 科学模式</h4><p>Python 不仅是通用和 web 编程语言，由于 NumPy、SciPy、scikit-learn、Matplotlib、Jupyter 等库和工具的加持，Python 成为数据科学和机器学习领域的最优工具。有了这些强大工具，你还需要一个强大的 IDE 来支持这些库所具备的绘图、分析等所有功能。</p>
+<p>关于科学模式的更多详情，参见：</p>
+<p><a href="https://www.jetbrains.com/help/pycharm/matplotlib-support.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/pycharm/matplotlib-support.html</a></p>
+<h4 id="5-远程开发"><a href="#5-远程开发" class="headerlink" title="5. 远程开发"></a>5. 远程开发</h4><p>很多应用出现 bug 的一个常见原因是，开发环境和生产环境不同。尽管在大多数情况下，开发时完美复制生产环境并不现实，但力求实现完美复刻是值得追寻的目标。</p>
+<p>在 PyCharm 的帮助下，你可以使用另一台计算机（如 Linux VM）上的解释器对应用进行 debug。这样，你就可以拥有与生产环境一样的解释器了，从而避免很多因开发环境和生产环境差异导致的 bug。</p>
+<p>详情参见：</p>
+<p><a href="https://www.jetbrains.com/help/pycharm/remote-debugging-with-product.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/pycharm/remote-debugging-with-product.html</a></p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>PyCharm 是最好的 Python 开发 IDE 之一。它提供大量优势，帮助执行例行任务，从而节约大量时间。学完本教程，现在你知道如何利用 PyCharm 提高生产效率了吗？</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top" rel="external nofollow noreferrer">ghf</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top/ren-sheng-ku-duan-wo-yong-pycharm.html">https://iamghf.top/ren-sheng-ku-duan-wo-yong-pycharm.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://iamghf.top" target="_blank">ghf</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/pycharm/">
+                                    <span class="chip bg-color">pycharm</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">one for all, all for one</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '7140a41ed2ddd46c10c7',
+        clientSecret: '9f81b92236315959b71eb3c245a4f02f922a7651',
+        repo: 'xjbsay',
+        owner: 'iamghf',
+        admin: "iamghf",
+        id: '2019-10-14T16-50-01',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/shi-da-ji-chu-shi-yong-suan-fa.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="十大基础实用算法">
+                        
+                        <span class="card-title">十大基础实用算法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            十大基础实用算法算法一：快速排序算法
+快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 n 个项目要Ο(nlogn) 次比较。在最坏状况下则需要Ο(n2) 次比较，但这种状况并不常见。事实上，快速排序通常明显比其他Ο(nlog
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    编程语言
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/liu-liang-jie-chi-ji-zhu-fen-xi.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="流量劫持技术分析">
+                        
+                        <span class="card-title">流量劫持技术分析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            流量劫持技术分析万物互联时代，无线网络全面覆盖我们的生活，基本上各家门店都有wifi标志，而且有的还没有密码，蹭WiFi似乎已成为一项基本“生存技能”，现代人的基本状态就像下面这首打油诗一样：
+枯藤老树昏鸦，空调Wifi西瓜
+葛优同款沙发，
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    网络技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B5%81%E9%87%8F%E5%8A%AB%E6%8C%81/">
+                        <span class="chip bg-color">流量劫持</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://iamghf.top" target="_blank">ghf</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">湘ICP备18008192号-1</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/iamghf" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:841567545@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=841567545" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 841567545" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

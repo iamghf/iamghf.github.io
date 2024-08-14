@@ -1,0 +1,1209 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="我战胜了所有对手，却输给了时代！, 网络,树莓派,编程,Java,大数据,Flink,ChatGPT,spring,微服务,springcloud">
+    <meta name="description" content="我折腾 我快乐">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>我战胜了所有对手，却输给了时代！ | ghf</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+    <!-- Clarity tracking code for https://iamghf.top/ -->
+    <script>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "j9amie3njm");
+    </script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="ghf" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ghf</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://iamghf.top/" class="waves-effect waves-light">
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Wiki</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ghf</div>
+        <div class="logo-desc">
+            
+            我折腾 我快乐
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://iamghf.top/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-list"></i>
+			
+			Wiki
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">我战胜了所有对手，却输给了时代！</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+        
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%A4%A7%E6%B6%A6%E5%8F%91/">
+                                <span class="chip bg-color">大润发</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%B6%A3%E9%97%BB/" class="post-category">
+                                趣闻
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-01-03
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    9 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="大润发创始人挥泪离场：我战胜了所有对手，却输给了时代！"><a href="#大润发创始人挥泪离场：我战胜了所有对手，却输给了时代！" class="headerlink" title="大润发创始人挥泪离场：我战胜了所有对手，却输给了时代！"></a>大润发创始人挥泪离场：我战胜了所有对手，却输给了时代！</h1><p>历史的车轮滚滚向前，它不会因任何人的消极缓慢而停止。</p>
+<p>时代抛弃你时，连一声再见都不会说。</p>
+<p>大润发创始人离职时说：<strong>战胜了所有对手，却输给了时代。</strong></p>
+<p>确实是这样，大润发在零售行业是一个号称19年不关一家店的传奇商场。在商场这个领域里，没有任何人能打败它，包括沃尔玛/家乐福，但是<strong>很可惜他败给了这个时代，被阿里巴巴收购，高层集体走人。</strong></p>
+<p><img src="https://img.iamghf.top/blog/2020-01-03-023510.jpg" alt="img"></p>
+<p><strong>1</strong></p>
+<p>现在的竞争是怎么样的呢？</p>
+<p>就像乌鸦喝水，一只老乌鸦经过长年累月的摸索，终于琢磨出了丢石子的方法，从此它就顺畅的喝到了水。并且它经常被人夸赞，方法还被写到教科书里！</p>
+<p>然而忽然有一天，飞来了另外一群乌鸦。<strong>这群乌鸦人家根本不会衔石子，但个个嘴里都带着一根吸管：</strong></p>
+<p><img src="https://img.iamghf.top/blog/2020-01-03-23608.jpg" alt="img"></p>
+<p>这叫什么事嘛！</p>
+<p>金庸小说里，金轮法王练了16年的武功，被杨过一招打败！</p>
+<p>完全不按套路出牌。</p>
+<p>的确，这个世界接下来就是不按套路出牌！</p>
+<p><strong>2</strong></p>
+<p>去年，著名数码相机品牌——尼康，关闭了它在中国的工厂。给出的理由是：<strong>智能手机的崛起侵占了原本属于数码相机的市场。</strong></p>
+<p>按照传统的商业逻辑，尼康最多被索尼/佳能等等同行打败，没想到打败它的居然是另一个行业——<strong>智能手机。</strong></p>
+<p>还是以数码相机行业为例，世界上曾经有一家世界500强的企业，名叫“柯达”，在1991年的时候，他的技术领先世界同行10年，但是2012年1月破产了，被做数码的干掉了。</p>
+<p>当“索尼”还沉浸在数码领先的喜悦中时，突然发现，原来全世界卖照相机卖的最好的不是他，而是做手机的“诺基亚”，因为每部手机都是一部照相机，于是“索尼”业绩大幅亏损。</p>
+<p><img src="https://img.iamghf.top/blog/2020-01-03-023610.jpg" alt="img"></p>
+<p>然后呢？</p>
+<p>然后原来做电脑的“苹果”出来了，做出了触屏的智能手机，把手机世界老大的“诺基亚”给干掉了，而且没有还手之力：2013年9月，“诺基亚”被微软收购了……</p>
+<p>事情还没完！</p>
+<p>10年之后的今天，当苹果手机还在如日中天时，中国的华为异军突起，又发布了全球首款AI手机，将手机带入了人工智能时代</p>
+<p><strong>3</strong></p>
+<p>我之前曾写过一篇文章，讲的是方便面行业的衰败原因，当时也用过这句话。</p>
+<p>方便面现在每年的销量以几十亿包的速度在减少，遭遇如此断崖式的危机，难道是产品出问题了吗？</p>
+<p>不是的，反而是越做越精致，越来越全面，大的小的，干拌的，开水泡的，各种口味层出不穷，还请了一些口碑极好的明星代言宣传，但仍旧挽回不了衰败的颓势。</p>
+<p>为什么这个曾连续18年销量保持增长的国民美食，在越做越用心的情况下，反而销量严重下滑呢？</p>
+<p>因为有了外卖，自从外卖行业的横空出世，各种可口的美食半小时左右就能送到手上，这时候基本就没方便面什么事了。</p>
+<p>打败康师傅的不是统一，不是今麦郎，更不是白象，不是任何一个平日里厮杀惨烈的竞争对手，而是美团、饿了么这些新兴公司，是散布在城市里大大小小的外卖美食小作坊。</p>
+<p>就好像大润发超市，没有被沃尔玛干掉，没有被家乐福给抢走地盘，但仍被阿里巴巴收购，高层集体走人。</p>
+<p>慢着，故事到这里还只是一个开始！</p>
+<p>我们都知道：美团是做外卖的，滴滴是做打车的，两者井水不犯河水。</p>
+<p>然而忽然有一天，一则“滴滴骑手招募令”在网上曝光，也就是说，打车起家的滴滴，竟然要和美团抢送餐的业务了！</p>
+<p>这下可好，美团也宣布要进军打车业务了！为了抢夺司机资源，美团给前2万报名的司机（北京是前5万）将享受3个月0抽成的优惠。</p>
+<p><img src="https://img.iamghf.top/blog/2020-01-03-023607.jpg" alt="img"></p>
+<p>下面是一张网上流传的图片，有人透露这是美团外卖渠道部的年会：最显眼的是这四个字：”灭饿除滴”。</p>
+<p><img src="https://img.iamghf.top/blog/2020-01-03-023609.jpg" alt="img"></p>
+<p>乱了，乱了，全乱了！</p>
+<p>以前，市场虽然很残酷，但我们最起码知道谁是敌人、谁是朋友。</p>
+<p>现在呢？<strong>我们完全分辨不出来孰敌孰友了！</strong></p>
+<p><strong>4</strong></p>
+<p>再看几个例子：</p>
+<p>对于80、90年代的人来说，儿时最珍贵的记忆莫过于一卷胶片，那个印在黑白时代的画面，——是整整一代人的情怀，也是那一年生人最美的芳华。</p>
+<p>关于胶卷的记忆，大多数人脑海中第一个就会想到柯达(Kodak)，就是那个曾经闻名于世的“胶卷王国”，曾拥有将近8000多家的柯达冲印店。那些遍布大小城市街区里醒目的黄黑标识，就是孩子们最向往的地方。</p>
+<p>可就在2012年1月19日，曾经的胶卷帝国一下子突然崩塌。柯达公司正式提出破产保护申请，市值一落千丈。</p>
+<p><img src="https://img.iamghf.top/blog/2020-01-03-023606.jpg" alt="img"></p>
+<p>关于柯达衰落的原因，其实看一下数码相机在大众中掀起的潮流就知道了。而在当时，柯达却是十分抗拒新时代和新技术的来临。<strong>与其说柯达公司没有意识到，还不如说柯达是不愿意参与、推动数码技术的更新迭代，它步伐沉重地缓慢转身，然而，驻足时却发现时代的鸿沟已经清晰地将自己与前行者远远隔开。</strong>在数字化浪潮面前，曾带给无数人以美好记忆的柯达就这样被席卷着被带到了众人看不见的地方。</p>
+<p><strong>讽刺的是，推倒柯达的数码影像技术，最早的发明者其实就是柯达。</strong>世界第一款数码相机由柯达的相机工程师Steve Sasson在1975年发明，并投入10亿美元进行相关研发，但是在当时数码业务并没有得到柯达高管们的重视，出于担心核心业务胶卷的地位受到影响，他们选择了放弃这次机会。</p>
+<p>Steve Sasson曾告诉《纽约时报》，他发明出数码相机之后，管理层的反应是：<strong>“这很可爱，但千万别告诉任何人。”</strong></p>
+<p>2000年以后，数码技术促使了很多行业变革，数码相机也得到了普及，佳能、尼康等日产照相机品牌抓住了这一时机，大规模地开发一系列的新机型。可是柯达依然一意孤行，执意投入在胶卷生产上，错过了数码技术这个风口。</p>
+<p><img src="https://img.iamghf.top/blog/2020-01-03-23611.jpg" alt="img"></p>
+<p>一个时代以前，提起“Kodak Moment”(“柯达时刻”)，人们想到的是值得留存与回味的记忆。如今，再提到柯达，却成了企业高管的警钟：在颠覆性技术侵入市场的时候，必须要及时回应。</p>
+<p>历史的车轮滚滚向前，它不会因任何人的消极缓慢而停止。庞大如诺基亚、记忆如柯达，它们的倒下显然不是个例。如今诺基亚贱卖，柯达败落，蝴蝶效应煽动的翅膀已经遍及几乎所有行业。整个世界都陷入一种焦虑。</p>
+<p>正如达尔文所讲，<strong>在丛林里，最终能存活下来的，往往不是最高大、最强壮的，而是对变化能做出最快反应的物种。</strong></p>
+<p><img src="https://img.iamghf.top/blog/2020-01-03-023608.jpg" alt="img"></p>
+<p>《三体》里有一个名词，就是：<strong>降维打击。</strong>一个无意中路过了人类文明的歌者文明，发现了人类，于是就像捏死一直蚂蚁一样，顺手灭掉了太阳系。</p>
+<p><strong>这就叫：我消灭你，但与你无关。</strong></p>
+<p>这个时代的残酷在于，往往你被抛弃了还一头雾水，事先不会和你打一声招呼。</p>
+<p>那些干掉你的，通常是你从未谋面过的陌生人，或是一些你从未放在心上的人和事，同你无冤无仇，但却来势凶猛，如同洪水猛兽般令人招架不住。</p>
+<p><strong>5</strong></p>
+<p>在如今这个时代，如果你隐居三年，彻底与世隔绝，当再次回归红尘之中，你会感到恍如隔了一个世纪。</p>
+<p>一切都变化地太快，快到很多人的观念还停留在上一个时代，快到很多人还没来得及做出反应，就已经被打倒在地。</p>
+<p>在我大学即将毕业的时候，有一次去奶奶家吃饭，奶奶就问我，毕业以后学校工作分配在哪里，是我们镇上的学校还是银行啊。</p>
+<p>我告诉她，现在学校不包分配了，全都要自己找。</p>
+<p>她感到很奇怪，然后就唠叨说家里哪个亲戚人家大学毕业后进了什么单位，现在日子有多好…</p>
+<p><strong>很多父母辈们对于子女的工作，期望最多的一点就是：稳定。</strong></p>
+<p>在他们的观念里，只要你进了一家大的单位，这辈子都不用愁了，能一直干到退休，每月拿着稳定的工资，就是最大的幸福。</p>
+<p>但现实的情况是，无论是体制内还是体制外，都没有绝对稳定的工作，谁都无法保证手上的饭碗明天还能不能端上。</p>
+<p>那个唐山收费站的大姐没想到，那些被机器人取代了岗位的富士康员工也没想到…</p>
+<p>在这个时代的车轮碾压下，没有人是可以逃离的，如果不做好准备，如果没有这方面的危机意识，那么当噩运来得时候，往往会招架不住，犹如天塌。</p>
+<p>温水煮青蛙的故事我们都知道，那只青蛙一直陶醉在稳定的舒适区，幻想着岁月静好，却从来没有想过有一天，这水会热到发烫，而自己却无力跳出。</p>
+<p><strong>未来没有稳定的工作，只有稳定的能力。</strong></p>
+<p><strong>未来只有一种稳定：是你到哪里都有饭吃！</strong></p>
+<p>有本事的人到哪都有饭吃，即使身背巨债，依旧可以东山再起。</p>
+<p>而大多数人目前却处于排斥学习的状态，自然也就难以摆脱迷茫，更难以挣到钱，这才是焦虑最主要的原因。</p>
+<p>认清这个时代，拥抱这个时代，然后活好余生。</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top" rel="external nofollow noreferrer">ghf</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top/shu-gei-shi-dai.html">https://iamghf.top/shu-gei-shi-dai.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://iamghf.top" target="_blank">ghf</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%A4%A7%E6%B6%A6%E5%8F%91/">
+                                    <span class="chip bg-color">大润发</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">one for all, all for one</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '7140a41ed2ddd46c10c7',
+        clientSecret: '9f81b92236315959b71eb3c245a4f02f922a7651',
+        repo: 'xjbsay',
+        owner: 'iamghf',
+        admin: "iamghf",
+        id: '2020-01-03T10-37-45',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/gong-si-dao-bi.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="一个公司即将要倒闭的征兆是什么？">
+                        
+                        <span class="card-title">一个公司即将要倒闭的征兆是什么？</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+我就经历过一个p2p公司荣辱兴衰。到现在为止，还欠我3个月工资加上杂七杂八的费用，也有6万左右。期间去劳动仲裁不管用，再去法院控告，对方不到庭，虽然胜了。但执行又是好大一笔费用，最后，心力人力憔悴，这事认个吃亏倒霉。
+总结下，这家公司倒闭
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%B6%A3%E9%97%BB/" class="post-category">
+                                    趣闻
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8D%B1%E6%9C%BA/">
+                        <span class="chip bg-color">危机</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019-nian-du-zhao-pian.html">
+                    <div class="card-image">
+                        
+                        <img src="https://img.iamghf.top/blog/2019-12-29-130544.jpg" class="responsive-img" alt="50张2019年度最美照片，每一张都是大自然的奇迹">
+                        
+                        <span class="card-title">50张2019年度最美照片，每一张都是大自然的奇迹</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            50张2019年度最美照片，每一张都是大自然的奇迹  【2019年AGORA大奖 50张入围摄影作品】 经过几个月的激烈角逐，2019年AGORA大奖揭晓了入围的50张摄影作品。 下面这些精美的图片从13万张作品中脱颖而出。每一张都风格独特
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%B6%A3%E9%97%BB/" class="post-category">
+                                    趣闻
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%85%A7%E7%89%87/">
+                        <span class="chip bg-color">照片</span>
+                    </a>
+                    
+                    <a href="/tags/AGORA%E5%A4%A7%E5%A5%96/">
+                        <span class="chip bg-color">AGORA大奖</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://iamghf.top" target="_blank">ghf</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">湘ICP备18008192号-1</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/iamghf" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:841567545@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=841567545" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 841567545" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

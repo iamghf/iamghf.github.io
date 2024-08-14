@@ -1,0 +1,1065 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTTP多版本对比, 网络,树莓派,编程,Java,大数据,Flink,ChatGPT,spring,微服务,springcloud">
+    <meta name="description" content="我折腾 我快乐">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>HTTP多版本对比 | ghf</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+    <!-- Clarity tracking code for https://iamghf.top/ -->
+    <script>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "j9amie3njm");
+    </script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="ghf" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ghf</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://iamghf.top/" class="waves-effect waves-light">
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Wiki</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ghf</div>
+        <div class="logo-desc">
+            
+            我折腾 我快乐
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://iamghf.top/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-list"></i>
+			
+			Wiki
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">HTTP多版本对比</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/http/">
+                                <span class="chip bg-color">http</span>
+                            </a>
+                        
+                            <a href="/tags/QUIC/">
+                                <span class="chip bg-color">QUIC</span>
+                            </a>
+                        
+                            <a href="/tags/tcp-ip/">
+                                <span class="chip bg-color">tcp/ip</span>
+                            </a>
+                        
+                            <a href="/tags/udp/">
+                                <span class="chip bg-color">udp</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" class="post-category">
+                                网络技术
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-04-18
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    7 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="HTTP多版本对比"><a href="#HTTP多版本对比" class="headerlink" title="HTTP多版本对比"></a>HTTP多版本对比</h1><p>上个世纪90年代初期，蒂姆·伯纳斯-李（Tim Berners-Lee）及其 CERN的团队共同努力，制定了互联网的基础，定义了互联网的四个构建模块：</p>
+<ul>
+<li>超文本文档格式（HTML）</li>
+<li>数据传输协议（HTTP）</li>
+<li>用于查看超文本的网络浏览器（第一个浏览器，WorldWideWeb）</li>
+<li>用于传输数据的服务器（httpd的早期版本）</li>
+</ul>
+<p>HTTP重用了现有的 TCP/IP 协议来进行数据传输，其中 HTTP 消息字节位于应用层，如下图中的浅蓝色所示。</p>
+<p><img src="https://img.iamghf.top/md/202404181033107" alt="http"></p>
+<h2 id="1、HTTP-0-9"><a href="#1、HTTP-0-9" class="headerlink" title="1、HTTP/0.9"></a>1、HTTP/0.9</h2><p>这是第一个 HTTP草案。它只有一个 GET方法，也不支持头部或状态代码；唯一可用的数据格式是 HTML。就像 HTTP/1.0和 HTTP/1.1一样，HTTP消息以 ASCII文本结构呈现。</p>
+<p>HTTP/0.9请求的示例：</p>
+<pre class=" language-http"><code class="language-http">GET /mypage.html</code></pre>
+<p>响应示例：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>A verysimple HTML page<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="2、HTTP-1-0"><a href="#2、HTTP-1-0" class="headerlink" title="2、HTTP/1.0"></a>2、HTTP/1.0</h2><p>这个版本定义了现在所用的 HTTP结构，类似于一份备忘录，同时引入了新的方法（HEAD和POST）、MIME类型、状态码和协议版本。</p>
+<p>HTTP/1.0请求的示例：</p>
+<pre class=" language-http"><code class="language-http">GET /mypage.html HTTP/1.0User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)</code></pre>
+<p>响应示例：</p>
+<pre class=" language-http"><code class="language-http">200 OK
+<span class="token header-name keyword">Date:</span> Tue, 15 Nov 1994 08:12:31 GMT
+<span class="token header-name keyword">Server:</span> CERN/3.0 libwww/2.17
+<span class="token header-name keyword">Content-Type:</span> text/html
+&lt;HTML>A page with an image&lt;IMG SRC="/myimage.gif"/>&lt;/HTML></code></pre>
+<h2 id="3、HTTP-1-1"><a href="#3、HTTP-1-1" class="headerlink" title="3、HTTP/1.1"></a>3、HTTP/1.1</h2><p><strong>这个版本于1997年初推出，距离其前身只有几个月。主要变化包括：</strong></p>
+<ul>
+<li><p>持久的TCP连接（keep-alive），可以节省机器和网络资源。在之前的版本中，每个请求都要打开一个新的TCP连接，并在响应后关闭。</p>
+</li>
+<li><p>Host头部，支持在同一个IP下有多个服务器。</p>
+</li>
+<li><p>有关编码、缓存、语言和MIME类型的头部约定。</p>
+</li>
+</ul>
+<p>HTTP/1.1请求的示例：</p>
+<pre class=" language-http"><code class="language-http">GET /api/fruit/orange HTTP/1.1
+<span class="token header-name keyword">Host:</span> www.fruityvice.com
+<span class="token header-name keyword">Accept-Encoding:</span> gzip, deflate, br</code></pre>
+<p>响应示例：</p>
+<pre class=" language-http"><code class="language-http"><span class="token response-status">HTTP/1.1 <span class="token property">200 OK</span></span>
+<span class="token header-name keyword">Server:</span> nginx/1.16.1
+<span class="token header-name keyword">Date:</span> Sun, 10 Mar 2024 20:44:25 GMT
+<span class="token header-name keyword">Transfer-Encoding:</span> chunked
+<span class="token header-name keyword">Connection:</span> keep-alive
+<span class="token header-name keyword">X-Content-Type-Options:</span> nosniff
+<span class="token header-name keyword">X-XSS-Protection:</span> 1; mode=block
+<span class="token header-name keyword">Cache-Control:</span> no-store, must-revalidate, no-cache,max-age=0
+<span class="token header-name keyword">Pragma:</span> no-cache
+<span class="token header-name keyword">X-Frame-Options:</span> DENY
+<span class="token header-name keyword">Content-Type:</span> application/json
+<span class="token header-name keyword">Expires:</span> 0
+{"name":"Orange","id":2,"family":"Rutaceae","order":"Sapindales","genus":"Citrus","nutritions":{"calories":43,"fat":0.2,"sugar":8.2,"carbohydrates":8.3,"protein":1.0}}</code></pre>
+<p><img src="https://img.iamghf.top/md/202404181039427" alt="http/1.1"></p>
+<h2 id="4、HTTP-2"><a href="#4、HTTP-2" class="headerlink" title="4、HTTP/2"></a>4、HTTP/2</h2><p><strong>2015年，在对互联网性能进行多年观察和研究后，人们基于谷歌的 SPDY协议，提出并建立了 HTTP/2。</strong></p>
+<p>它与 HTTP/1.1有很多不同，包括将多个消息复用到单个 TCP数据包中、消息的二进制格式以及用于头部的 HPACK压缩。</p>
+<p>在 HTTP/1.1中，两个请求不能共享同一个 TCP连接，必须等待第一个请求结束后才能开始后续请求。这被称为头部阻塞。在下面的图表中，由于只使用了一个 TCP连接，请求2必须等到响应1到达之后才能发送。</p>
+<p><img src="https://img.iamghf.top/md/202404181041290" alt="http/1.1"></p>
+<p>HTTP/2通过流（stream）解决了这个问题，每个流对应一个消息。许多流可以交错在单个 TCP数据包中。如果某个流由于某种原因无法发送其数据，其他流可以在 TCP数据包中顶替它。</p>
+<p>HTTP/2的流被分成帧（frame），每个帧包含：帧类型、它所属的流以及长度（以字节为单位）。在下面的图表中，彩色矩形是一个 TCP数据包，✉ 代表其中的一个 HTTP/2帧。第一个和第三个 TCP数据包携带了不同流的帧。</p>
+<p><img src="https://img.iamghf.top/md/202404181042261" alt="http/2"></p>
+<p>下面的图像展示了帧如何放置在 TCP数据包中。流1携带了一个 JavaScript文件的 HTTP响应，而流2携带了一个 CSS文件的 HTTP响应。</p>
+<p><img src="https://img.iamghf.top/md/202404181042581" alt="http"></p>
+<h2 id="5、HTTP-3"><a href="#5、HTTP-3" class="headerlink" title="5、HTTP/3"></a>5、HTTP/3</h2><p>HTTP/3诞生于一个名为 QUIC的新传输协议，该协议由谷歌于2012年创建。QUIC被封装在 UDP内，与 TCP相比，它有以下优点：</p>
+<ul>
+<li>建立连接和TLS身份验证的往返包数量更少；</li>
+<li>在处理数据包丢失方面具有更强的连接韧性；</li>
+<li>解决了TCP和TLS中存在的头部阻塞问题。</li>
+</ul>
+<p>HTTP/2解决了 HTTP头部阻塞问题，但是，这个问题在 TCP和  TLS中也存在。TCP认为它需要发送的数据是一系列连续的数据包，如果有任何数据包丢失，必须重新发送，以保持信息的完整性。在  TCP中，直到丢失的数据包成功重新发送到目的地之前，后续的数据包都不能被发送。</p>
+<p>下面的图示直观地解释了在 HTTP/2中这种情况是如何发生的。第二个数据包只包含了响应1的帧，但是它的丢失延迟了响应1和响应2，这意味着在这种情况下没有并行处理。</p>
+<p><img src="https://img.iamghf.top/md/202404181043827" alt="http/2"></p>
+<p>为了解决 TCP的头部阻塞问题，QUIC决定使用 UDP作为传输协议，因为UDP不保证到达。在TCP中作为传输层的数据完整性责任被移至QUIC的应用层，消息的帧可以无序到达，而不会阻塞不相关的流。</p>
+<p><img src="https://img.iamghf.top/md/202404181045124" alt="http/3"></p>
+<p><img src="https://img.iamghf.top/md/202404181052017" alt="quic"></p>
+<p>与 TCP相关的 TLS（SSL）中的头部阻塞是因为加密通常应用于整个消息内容，这意味着需要接收所有数据之后才能进行解密。使用 QUIC时，加密是针对每个 QUIC数据包的，到达时就可以进行解密，而无需预先接收所有数据包。</p>
+<p>带有 TLS的 TCP：</p>
+<ol>
+<li>输入：A+B+C</li>
+<li>加密：crypt(A+B+C) = D+E+F</li>
+<li>数据包：D, E, F</li>
+<li>接收：decrypt(D+E+F)</li>
+<li>A+B+C</li>
+</ol>
+<p>带有TLS的QUIC：</p>
+<ol>
+<li>输入：A+B+C</li>
+<li>加密：crypt(A) = X, crypt(B) = Y, crypt(C) = Z</li>
+<li>包：X, Y, Z</li>
+<li>接收：decrypt(X) + decrypt(Y) + decrypt(Z)</li>
+<li>A+B+C</li>
+</ol>
+<h2 id="6、比较表"><a href="#6、比较表" class="headerlink" title="6、比较表"></a>6、比较表</h2><p><img src="https://img.iamghf.top/md/202404181045178" alt="http对比"></p>
+<p>* TLS 1.2需要2次往返进行加密握手，而 TLS 1.3只需要1次，还有 0-RTT（零往返时间恢复）选项，其中不需要先前的握手。然而，0-RTT会导致重放攻击，因此是不安全的。</p>
+<p>** QUIC的连接 ID可能被用于指纹识别，一项研究指出，这存在对用户隐私的风险。</p>
+<h2 id="7、哪个版本最好？"><a href="#7、哪个版本最好？" class="headerlink" title="7、哪个版本最好？"></a>7、哪个版本最好？</h2><p>目前最好的两个版本是 HTTP/2和 HTTP/3。</p>
+<p>HTTP/3是为不稳定的连接设计的，例如手机和卫星网络。为了应对网络不稳定性，QUIC在数据流之间具有很高的独立性，并且在丢包时具有很好的弹性。然而，HTTP/3也存在性能损失，主要是因为1）由于 UDP的使用率较低，路由器和操作系统在过去几十年里没有对 UDP协议进行优化，使其相对于  TCP而言速度较慢；2）QUIC使用逐个数据包的加密需要更多的数学运算，效率低于  TCP中使用的整个消息加密。此外，UDP协议在某些网络中受到限制，以防止诸如 UDP洪水攻击和 DNS放大攻击等攻击。</p>
+<p>在可靠和稳定的连接上，HTTP/2通常比 HTTP/3提供更好的性能。</p>
+<p>一般来说，建议进行兼容性和性能测试，以确定哪个版本最合适。此外，服务器可以接受 HTTP/2和 HTTP/3连接，让客户端决定使用哪个版本。</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top" rel="external nofollow noreferrer">ghf</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://iamghf.top/20240418001.html">https://iamghf.top/20240418001.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://iamghf.top" target="_blank">ghf</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/http/">
+                                    <span class="chip bg-color">http</span>
+                                </a>
+                            
+                                <a href="/tags/QUIC/">
+                                    <span class="chip bg-color">QUIC</span>
+                                </a>
+                            
+                                <a href="/tags/tcp-ip/">
+                                    <span class="chip bg-color">tcp/ip</span>
+                                </a>
+                            
+                                <a href="/tags/udp/">
+                                    <span class="chip bg-color">udp</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">one for all, all for one</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '7140a41ed2ddd46c10c7',
+        clientSecret: '9f81b92236315959b71eb3c245a4f02f922a7651',
+        repo: 'xjbsay',
+        owner: 'iamghf',
+        admin: "iamghf",
+        id: '2024-04-18T10-31-47',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/20240422001.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="金融大模型技术创新与应用探索">
+                        
+                        <span class="card-title">金融大模型技术创新与应用探索</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            金融大模型技术创新与应用探索大模型时代已来临，每个组织以及每个人的知识体系都需要重塑，思考如何更好地利用 AI 工具提升效率，以应对未来的变化。而始终不变的是，我们要持续学习，时刻保持好奇心，以不变应对未来更多的变化。本文将分享金融行业对大
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/AI/" class="post-category">
+                                    AI
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%87%91%E8%9E%8D%E5%A4%A7%E6%A8%A1%E5%9E%8B/">
+                        <span class="chip bg-color">金融大模型</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/20240415002.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="数据中台知识体系总结">
+                        
+                        <span class="card-title">数据中台知识体系总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            数据中台知识体系总结当前，大部分企业不再建设从源数据采集到分析应用的烟囱式系统，更倾向于数据集中式采集、存储，并应用分层建设。这种方式一方面有利于应用系统的快速部署，另一方面也保证数据的集中管理与运营，体现数据的资产、资源属性。笔者根据个人
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
+                                    大数据
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">
+                        <span class="chip bg-color">大数据</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B0/">
+                        <span class="chip bg-color">数据中台</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/">
+                        <span class="chip bg-color">数据仓库</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%AD%E5%8F%B0%E4%BB%B7%E5%80%BC/">
+                        <span class="chip bg-color">中台价值</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B0%E6%9E%B6%E6%9E%84/">
+                        <span class="chip bg-color">数据中台架构</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://iamghf.top" target="_blank">ghf</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">湘ICP备18008192号-1</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/iamghf" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:841567545@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=841567545" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 841567545" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c1b480119ac4758bb84d4885b5046e83";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
