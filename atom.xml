@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2024-08-08T03:55:01.405Z</updated>
+  <updated>2025-03-17T12:33:39.250Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ollama离线部署</title>
+    <link href="https://iamghf.top/ollama.html"/>
+    <id>https://iamghf.top/ollama.html</id>
+    <published>2025-03-17T12:27:55.000Z</published>
+    <updated>2025-03-17T12:33:39.250Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;离线安装ollama&quot;&gt;&lt;a href=&quot;#离线安装ollama&quot; class=&quot;headerlink&quot; title=&quot;离线安装ollama&quot;&gt;&lt;/a&gt;离线安装ollama&lt;/h1&gt;&lt;h2 id=&quot;下载ollama安装包&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://iamghf.top/categories/AI/"/>
+    
+    
+      <category term="ollama" scheme="https://iamghf.top/tags/ollama/"/>
+    
+      <category term="离线" scheme="https://iamghf.top/tags/%E7%A6%BB%E7%BA%BF/"/>
+    
+      <category term="大模型本地部署" scheme="https://iamghf.top/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/"/>
+    
+      <category term="大模型私有部署" scheme="https://iamghf.top/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A7%81%E6%9C%89%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过plex、nginx、alist、cd2实现115直链播放</title>
+    <link href="https://iamghf.top/20240919001.html"/>
+    <id>https://iamghf.top/20240919001.html</id>
+    <published>2024-09-19T03:08:30.000Z</published>
+    <updated>2024-09-19T05:54:47.068Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;通过plex、nginx、alist、cd2实现115直链播放&quot;&gt;&lt;a href=&quot;#通过plex、nginx、alist、cd2实现115直链播放&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="https://iamghf.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="plex" scheme="https://iamghf.top/tags/plex/"/>
+    
+      <category term="Nginx" scheme="https://iamghf.top/tags/Nginx/"/>
+    
+      <category term="alist" scheme="https://iamghf.top/tags/alist/"/>
+    
+      <category term="cd2" scheme="https://iamghf.top/tags/cd2/"/>
+    
+      <category term="115" scheme="https://iamghf.top/tags/115/"/>
+    
+      <category term="302" scheme="https://iamghf.top/tags/302/"/>
+    
+      <category term="直链" scheme="https://iamghf.top/tags/%E7%9B%B4%E9%93%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>某网站登陆鉴权逆向分析</title>
@@ -587,82 +659,6 @@
       <category term="miniconda" scheme="https://iamghf.top/tags/miniconda/"/>
     
       <category term="pip" scheme="https://iamghf.top/tags/pip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小红书引流</title>
-    <link href="https://iamghf.top/xiao-hong-shu-yin-liu.html"/>
-    <id>https://iamghf.top/xiao-hong-shu-yin-liu.html</id>
-    <published>2023-11-30T03:28:30.000Z</published>
-    <updated>2023-11-30T03:43:22.819Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;正常来说，小红书发链接是无法点击的！&lt;br&gt;所以无法通过链接去引流！&lt;br&gt;但是，小红书自家的域名却可以点击！&lt;br&gt;于是，就有了一次大胆的尝试~&lt;/p&gt;
-&lt;p&gt;小红书有一个严重的bug，就是他识别的并不是根域名，而是只要二级域名包含了&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://iamghf.top/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="小红书" scheme="https://iamghf.top/tags/%E5%B0%8F%E7%BA%A2%E4%B9%A6/"/>
-    
-      <category term="引流" scheme="https://iamghf.top/tags/%E5%BC%95%E6%B5%81/"/>
-    
-      <category term="分享" scheme="https://iamghf.top/tags/%E5%88%86%E4%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Google搜索技巧</title>
-    <link href="https://iamghf.top/google-sou-suo-ji-qiao.html"/>
-    <id>https://iamghf.top/google-sou-suo-ji-qiao.html</id>
-    <published>2023-11-03T02:31:25.000Z</published>
-    <updated>2023-11-03T06:33:26.663Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;知识爆炸时代，如何快速从海量信息中，获取到自己需要的信息。推荐以下常用的Google搜索小技巧。&lt;/p&gt;
-&lt;h2 id=&quot;“”&quot;&gt;&lt;a href=&quot;#“”&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://iamghf.top/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="google" scheme="https://iamghf.top/tags/google/"/>
-    
-      <category term="搜索" scheme="https://iamghf.top/tags/%E6%90%9C%E7%B4%A2/"/>
-    
-      <category term="技巧" scheme="https://iamghf.top/tags/%E6%8A%80%E5%B7%A7/"/>
-    
-      <category term="信息获取" scheme="https://iamghf.top/tags/%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96/"/>
-    
-      <category term="搜索条件" scheme="https://iamghf.top/tags/%E6%90%9C%E7%B4%A2%E6%9D%A1%E4%BB%B6/"/>
-    
-      <category term="用法" scheme="https://iamghf.top/tags/%E7%94%A8%E6%B3%95/"/>
-    
-      <category term="intitle" scheme="https://iamghf.top/tags/intitle/"/>
-    
-      <category term="filetype" scheme="https://iamghf.top/tags/filetype/"/>
-    
-      <category term="site" scheme="https://iamghf.top/tags/site/"/>
     
   </entry>
   

@@ -4,6 +4,74 @@
   
     
     <entry>
+      <title>ollama离线部署</title>
+      <link href="/ollama.html"/>
+      <url>/ollama.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="离线安装ollama"><a href="#离线安装ollama" class="headerlink" title="离线安装ollama"></a>离线安装ollama</h1><h2 id="下载ollama安装包"><a href="#下载ollama安装包" class="headerlink" title="下载ollama安装包"></a>下载ollama安装包</h2><p>官网地址：<a href="https://ollama.com/download/linux" target="_blank" rel="noopener">https://ollama.com/download/linux</a><br>GitHub手动安装文档地址：<a href="https://github.com/ollama/ollama/blob/main/docs/linux.md" target="_blank" rel="noopener">https://github.com/ollama/ollama/blob/main/docs/linux.md</a><br>安装包下载地址：<a href="https://ollama.com/download/ollama-linux-amd64.tgz" target="_blank" rel="noopener">https://ollama.com/download/ollama-linux-amd64.tgz</a></p><h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><p>上传安装包到服务器，并解压</p><pre class=" language-shell"><code class="language-shell">tar -xzf ollama-linux-amd64.tgz</code></pre><h1 id="创建ollama-service文件"><a href="#创建ollama-service文件" class="headerlink" title="创建ollama.service文件"></a>创建ollama.service文件</h1><pre class=" language-shell"><code class="language-shell">vim /etc/systemd/system/ollama.service</code></pre><pre class=" language-ini"><code class="language-ini"><span class="token selector">[Unit]</span><span class="token constant">Description</span><span class="token attr-value"><span class="token punctuation">=</span>Ollama Service</span><span class="token constant">After</span><span class="token attr-value"><span class="token punctuation">=</span>network-online.target</span><span class="token selector">[Service]</span><span class="token constant">ExecStart</span><span class="token attr-value"><span class="token punctuation">=</span>/你的安装位置/ollama serve</span><span class="token constant">User</span><span class="token attr-value"><span class="token punctuation">=</span>root</span><span class="token constant">Group</span><span class="token attr-value"><span class="token punctuation">=</span>root</span><span class="token constant">Restart</span><span class="token attr-value"><span class="token punctuation">=</span>always</span><span class="token constant">RestartSec</span><span class="token attr-value"><span class="token punctuation">=</span>3</span><span class="token constant">Environment</span><span class="token attr-value"><span class="token punctuation">=</span>"PATH=$PATH"</span>#指定模型存储位置，可以直接在外网下载好模型，打包解压到内网的ollama的模型目录下，就能实现离线安装了<span class="token constant">Environment</span><span class="token attr-value"><span class="token punctuation">=</span>"OLLAMA_MODELS=你的模型目录"</span>#解决ollama无法访问的问题<span class="token constant">Environment</span><span class="token attr-value"><span class="token punctuation">=</span>"OLLAMA_HOST=0.0.0.0:11434"</span><span class="token selector">[Install]</span><span class="token constant">WantedBy</span><span class="token attr-value"><span class="token punctuation">=</span>default.target</span></code></pre><p>修改完之后，刷新<br>sudo systemctl daemon-reload</p><h1 id="启动相关命令"><a href="#启动相关命令" class="headerlink" title="启动相关命令"></a>启动相关命令</h1><pre><code>systemctl enable ollamasystemctl start ollamasystemctl status ollamasystemctl stop ollamasystemctl restart ollama</code></pre><h2 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h2><pre><code>export PATH=$PATH:/home/hldev/ChatGPT/soft/ollama/bin</code></pre><pre><code>source ~/.bashrc</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ollama </tag>
+            
+            <tag> 离线 </tag>
+            
+            <tag> 大模型本地部署 </tag>
+            
+            <tag> 大模型私有部署 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>通过plex、nginx、alist、cd2实现115直链播放</title>
+      <link href="/20240919001.html"/>
+      <url>/20240919001.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="通过plex、nginx、alist、cd2实现115直链播放"><a href="#通过plex、nginx、alist、cd2实现115直链播放" class="headerlink" title="通过plex、nginx、alist、cd2实现115直链播放"></a>通过plex、nginx、alist、cd2实现115直链播放</h1><p>网上大多数是用emby来搭媒体服务器，本人已经有plex会员懒得去折腾emby破解，所以选择用plex。</p><h2 id="plex"><a href="#plex" class="headerlink" title="plex"></a>plex</h2><p>去官网选择下载安装文件。</p><p><a href="https://www.plex.tv/media-server-downloads/?cat=computer&amp;plat=linux#plex-media-server" target="_blank" rel="noopener">https://www.plex.tv/media-server-downloads/?cat=computer&amp;plat=linux#plex-media-server</a></p><p>本人以阿里云centos为例。</p><pre><code>yum install plexmediaserver-1.41.0.8992-8463ad060.x86_64.rpmsystemctl restart plexmediaserver</code></pre><p>安装城后 plex 默认访问地址：<a href="http://127.0.0.1:32400/web" target="_blank" rel="noopener">http://127.0.0.1:32400/web</a></p><h2 id="alist"><a href="#alist" class="headerlink" title="alist"></a>alist</h2><h2 id="cd2"><a href="#cd2" class="headerlink" title="cd2"></a>cd2</h2><h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> plex </tag>
+            
+            <tag> Nginx </tag>
+            
+            <tag> alist </tag>
+            
+            <tag> cd2 </tag>
+            
+            <tag> 115 </tag>
+            
+            <tag> 302 </tag>
+            
+            <tag> 直链 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>某网站登陆鉴权逆向分析</title>
       <link href="/20240808.html"/>
       <url>/20240808.html</url>
