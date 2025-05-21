@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2025-03-17T12:33:39.250Z</updated>
+  <updated>2025-05-21T11:13:39.755Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>PDF内容提取神器-MinerU 私有部署</title>
+    <link href="https://iamghf.top/mineru.html"/>
+    <id>https://iamghf.top/mineru.html</id>
+    <published>2025-05-21T10:40:33.000Z</published>
+    <updated>2025-05-21T11:13:39.755Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;MinerU-私有部署及提供在线服务&quot;&gt;&lt;a href=&quot;#MinerU-私有部署及提供在线服务&quot; class=&quot;headerlink&quot; title=&quot;MinerU 私有部署及提供在线服务&quot;&gt;&lt;/a&gt;MinerU
+        
+      
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://iamghf.top/categories/AI/"/>
+    
+    
+      <category term="MinerU" scheme="https://iamghf.top/tags/MinerU/"/>
+    
+      <category term="私有部署" scheme="https://iamghf.top/tags/%E7%A7%81%E6%9C%89%E9%83%A8%E7%BD%B2/"/>
+    
+      <category term="在线服务API" scheme="https://iamghf.top/tags/%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1API/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ollama离线部署</title>
     <link href="https://iamghf.top/ollama.html"/>
     <id>https://iamghf.top/ollama.html</id>
     <published>2025-03-17T12:27:55.000Z</published>
-    <updated>2025-03-17T12:33:39.250Z</updated>
+    <updated>2025-03-17T12:34:39.241Z</updated>
     
     <summary type="html">
     
@@ -54,7 +85,7 @@
     <link href="https://iamghf.top/20240919001.html"/>
     <id>https://iamghf.top/20240919001.html</id>
     <published>2024-09-19T03:08:30.000Z</published>
-    <updated>2024-09-19T05:54:47.068Z</updated>
+    <updated>2025-03-17T12:34:39.244Z</updated>
     
     <summary type="html">
     
@@ -624,41 +655,6 @@
       <category term="chatglm3-6b" scheme="https://iamghf.top/tags/chatglm3-6b/"/>
     
       <category term="本地部署" scheme="https://iamghf.top/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装配置conda</title>
-    <link href="https://iamghf.top/an-zhuang-pei-zhi-conda.html"/>
-    <id>https://iamghf.top/an-zhuang-pei-zhi-conda.html</id>
-    <published>2023-12-27T12:09:35.000Z</published>
-    <updated>2023-12-27T12:18:46.064Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;安装配置conda环境&quot;&gt;&lt;a href=&quot;#安装配置conda环境&quot; class=&quot;headerlink&quot; title=&quot;安装配置conda环境&quot;&gt;&lt;/a&gt;安装配置conda环境&lt;/h1&gt;&lt;h2 id=&quot;关于conda&quot;&gt;&lt;a href=&quot;#关于conda&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="python" scheme="https://iamghf.top/tags/python/"/>
-    
-      <category term="conda" scheme="https://iamghf.top/tags/conda/"/>
-    
-      <category term="anaconda" scheme="https://iamghf.top/tags/anaconda/"/>
-    
-      <category term="miniconda" scheme="https://iamghf.top/tags/miniconda/"/>
-    
-      <category term="pip" scheme="https://iamghf.top/tags/pip/"/>
     
   </entry>
   

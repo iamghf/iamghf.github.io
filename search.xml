@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>PDF内容提取神器-MinerU 私有部署</title>
+      <link href="/mineru.html"/>
+      <url>/mineru.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="MinerU-私有部署及提供在线服务"><a href="#MinerU-私有部署及提供在线服务" class="headerlink" title="MinerU 私有部署及提供在线服务"></a>MinerU 私有部署及提供在线服务</h1><pre><code>MinerU是一款将PDF转化为机器可读格式的工具（如markdown、json），可以很方便地抽取为任意格式。主要功能：- 删除页眉、页脚、脚注、页码等元素，确保语义连贯- 输出符合人类阅读顺序的文本，适用于单栏、多栏及复杂排版- 保留原文档的结构，包括标题、段落、列表等- 提取图像、图片描述、表格、表格标题及脚注- 自动识别并转换文档中的公式为LaTeX格式- 自动识别并转换文档中的表格为LaTeX或HTML格式- 自动检测扫描版PDF和乱码PDF，并启用OCR功能- OCR支持84种语言的检测与识别- 支持多种输出格式，如多模态与NLP的Markdown、按阅读顺序排序的JSON、含有丰富信息的中间格式等- 支持多种可视化结果，包括layout可视化、span可视化等，便于高效确认输出效果与质检- 支持CPU和GPU环境- 兼容Windows、Linux和Mac平台</code></pre><p>结合dify、大模型可以玩玩信息提取、稽核、分析等等场景。</p><p><img src="https://img.iamghf.top/md/202505211906300.png" alt="业务稽核"></p><p>废话不多说直接开搞！</p><h2 id="通过docker构建镜像"><a href="#通过docker构建镜像" class="headerlink" title="通过docker构建镜像"></a>通过docker构建镜像</h2><pre class=" language-shell"><code class="language-shell">wget https://gcore.jsdelivr.net/gh/opendatalab/MinerU@master/docker/china/Dockerfile -O Dockerfiledocker build -t mineru:latest .</code></pre><h2 id="拉起容器"><a href="#拉起容器" class="headerlink" title="拉起容器"></a>拉起容器</h2><pre class=" language-shell"><code class="language-shell">docker run -it --name mineru -p 35000:5000 -v /data/apps/mineru:/app --gpus=all mineru:latest /bin/bash -c "echo 'source /opt/mineru_venv/bin/activate' >> ~/.bashrc && exec bash"</code></pre><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><pre class=" language-shell"><code class="language-shell">magic-pdf --help</code></pre><h2 id="mineru-在线服务"><a href="#mineru-在线服务" class="headerlink" title="mineru 在线服务"></a>mineru 在线服务</h2><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><pre class=" language-shell"><code class="language-shell">pip install flask gunicorn werkzeug python-dotenv pdfplumber -i https://mirrors.aliyun.com/pypi/simple/ pip install -U "magic-pdf[full]" -i https://mirrors.aliyun.com/pypi/simple</code></pre><h2 id="安装必备的命令"><a href="#安装必备的命令" class="headerlink" title="安装必备的命令"></a>安装必备的命令</h2><pre class=" language-shell"><code class="language-shell">apt updateapt install vim curl psmisc -y</code></pre><h2 id="编写服务代码"><a href="#编写服务代码" class="headerlink" title="编写服务代码"></a>编写服务代码</h2><pre><code>https://115cdn.com/s/swwwp7q3wel?password=y698&amp;#</code></pre><h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><pre class=" language-shell"><code class="language-shell">gunicorn -w 4 -b 0.0.0.0:5000 --timeout 600 pdf-server:app -D</code></pre><h3 id="关闭服务"><a href="#关闭服务" class="headerlink" title="关闭服务"></a>关闭服务</h3><pre class=" language-shell"><code class="language-shell">pstree -ap |grep gunicornkill -TERM PID</code></pre><h3 id="测试方法"><a href="#测试方法" class="headerlink" title="测试方法"></a>测试方法</h3><pre class=" language-shell"><code class="language-shell">curl -X POST -F "file=@/data/1.pdf" -F "start_page=0" -F "end_page=1" http://localhost:5000/extract_pdf</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MinerU </tag>
+            
+            <tag> 私有部署 </tag>
+            
+            <tag> 在线服务API </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ollama离线部署</title>
       <link href="/ollama.html"/>
       <url>/ollama.html</url>
