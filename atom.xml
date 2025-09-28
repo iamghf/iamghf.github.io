@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2025-05-21T11:13:39.755Z</updated>
+  <updated>2025-09-28T02:56:58.965Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -17,11 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>mcp服务开发</title>
+    <link href="https://iamghf.top/mcp-fu-wu-kai-fa.html"/>
+    <id>https://iamghf.top/mcp-fu-wu-kai-fa.html</id>
+    <published>2025-09-28T02:19:30.000Z</published>
+    <updated>2025-09-28T02:56:58.965Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;mcp服务开发教程&quot;&gt;&lt;a href=&quot;#mcp服务开发教程&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://iamghf.top/categories/AI/"/>
+    
+    
+      <category term="mcp" scheme="https://iamghf.top/tags/mcp/"/>
+    
+      <category term="mcp 服务端" scheme="https://iamghf.top/tags/mcp-%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+      <category term="mcp 客户端" scheme="https://iamghf.top/tags/mcp-%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+    
+      <category term="MCP Inspector" scheme="https://iamghf.top/tags/MCP-Inspector/"/>
+    
+      <category term="cherry studio" scheme="https://iamghf.top/tags/cherry-studio/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PDF内容提取神器-MinerU 私有部署</title>
     <link href="https://iamghf.top/mineru.html"/>
     <id>https://iamghf.top/mineru.html</id>
     <published>2025-05-21T10:40:33.000Z</published>
-    <updated>2025-05-21T11:13:39.755Z</updated>
+    <updated>2025-05-21T11:14:15.388Z</updated>
     
     <summary type="html">
     
@@ -618,43 +653,6 @@
       <category term="破解" scheme="https://iamghf.top/tags/%E7%A0%B4%E8%A7%A3/"/>
     
       <category term="BurpSuite" scheme="https://iamghf.top/tags/BurpSuite/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>部署chatglm3</title>
-    <link href="https://iamghf.top/chatglm3.html"/>
-    <id>https://iamghf.top/chatglm3.html</id>
-    <published>2023-12-27T12:12:40.000Z</published>
-    <updated>2023-12-27T12:18:46.066Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;MacBook部署chatglm3-6b&quot;&gt;&lt;a href=&quot;#MacBook部署chatglm3-6b&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="chatglm3" scheme="https://iamghf.top/tags/chatglm3/"/>
-    
-      <category term="MacBook M1 Pro" scheme="https://iamghf.top/tags/MacBook-M1-Pro/"/>
-    
-      <category term="chatgpt" scheme="https://iamghf.top/tags/chatgpt/"/>
-    
-      <category term="大模型" scheme="https://iamghf.top/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    
-      <category term="chatglm3-6b" scheme="https://iamghf.top/tags/chatglm3-6b/"/>
-    
-      <category term="本地部署" scheme="https://iamghf.top/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/"/>
     
   </entry>
   
