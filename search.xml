@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>openclaw配置telegram</title>
+      <link href="/openclaw-pei-zhi-telegram.html"/>
+      <url>/openclaw-pei-zhi-telegram.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="打通OpenClaw与Telegram的教程"><a href="#打通OpenClaw与Telegram的教程" class="headerlink" title="打通OpenClaw与Telegram的教程"></a>打通OpenClaw与Telegram的教程</h1><h2 id="创建-Telegram-机器人"><a href="#创建-Telegram-机器人" class="headerlink" title="创建 Telegram 机器人"></a>创建 Telegram 机器人</h2><p><strong>创建 Bot 并获取 Token</strong> 在 Telegram 中搜索 <code>@BotFather</code>，进入聊天界面。</p><p><img src="https://img.iamghf.top/md/202603021930519.png" alt="image-20260302193046520"></p><p>输入 <code>/newbot</code>，按提示设置机器人名称和用户名，完成后会收到一个 <strong>API Token</strong>，<strong>请务必保存好</strong>，后面配置时需要用到。</p><p><img src="https://img.iamghf.top/md/202603021937119.png" alt="image-20260302193746587"></p><h2 id="配置-openclaw"><a href="#配置-openclaw" class="headerlink" title="配置 openclaw"></a>配置 openclaw</h2><p>打开终端，输入以下命令开始配置：</p><pre><code>openclaw config</code></pre><p><img src="https://img.iamghf.top/md/202603021943373.png" alt="image-20260302194330205"></p><p>选择local。</p><p>进入channels 配置项，选择telegram</p><p><img src="https://img.iamghf.top/md/202603021945385.png" alt="image-20260302194512637"></p><p>粘贴telegram的 Bot Token。</p><p><img src="https://img.iamghf.top/md/202603021948401.png" alt="image-20260302194815640"></p><h2 id="配对"><a href="#配对" class="headerlink" title="配对"></a>配对</h2><p>在telegram中找到刚创建的机器人 随便发条消息，会自动回复一个配对码</p><p><img src="https://img.iamghf.top/md/202603021951406.png" alt="image-20260302195155618"></p><p>在终端执行以下命令，将 <code>openclaw</code> 与你的 Bot 绑定：</p><pre><code>openclaw pairing approve telegram 你的配对码</code></pre><p><img src="https://img.iamghf.top/md/202603022000388.png" alt="image-20260302195944304"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> openclaw </tag>
+            
+            <tag> telegram </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mcp服务开发</title>
       <link href="/mcp-fu-wu-kai-fa.html"/>
       <url>/mcp-fu-wu-kai-fa.html</url>
