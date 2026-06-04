@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>gg卡</title>
+      <link href="/gg-qia.html"/>
+      <url>/gg-qia.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="使用模拟器开通esim卡"><a href="#使用模拟器开通esim卡" class="headerlink" title="使用模拟器开通esim卡"></a>使用模拟器开通esim卡</h1><h2 id="需要的软件"><a href="#需要的软件" class="headerlink" title="需要的软件"></a>需要的软件</h2><p><a href="https://github.com/Unicorn369/HookEuicc" target="_blank" rel="noopener">HookEuicc</a> 解除某些软件对eSIM的要求</p><p>Kitsune Mask (Magisk Delta) ：MuMu 的底层实现（通常是基于 x86 或修改过的 Android 核心）对标准版 Magisk 的 Zygisk 支持并不完美</p><p><a href="https://github.com/LSPosed/LSPosed/releases/download/v1.9.2/LSPosed-v1.9.2-7024-zygisk-release.zip" target="_blank" rel="noopener">LSPosed</a></p><p>giffgaff </p><h2 id="模拟器设置"><a href="#模拟器设置" class="headerlink" title="模拟器设置"></a>模拟器设置</h2><p><strong>开启可写系统盘与Root权限</strong></p><p><img src="https://img.iamghf.top/md/20260604185412334.png" alt="image-20260604185355147"></p><p><img src="https://img.iamghf.top/md/20260604185529371.png" alt="image-20260604185527576"></p><h2 id="安装-magisk"><a href="#安装-magisk" class="headerlink" title="安装 magisk"></a>安装 magisk</h2><p>使用Kitsune Mask安装mgisk, 将Kitsune Mask的apk拖进模拟器安装。</p><p><img src="https://img.iamghf.top/md/20260604185701146.png" alt="MuMu模拟器Pro如何使用root管理软件《Magisk（面具）》？Magisk安装教程，Magisk玩机"></p><p>选中“直接安装”方式，并点击右侧开始进行安装；</p><p><img src="https://img.iamghf.top/md/20260604185838464.png" alt="image-20260604185834518"></p><p>安装完成后，应用界面底部会提示 “All done！”，此时需要手动重启模拟器；</p><p><img src="https://img.iamghf.top/md/20260604185917522.png" alt=""></p><p>重启模拟器后，打开《Kitsune Mask》会遇到提示异常状态，可参考以下步骤操作。</p><p><img src="https://img.iamghf.top/md/20260604190135249.png" alt=""></p><p> 在应用中心下载《RE文件管理器（Root Explorer）》</p><p><img src="https://img.iamghf.top/md/20260604190145478.png" alt=""></p><p>通过文件管理器删除su与SuperUser文件</p><p>打开RE文件管理器（Root Explorer），进入<strong>/system/xbin</strong>路径删除<strong>su</strong>文件，再进入<strong>system/app</strong>路径删除<strong>SuperUser</strong>，之后重启模拟器即可。</p><p><img src="https://img.iamghf.top/md/20260604190151395.png" alt=""></p><p><img src="https://img.iamghf.top/md/20260604190218637.png" alt=""></p><p><strong>注：</strong></p><ul><li><strong>删除的su均为MuMu模拟器Pro自带的su，删除操作无法恢复，且后续所有使用的su均为Magisk的su，超级用户状态均为Magisk管理，详细可到Magisk内进行设置调整。</strong></li></ul><h2 id="安装LSPosed"><a href="#安装LSPosed" class="headerlink" title="安装LSPosed"></a>安装LSPosed</h2><p>下载<a href="https://github.com/LSPosed/LSPosed/releases/download/v1.9.2/LSPosed-v1.9.2-7024-zygisk-release.zip" target="_blank" rel="noopener">LSPosed-v1.9.2-7024-zygisk-release.zip</a></p><p><img src="https://img.iamghf.top/md/20260604190741314.png" alt="image-20260604190739471"></p><p>选择LSPosed-v1.9.2-7024-zygisk-release.zip文件。</p><p>回到magisk主页，选择设置，开启zygisk模块</p><p><img src="https://img.iamghf.top/md/20260604190912179.png" alt="image-20260604190909605"></p><p>如果手机桌面没有LSPosed 管理模块，需要手动解压zip文件，并安装manager apk文件。</p><p><img src="https://img.iamghf.top/md/20260604191121715.png" alt="image-20260604191120215"></p><h2 id="安装HookEuicc"><a href="#安装HookEuicc" class="headerlink" title="安装HookEuicc"></a>安装HookEuicc</h2><p>下载HookEuicc，并拖到模拟器中安装。</p><p><img src="https://img.iamghf.top/md/20260604191323542.png" alt="image-20260604191321592"></p><h2 id="安装giffgaff"><a href="#安装giffgaff" class="headerlink" title="安装giffgaff"></a>安装giffgaff</h2><p><img src="https://img.iamghf.top/md/20260604191426602.png" alt="image-20260604191423403"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gg卡 </tag>
+            
+            <tag> esim </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>飞牛STRM+302直连播放</title>
       <link href="/fei-niu-ying-shi-strm-302-zhi-lian-bo-fang.html"/>
       <url>/fei-niu-ying-shi-strm-302-zhi-lian-bo-fang.html</url>

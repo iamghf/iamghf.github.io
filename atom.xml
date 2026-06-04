@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iamghf.top/"/>
-  <updated>2026-03-30T07:08:28.140Z</updated>
+  <updated>2026-06-04T11:16:15.922Z</updated>
   <id>https://iamghf.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gg卡</title>
+    <link href="https://iamghf.top/gg-qia.html"/>
+    <id>https://iamghf.top/gg-qia.html</id>
+    <published>2026-06-04T08:42:28.000Z</published>
+    <updated>2026-06-04T11:16:15.922Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;使用模拟器开通esim卡&quot;&gt;&lt;a href=&quot;#使用模拟器开通esim卡&quot; class=&quot;headerlink&quot; title=&quot;使用模拟器开通esim卡&quot;&gt;&lt;/a&gt;使用模拟器开通esim卡&lt;/h1&gt;&lt;h2 id=&quot;需要的软件&quot;&gt;&lt;a href=&quot;#需要的软件&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件系统" scheme="https://iamghf.top/categories/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="gg卡" scheme="https://iamghf.top/tags/gg%E5%8D%A1/"/>
+    
+      <category term="esim" scheme="https://iamghf.top/tags/esim/"/>
+    
+  </entry>
   
   <entry>
     <title>飞牛STRM+302直连播放</title>
@@ -622,37 +651,6 @@
       <category term="text2sql" scheme="https://iamghf.top/tags/text2sql/"/>
     
       <category term="langchain" scheme="https://iamghf.top/tags/langchain/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTP Request Smuggling</title>
-    <link href="https://iamghf.top/web-lou-dong-1.html"/>
-    <id>https://iamghf.top/web-lou-dong-1.html</id>
-    <published>2024-04-08T01:48:05.000Z</published>
-    <updated>2024-04-08T03:04:23.913Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;HTTP-Request-Smuggling&quot;&gt;&lt;a href=&quot;#HTTP-Request-Smuggling&quot; class=&quot;headerlink&quot; title=&quot;HTTP Request Smuggling&quot;&gt;&lt;/a&gt;HTTP Request
-        
-      
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://iamghf.top/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="网络安全" scheme="https://iamghf.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="漏洞" scheme="https://iamghf.top/tags/%E6%BC%8F%E6%B4%9E/"/>
-    
-      <category term="smuggling" scheme="https://iamghf.top/tags/smuggling/"/>
     
   </entry>
   
